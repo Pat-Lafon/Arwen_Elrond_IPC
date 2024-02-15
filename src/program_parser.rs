@@ -1,4 +1,4 @@
-// auto-generated: "lalrpop 0.20.0"
+// auto-generated: "lalrpop 0.20.1"
 // sha3: 3c4650cbaaa5ac3b6e2107aeddbd8e0c4924d4a17617d1a93f4b843c37fc2762
 use crate::ipc::{ElrondKnownPredicate, ElrondPredicates, ElrondAssertion,ElrondSpec, ElrondForallFormula, ElrondTpedvar, ElrondType, ElrondPred, ElrondSimpleExpr, ElrondLiteral};
 use std::str::FromStr;
@@ -10,7 +10,7 @@ extern crate core;
 extern crate alloc;
 
 #[rustfmt::skip]
-#[allow(non_snake_case, non_camel_case_types, unused_mut, unused_variables, unused_imports, unused_parens, clippy::all)]
+#[allow(non_snake_case, non_camel_case_types, unused_mut, unused_variables, unused_imports, unused_parens, clippy::needless_lifetimes, clippy::type_complexity, clippy::needless_return, clippy::too_many_arguments, clippy::never_loop, clippy::match_single_binding, clippy::needless_raw_string_hashes)]
 mod __parse__ARG_TP {
 
     use crate::ipc::{ElrondKnownPredicate, ElrondPredicates, ElrondAssertion,ElrondSpec, ElrondForallFormula, ElrondTpedvar, ElrondType, ElrondPred, ElrondSimpleExpr, ElrondLiteral};
@@ -183,7 +183,7 @@ mod __parse__ARG_TP {
             }
         }).collect()
     }
-    pub(crate) struct __StateMachine<'input>
+    struct __StateMachine<'input>
     where 
     {
         input: &'input str,
@@ -337,7 +337,7 @@ mod __parse__ARG_TP {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> __Symbol<'input>
     {
-        match __token_index {
+        #[allow(clippy::manual_range_patterns)]match __token_index {
             0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 => match __token {
                 Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(14, __tok0) | Token(15, __tok0) | Token(16, __tok0) | Token(17, __tok0) | Token(18, __tok0) | Token(19, __tok0) | Token(20, __tok0) | Token(21, __tok0) | Token(22, __tok0) | Token(23, __tok0) | Token(24, __tok0) | Token(25, __tok0) | Token(26, __tok0) | Token(27, __tok0) | Token(28, __tok0) | Token(29, __tok0) | Token(30, __tok0) | Token(31, __tok0) | Token(32, __tok0) | Token(33, __tok0) | Token(0, __tok0) | Token(1, __tok0) if true => __Symbol::Variant0(__tok0),
                 _ => unreachable!(),
@@ -986,6 +986,7 @@ mod __parse__ARG_TP {
         _priv: (),
     }
 
+    impl Default for ARG_TPParser { fn default() -> Self { Self::new() } }
     impl ARG_TPParser {
         pub fn new() -> ARG_TPParser {
             let __builder = super::__intern_token::new_builder();
@@ -1046,7 +1047,7 @@ mod __parse__ARG_TP {
             __states.push(__next_state);
         }
     }
-    pub(crate) fn __reduce<
+    fn __reduce<
         'input,
     >(
         input: &'input str,
@@ -1666,7 +1667,7 @@ mod __parse__ARG_TP {
             _ => __symbol_type_mismatch()
         }
     }
-    pub(crate) fn __reduce0<
+    fn __reduce0<
         'input,
     >(
         input: &'input str,
@@ -1685,7 +1686,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (2, 0)
     }
-    pub(crate) fn __reduce1<
+    fn __reduce1<
         'input,
     >(
         input: &'input str,
@@ -1695,13 +1696,13 @@ mod __parse__ARG_TP {
     ) -> (usize, usize)
     {
         // (<ARG_TP> ",")* =  => ActionFn(83);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action83::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (0, 1)
     }
-    pub(crate) fn __reduce2<
+    fn __reduce2<
         'input,
     >(
         input: &'input str,
@@ -1718,7 +1719,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (1, 1)
     }
-    pub(crate) fn __reduce3<
+    fn __reduce3<
         'input,
     >(
         input: &'input str,
@@ -1737,7 +1738,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (2, 2)
     }
-    pub(crate) fn __reduce4<
+    fn __reduce4<
         'input,
     >(
         input: &'input str,
@@ -1757,7 +1758,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (3, 2)
     }
-    pub(crate) fn __reduce5<
+    fn __reduce5<
         'input,
     >(
         input: &'input str,
@@ -1776,7 +1777,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (2, 3)
     }
-    pub(crate) fn __reduce6<
+    fn __reduce6<
         'input,
     >(
         input: &'input str,
@@ -1786,13 +1787,13 @@ mod __parse__ARG_TP {
     ) -> (usize, usize)
     {
         // (<KnownPredicate> ";")* =  => ActionFn(71);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action71::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (0, 4)
     }
-    pub(crate) fn __reduce7<
+    fn __reduce7<
         'input,
     >(
         input: &'input str,
@@ -1809,7 +1810,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (1, 4)
     }
-    pub(crate) fn __reduce8<
+    fn __reduce8<
         'input,
     >(
         input: &'input str,
@@ -1828,7 +1829,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (2, 5)
     }
-    pub(crate) fn __reduce9<
+    fn __reduce9<
         'input,
     >(
         input: &'input str,
@@ -1848,7 +1849,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (3, 5)
     }
-    pub(crate) fn __reduce10<
+    fn __reduce10<
         'input,
     >(
         input: &'input str,
@@ -1867,7 +1868,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (2, 6)
     }
-    pub(crate) fn __reduce11<
+    fn __reduce11<
         'input,
     >(
         input: &'input str,
@@ -1877,13 +1878,13 @@ mod __parse__ARG_TP {
     ) -> (usize, usize)
     {
         // (<VAR> ",")* =  => ActionFn(78);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action78::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (0, 7)
     }
-    pub(crate) fn __reduce12<
+    fn __reduce12<
         'input,
     >(
         input: &'input str,
@@ -1900,7 +1901,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (1, 7)
     }
-    pub(crate) fn __reduce13<
+    fn __reduce13<
         'input,
     >(
         input: &'input str,
@@ -1919,7 +1920,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (2, 8)
     }
-    pub(crate) fn __reduce14<
+    fn __reduce14<
         'input,
     >(
         input: &'input str,
@@ -1939,7 +1940,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (3, 8)
     }
-    pub(crate) fn __reduce15<
+    fn __reduce15<
         'input,
     >(
         input: &'input str,
@@ -1956,7 +1957,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce16<
+    fn __reduce16<
         'input,
     >(
         input: &'input str,
@@ -1973,7 +1974,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce17<
+    fn __reduce17<
         'input,
     >(
         input: &'input str,
@@ -1990,7 +1991,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant7(__nt), __end));
         (1, 10)
     }
-    pub(crate) fn __reduce18<
+    fn __reduce18<
         'input,
     >(
         input: &'input str,
@@ -2000,13 +2001,13 @@ mod __parse__ARG_TP {
     ) -> (usize, usize)
     {
         // ARG_TP? =  => ActionFn(82);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action82::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant7(__nt), __end));
         (0, 10)
     }
-    pub(crate) fn __reduce19<
+    fn __reduce19<
         'input,
     >(
         input: &'input str,
@@ -2028,7 +2029,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant8(__nt), __end));
         (5, 11)
     }
-    pub(crate) fn __reduce20<
+    fn __reduce20<
         'input,
     >(
         input: &'input str,
@@ -2038,13 +2039,13 @@ mod __parse__ARG_TP {
     ) -> (usize, usize)
     {
         // Arg* =  => ActionFn(62);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action62::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (0, 12)
     }
-    pub(crate) fn __reduce21<
+    fn __reduce21<
         'input,
     >(
         input: &'input str,
@@ -2061,7 +2062,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (1, 12)
     }
-    pub(crate) fn __reduce22<
+    fn __reduce22<
         'input,
     >(
         input: &'input str,
@@ -2078,7 +2079,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (1, 13)
     }
-    pub(crate) fn __reduce23<
+    fn __reduce23<
         'input,
     >(
         input: &'input str,
@@ -2097,7 +2098,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (2, 13)
     }
-    pub(crate) fn __reduce24<
+    fn __reduce24<
         'input,
     >(
         input: &'input str,
@@ -2107,13 +2108,13 @@ mod __parse__ARG_TP {
     ) -> (usize, usize)
     {
         // Args =  => ActionFn(108);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action108::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant10(__nt), __end));
         (0, 14)
     }
-    pub(crate) fn __reduce25<
+    fn __reduce25<
         'input,
     >(
         input: &'input str,
@@ -2130,7 +2131,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant10(__nt), __end));
         (1, 14)
     }
-    pub(crate) fn __reduce26<
+    fn __reduce26<
         'input,
     >(
         input: &'input str,
@@ -2155,7 +2156,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (8, 15)
     }
-    pub(crate) fn __reduce27<
+    fn __reduce27<
         'input,
     >(
         input: &'input str,
@@ -2179,7 +2180,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (7, 15)
     }
-    pub(crate) fn __reduce28<
+    fn __reduce28<
         'input,
     >(
         input: &'input str,
@@ -2203,7 +2204,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (7, 15)
     }
-    pub(crate) fn __reduce29<
+    fn __reduce29<
         'input,
     >(
         input: &'input str,
@@ -2226,7 +2227,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (6, 15)
     }
-    pub(crate) fn __reduce30<
+    fn __reduce30<
         'input,
     >(
         input: &'input str,
@@ -2243,7 +2244,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 16)
     }
-    pub(crate) fn __reduce31<
+    fn __reduce31<
         'input,
     >(
         input: &'input str,
@@ -2260,7 +2261,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 16)
     }
-    pub(crate) fn __reduce32<
+    fn __reduce32<
         'input,
     >(
         input: &'input str,
@@ -2277,7 +2278,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (1, 17)
     }
-    pub(crate) fn __reduce33<
+    fn __reduce33<
         'input,
     >(
         input: &'input str,
@@ -2287,13 +2288,13 @@ mod __parse__ARG_TP {
     ) -> (usize, usize)
     {
         // Comma<ARG_TP> =  => ActionFn(105);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action105::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (0, 17)
     }
-    pub(crate) fn __reduce34<
+    fn __reduce34<
         'input,
     >(
         input: &'input str,
@@ -2312,7 +2313,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (2, 17)
     }
-    pub(crate) fn __reduce35<
+    fn __reduce35<
         'input,
     >(
         input: &'input str,
@@ -2329,7 +2330,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (1, 17)
     }
-    pub(crate) fn __reduce36<
+    fn __reduce36<
         'input,
     >(
         input: &'input str,
@@ -2346,7 +2347,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (1, 18)
     }
-    pub(crate) fn __reduce37<
+    fn __reduce37<
         'input,
     >(
         input: &'input str,
@@ -2356,13 +2357,13 @@ mod __parse__ARG_TP {
     ) -> (usize, usize)
     {
         // Comma<VAR> =  => ActionFn(121);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action121::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (0, 18)
     }
-    pub(crate) fn __reduce38<
+    fn __reduce38<
         'input,
     >(
         input: &'input str,
@@ -2381,7 +2382,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (2, 18)
     }
-    pub(crate) fn __reduce39<
+    fn __reduce39<
         'input,
     >(
         input: &'input str,
@@ -2398,7 +2399,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (1, 18)
     }
-    pub(crate) fn __reduce40<
+    fn __reduce40<
         'input,
     >(
         input: &'input str,
@@ -2415,7 +2416,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 19)
     }
-    pub(crate) fn __reduce41<
+    fn __reduce41<
         'input,
     >(
         input: &'input str,
@@ -2432,7 +2433,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 20)
     }
-    pub(crate) fn __reduce42<
+    fn __reduce42<
         'input,
     >(
         input: &'input str,
@@ -2452,7 +2453,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (3, 20)
     }
-    pub(crate) fn __reduce43<
+    fn __reduce43<
         'input,
     >(
         input: &'input str,
@@ -2469,7 +2470,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant15(__nt), __end));
         (1, 21)
     }
-    pub(crate) fn __reduce44<
+    fn __reduce44<
         'input,
     >(
         input: &'input str,
@@ -2486,7 +2487,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce45<
+    fn __reduce45<
         'input,
     >(
         input: &'input str,
@@ -2503,7 +2504,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce46<
+    fn __reduce46<
         'input,
     >(
         input: &'input str,
@@ -2520,7 +2521,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce47<
+    fn __reduce47<
         'input,
     >(
         input: &'input str,
@@ -2537,7 +2538,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce48<
+    fn __reduce48<
         'input,
     >(
         input: &'input str,
@@ -2554,7 +2555,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce49<
+    fn __reduce49<
         'input,
     >(
         input: &'input str,
@@ -2571,7 +2572,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce50<
+    fn __reduce50<
         'input,
     >(
         input: &'input str,
@@ -2588,7 +2589,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce51<
+    fn __reduce51<
         'input,
     >(
         input: &'input str,
@@ -2605,7 +2606,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant16(__nt), __end));
         (1, 23)
     }
-    pub(crate) fn __reduce52<
+    fn __reduce52<
         'input,
     >(
         input: &'input str,
@@ -2615,13 +2616,13 @@ mod __parse__ARG_TP {
     ) -> (usize, usize)
     {
         // KnownPredicate? =  => ActionFn(70);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action70::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant16(__nt), __end));
         (0, 23)
     }
-    pub(crate) fn __reduce53<
+    fn __reduce53<
         'input,
     >(
         input: &'input str,
@@ -2638,7 +2639,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce54<
+    fn __reduce54<
         'input,
     >(
         input: &'input str,
@@ -2655,7 +2656,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce55<
+    fn __reduce55<
         'input,
     >(
         input: &'input str,
@@ -2672,7 +2673,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce56<
+    fn __reduce56<
         'input,
     >(
         input: &'input str,
@@ -2689,7 +2690,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 25)
     }
-    pub(crate) fn __reduce57<
+    fn __reduce57<
         'input,
     >(
         input: &'input str,
@@ -2706,7 +2707,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant18(__nt), __end));
         (1, 26)
     }
-    pub(crate) fn __reduce58<
+    fn __reduce58<
         'input,
     >(
         input: &'input str,
@@ -2725,7 +2726,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant18(__nt), __end));
         (2, 26)
     }
-    pub(crate) fn __reduce59<
+    fn __reduce59<
         'input,
     >(
         input: &'input str,
@@ -2745,7 +2746,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 27)
     }
-    pub(crate) fn __reduce60<
+    fn __reduce60<
         'input,
     >(
         input: &'input str,
@@ -2762,7 +2763,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (1, 28)
     }
-    pub(crate) fn __reduce61<
+    fn __reduce61<
         'input,
     >(
         input: &'input str,
@@ -2772,13 +2773,13 @@ mod __parse__ARG_TP {
     ) -> (usize, usize)
     {
         // PostSpec? =  => ActionFn(66);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action66::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (0, 28)
     }
-    pub(crate) fn __reduce62<
+    fn __reduce62<
         'input,
     >(
         input: &'input str,
@@ -2798,7 +2799,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 29)
     }
-    pub(crate) fn __reduce63<
+    fn __reduce63<
         'input,
     >(
         input: &'input str,
@@ -2815,7 +2816,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (1, 30)
     }
-    pub(crate) fn __reduce64<
+    fn __reduce64<
         'input,
     >(
         input: &'input str,
@@ -2825,13 +2826,13 @@ mod __parse__ARG_TP {
     ) -> (usize, usize)
     {
         // PreSpec? =  => ActionFn(68);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action68::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (0, 30)
     }
-    pub(crate) fn __reduce65<
+    fn __reduce65<
         'input,
     >(
         input: &'input str,
@@ -2851,7 +2852,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 31)
     }
-    pub(crate) fn __reduce66<
+    fn __reduce66<
         'input,
     >(
         input: &'input str,
@@ -2871,7 +2872,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 31)
     }
-    pub(crate) fn __reduce67<
+    fn __reduce67<
         'input,
     >(
         input: &'input str,
@@ -2888,7 +2889,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 31)
     }
-    pub(crate) fn __reduce68<
+    fn __reduce68<
         'input,
     >(
         input: &'input str,
@@ -2905,7 +2906,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 32)
     }
-    pub(crate) fn __reduce69<
+    fn __reduce69<
         'input,
     >(
         input: &'input str,
@@ -2925,7 +2926,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce70<
+    fn __reduce70<
         'input,
     >(
         input: &'input str,
@@ -2942,7 +2943,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 32)
     }
-    pub(crate) fn __reduce71<
+    fn __reduce71<
         'input,
     >(
         input: &'input str,
@@ -2962,7 +2963,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce72<
+    fn __reduce72<
         'input,
     >(
         input: &'input str,
@@ -2982,7 +2983,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce73<
+    fn __reduce73<
         'input,
     >(
         input: &'input str,
@@ -3002,7 +3003,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce74<
+    fn __reduce74<
         'input,
     >(
         input: &'input str,
@@ -3024,7 +3025,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (5, 33)
     }
-    pub(crate) fn __reduce75<
+    fn __reduce75<
         'input,
     >(
         input: &'input str,
@@ -3046,7 +3047,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (5, 33)
     }
-    pub(crate) fn __reduce76<
+    fn __reduce76<
         'input,
     >(
         input: &'input str,
@@ -3063,7 +3064,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 33)
     }
-    pub(crate) fn __reduce77<
+    fn __reduce77<
         'input,
     >(
         input: &'input str,
@@ -3080,7 +3081,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 34)
     }
-    pub(crate) fn __reduce78<
+    fn __reduce78<
         'input,
     >(
         input: &'input str,
@@ -3097,7 +3098,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant22(__nt), __end));
         (1, 35)
     }
-    pub(crate) fn __reduce79<
+    fn __reduce79<
         'input,
     >(
         input: &'input str,
@@ -3114,7 +3115,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 36)
     }
-    pub(crate) fn __reduce80<
+    fn __reduce80<
         'input,
     >(
         input: &'input str,
@@ -3134,7 +3135,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (3, 36)
     }
-    pub(crate) fn __reduce81<
+    fn __reduce81<
         'input,
     >(
         input: &'input str,
@@ -3151,7 +3152,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (1, 37)
     }
-    pub(crate) fn __reduce82<
+    fn __reduce82<
         'input,
     >(
         input: &'input str,
@@ -3161,13 +3162,13 @@ mod __parse__ARG_TP {
     ) -> (usize, usize)
     {
         // SemiColon<KnownPredicate> =  => ActionFn(111);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action111::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (0, 37)
     }
-    pub(crate) fn __reduce83<
+    fn __reduce83<
         'input,
     >(
         input: &'input str,
@@ -3186,7 +3187,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (2, 37)
     }
-    pub(crate) fn __reduce84<
+    fn __reduce84<
         'input,
     >(
         input: &'input str,
@@ -3203,7 +3204,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (1, 37)
     }
-    pub(crate) fn __reduce85<
+    fn __reduce85<
         'input,
     >(
         input: &'input str,
@@ -3220,7 +3221,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 38)
     }
-    pub(crate) fn __reduce86<
+    fn __reduce86<
         'input,
     >(
         input: &'input str,
@@ -3239,7 +3240,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (2, 38)
     }
-    pub(crate) fn __reduce87<
+    fn __reduce87<
         'input,
     >(
         input: &'input str,
@@ -3259,7 +3260,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 39)
     }
-    pub(crate) fn __reduce88<
+    fn __reduce88<
         'input,
     >(
         input: &'input str,
@@ -3276,7 +3277,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 40)
     }
-    pub(crate) fn __reduce89<
+    fn __reduce89<
         'input,
     >(
         input: &'input str,
@@ -3296,7 +3297,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (3, 40)
     }
-    pub(crate) fn __reduce90<
+    fn __reduce90<
         'input,
     >(
         input: &'input str,
@@ -3313,7 +3314,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 41)
     }
-    pub(crate) fn __reduce91<
+    fn __reduce91<
         'input,
     >(
         input: &'input str,
@@ -3330,7 +3331,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant24(__nt), __end));
         (1, 42)
     }
-    pub(crate) fn __reduce92<
+    fn __reduce92<
         'input,
     >(
         input: &'input str,
@@ -3340,13 +3341,13 @@ mod __parse__ARG_TP {
     ) -> (usize, usize)
     {
         // VAR? =  => ActionFn(77);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action77::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant24(__nt), __end));
         (0, 42)
     }
-    pub(crate) fn __reduce93<
+    fn __reduce93<
         'input,
     >(
         input: &'input str,
@@ -3363,7 +3364,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 43)
     }
-    pub(crate) fn __reduce94<
+    fn __reduce94<
         'input,
     >(
         input: &'input str,
@@ -3383,7 +3384,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (3, 43)
     }
-    pub(crate) fn __reduce96<
+    fn __reduce96<
         'input,
     >(
         input: &'input str,
@@ -3400,7 +3401,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (1, 45)
     }
-    pub(crate) fn __reduce97<
+    fn __reduce97<
         'input,
     >(
         input: &'input str,
@@ -3417,7 +3418,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 46)
     }
-    pub(crate) fn __reduce98<
+    fn __reduce98<
         'input,
     >(
         input: &'input str,
@@ -3434,7 +3435,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 47)
     }
-    pub(crate) fn __reduce99<
+    fn __reduce99<
         'input,
     >(
         input: &'input str,
@@ -3451,7 +3452,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 48)
     }
-    pub(crate) fn __reduce100<
+    fn __reduce100<
         'input,
     >(
         input: &'input str,
@@ -3468,7 +3469,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 49)
     }
-    pub(crate) fn __reduce101<
+    fn __reduce101<
         'input,
     >(
         input: &'input str,
@@ -3485,7 +3486,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 50)
     }
-    pub(crate) fn __reduce102<
+    fn __reduce102<
         'input,
     >(
         input: &'input str,
@@ -3502,7 +3503,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 51)
     }
-    pub(crate) fn __reduce103<
+    fn __reduce103<
         'input,
     >(
         input: &'input str,
@@ -3519,7 +3520,7 @@ mod __parse__ARG_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 52)
     }
-    pub(crate) fn __reduce104<
+    fn __reduce104<
         'input,
     >(
         input: &'input str,
@@ -3540,7 +3541,7 @@ mod __parse__ARG_TP {
 pub use self::__parse__ARG_TP::ARG_TPParser;
 
 #[rustfmt::skip]
-#[allow(non_snake_case, non_camel_case_types, unused_mut, unused_variables, unused_imports, unused_parens, clippy::all)]
+#[allow(non_snake_case, non_camel_case_types, unused_mut, unused_variables, unused_imports, unused_parens, clippy::needless_lifetimes, clippy::type_complexity, clippy::needless_return, clippy::too_many_arguments, clippy::never_loop, clippy::match_single_binding, clippy::needless_raw_string_hashes)]
 mod __parse__Assertion {
 
     use crate::ipc::{ElrondKnownPredicate, ElrondPredicates, ElrondAssertion,ElrondSpec, ElrondForallFormula, ElrondTpedvar, ElrondType, ElrondPred, ElrondSimpleExpr, ElrondLiteral};
@@ -4058,7 +4059,7 @@ mod __parse__Assertion {
             }
         }).collect()
     }
-    pub(crate) struct __StateMachine<'input>
+    struct __StateMachine<'input>
     where 
     {
         input: &'input str,
@@ -4212,7 +4213,7 @@ mod __parse__Assertion {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> __Symbol<'input>
     {
-        match __token_index {
+        #[allow(clippy::manual_range_patterns)]match __token_index {
             0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 => match __token {
                 Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(14, __tok0) | Token(15, __tok0) | Token(16, __tok0) | Token(17, __tok0) | Token(18, __tok0) | Token(19, __tok0) | Token(20, __tok0) | Token(21, __tok0) | Token(22, __tok0) | Token(23, __tok0) | Token(24, __tok0) | Token(25, __tok0) | Token(26, __tok0) | Token(27, __tok0) | Token(28, __tok0) | Token(29, __tok0) | Token(30, __tok0) | Token(31, __tok0) | Token(32, __tok0) | Token(33, __tok0) | Token(0, __tok0) | Token(1, __tok0) if true => __Symbol::Variant0(__tok0),
                 _ => unreachable!(),
@@ -4861,6 +4862,7 @@ mod __parse__Assertion {
         _priv: (),
     }
 
+    impl Default for AssertionParser { fn default() -> Self { Self::new() } }
     impl AssertionParser {
         pub fn new() -> AssertionParser {
             let __builder = super::__intern_token::new_builder();
@@ -4921,7 +4923,7 @@ mod __parse__Assertion {
             __states.push(__next_state);
         }
     }
-    pub(crate) fn __reduce<
+    fn __reduce<
         'input,
     >(
         input: &'input str,
@@ -5541,7 +5543,7 @@ mod __parse__Assertion {
             _ => __symbol_type_mismatch()
         }
     }
-    pub(crate) fn __reduce0<
+    fn __reduce0<
         'input,
     >(
         input: &'input str,
@@ -5560,7 +5562,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (2, 0)
     }
-    pub(crate) fn __reduce1<
+    fn __reduce1<
         'input,
     >(
         input: &'input str,
@@ -5570,13 +5572,13 @@ mod __parse__Assertion {
     ) -> (usize, usize)
     {
         // (<ARG_TP> ",")* =  => ActionFn(83);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action83::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (0, 1)
     }
-    pub(crate) fn __reduce2<
+    fn __reduce2<
         'input,
     >(
         input: &'input str,
@@ -5593,7 +5595,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (1, 1)
     }
-    pub(crate) fn __reduce3<
+    fn __reduce3<
         'input,
     >(
         input: &'input str,
@@ -5612,7 +5614,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (2, 2)
     }
-    pub(crate) fn __reduce4<
+    fn __reduce4<
         'input,
     >(
         input: &'input str,
@@ -5632,7 +5634,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (3, 2)
     }
-    pub(crate) fn __reduce5<
+    fn __reduce5<
         'input,
     >(
         input: &'input str,
@@ -5651,7 +5653,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (2, 3)
     }
-    pub(crate) fn __reduce6<
+    fn __reduce6<
         'input,
     >(
         input: &'input str,
@@ -5661,13 +5663,13 @@ mod __parse__Assertion {
     ) -> (usize, usize)
     {
         // (<KnownPredicate> ";")* =  => ActionFn(71);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action71::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (0, 4)
     }
-    pub(crate) fn __reduce7<
+    fn __reduce7<
         'input,
     >(
         input: &'input str,
@@ -5684,7 +5686,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (1, 4)
     }
-    pub(crate) fn __reduce8<
+    fn __reduce8<
         'input,
     >(
         input: &'input str,
@@ -5703,7 +5705,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (2, 5)
     }
-    pub(crate) fn __reduce9<
+    fn __reduce9<
         'input,
     >(
         input: &'input str,
@@ -5723,7 +5725,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (3, 5)
     }
-    pub(crate) fn __reduce10<
+    fn __reduce10<
         'input,
     >(
         input: &'input str,
@@ -5742,7 +5744,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (2, 6)
     }
-    pub(crate) fn __reduce11<
+    fn __reduce11<
         'input,
     >(
         input: &'input str,
@@ -5752,13 +5754,13 @@ mod __parse__Assertion {
     ) -> (usize, usize)
     {
         // (<VAR> ",")* =  => ActionFn(78);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action78::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (0, 7)
     }
-    pub(crate) fn __reduce12<
+    fn __reduce12<
         'input,
     >(
         input: &'input str,
@@ -5775,7 +5777,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (1, 7)
     }
-    pub(crate) fn __reduce13<
+    fn __reduce13<
         'input,
     >(
         input: &'input str,
@@ -5794,7 +5796,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (2, 8)
     }
-    pub(crate) fn __reduce14<
+    fn __reduce14<
         'input,
     >(
         input: &'input str,
@@ -5814,7 +5816,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (3, 8)
     }
-    pub(crate) fn __reduce15<
+    fn __reduce15<
         'input,
     >(
         input: &'input str,
@@ -5831,7 +5833,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce16<
+    fn __reduce16<
         'input,
     >(
         input: &'input str,
@@ -5848,7 +5850,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce17<
+    fn __reduce17<
         'input,
     >(
         input: &'input str,
@@ -5865,7 +5867,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant7(__nt), __end));
         (1, 10)
     }
-    pub(crate) fn __reduce18<
+    fn __reduce18<
         'input,
     >(
         input: &'input str,
@@ -5875,13 +5877,13 @@ mod __parse__Assertion {
     ) -> (usize, usize)
     {
         // ARG_TP? =  => ActionFn(82);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action82::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant7(__nt), __end));
         (0, 10)
     }
-    pub(crate) fn __reduce19<
+    fn __reduce19<
         'input,
     >(
         input: &'input str,
@@ -5903,7 +5905,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant8(__nt), __end));
         (5, 11)
     }
-    pub(crate) fn __reduce20<
+    fn __reduce20<
         'input,
     >(
         input: &'input str,
@@ -5913,13 +5915,13 @@ mod __parse__Assertion {
     ) -> (usize, usize)
     {
         // Arg* =  => ActionFn(62);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action62::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (0, 12)
     }
-    pub(crate) fn __reduce21<
+    fn __reduce21<
         'input,
     >(
         input: &'input str,
@@ -5936,7 +5938,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (1, 12)
     }
-    pub(crate) fn __reduce22<
+    fn __reduce22<
         'input,
     >(
         input: &'input str,
@@ -5953,7 +5955,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (1, 13)
     }
-    pub(crate) fn __reduce23<
+    fn __reduce23<
         'input,
     >(
         input: &'input str,
@@ -5972,7 +5974,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (2, 13)
     }
-    pub(crate) fn __reduce24<
+    fn __reduce24<
         'input,
     >(
         input: &'input str,
@@ -5982,13 +5984,13 @@ mod __parse__Assertion {
     ) -> (usize, usize)
     {
         // Args =  => ActionFn(108);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action108::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant10(__nt), __end));
         (0, 14)
     }
-    pub(crate) fn __reduce25<
+    fn __reduce25<
         'input,
     >(
         input: &'input str,
@@ -6005,7 +6007,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant10(__nt), __end));
         (1, 14)
     }
-    pub(crate) fn __reduce26<
+    fn __reduce26<
         'input,
     >(
         input: &'input str,
@@ -6030,7 +6032,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (8, 15)
     }
-    pub(crate) fn __reduce27<
+    fn __reduce27<
         'input,
     >(
         input: &'input str,
@@ -6054,7 +6056,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (7, 15)
     }
-    pub(crate) fn __reduce28<
+    fn __reduce28<
         'input,
     >(
         input: &'input str,
@@ -6078,7 +6080,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (7, 15)
     }
-    pub(crate) fn __reduce29<
+    fn __reduce29<
         'input,
     >(
         input: &'input str,
@@ -6101,7 +6103,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (6, 15)
     }
-    pub(crate) fn __reduce30<
+    fn __reduce30<
         'input,
     >(
         input: &'input str,
@@ -6118,7 +6120,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 16)
     }
-    pub(crate) fn __reduce31<
+    fn __reduce31<
         'input,
     >(
         input: &'input str,
@@ -6135,7 +6137,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 16)
     }
-    pub(crate) fn __reduce32<
+    fn __reduce32<
         'input,
     >(
         input: &'input str,
@@ -6152,7 +6154,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (1, 17)
     }
-    pub(crate) fn __reduce33<
+    fn __reduce33<
         'input,
     >(
         input: &'input str,
@@ -6162,13 +6164,13 @@ mod __parse__Assertion {
     ) -> (usize, usize)
     {
         // Comma<ARG_TP> =  => ActionFn(105);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action105::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (0, 17)
     }
-    pub(crate) fn __reduce34<
+    fn __reduce34<
         'input,
     >(
         input: &'input str,
@@ -6187,7 +6189,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (2, 17)
     }
-    pub(crate) fn __reduce35<
+    fn __reduce35<
         'input,
     >(
         input: &'input str,
@@ -6204,7 +6206,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (1, 17)
     }
-    pub(crate) fn __reduce36<
+    fn __reduce36<
         'input,
     >(
         input: &'input str,
@@ -6221,7 +6223,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (1, 18)
     }
-    pub(crate) fn __reduce37<
+    fn __reduce37<
         'input,
     >(
         input: &'input str,
@@ -6231,13 +6233,13 @@ mod __parse__Assertion {
     ) -> (usize, usize)
     {
         // Comma<VAR> =  => ActionFn(121);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action121::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (0, 18)
     }
-    pub(crate) fn __reduce38<
+    fn __reduce38<
         'input,
     >(
         input: &'input str,
@@ -6256,7 +6258,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (2, 18)
     }
-    pub(crate) fn __reduce39<
+    fn __reduce39<
         'input,
     >(
         input: &'input str,
@@ -6273,7 +6275,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (1, 18)
     }
-    pub(crate) fn __reduce40<
+    fn __reduce40<
         'input,
     >(
         input: &'input str,
@@ -6290,7 +6292,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 19)
     }
-    pub(crate) fn __reduce41<
+    fn __reduce41<
         'input,
     >(
         input: &'input str,
@@ -6307,7 +6309,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 20)
     }
-    pub(crate) fn __reduce42<
+    fn __reduce42<
         'input,
     >(
         input: &'input str,
@@ -6327,7 +6329,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (3, 20)
     }
-    pub(crate) fn __reduce43<
+    fn __reduce43<
         'input,
     >(
         input: &'input str,
@@ -6344,7 +6346,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant15(__nt), __end));
         (1, 21)
     }
-    pub(crate) fn __reduce44<
+    fn __reduce44<
         'input,
     >(
         input: &'input str,
@@ -6361,7 +6363,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce45<
+    fn __reduce45<
         'input,
     >(
         input: &'input str,
@@ -6378,7 +6380,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce46<
+    fn __reduce46<
         'input,
     >(
         input: &'input str,
@@ -6395,7 +6397,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce47<
+    fn __reduce47<
         'input,
     >(
         input: &'input str,
@@ -6412,7 +6414,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce48<
+    fn __reduce48<
         'input,
     >(
         input: &'input str,
@@ -6429,7 +6431,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce49<
+    fn __reduce49<
         'input,
     >(
         input: &'input str,
@@ -6446,7 +6448,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce50<
+    fn __reduce50<
         'input,
     >(
         input: &'input str,
@@ -6463,7 +6465,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce51<
+    fn __reduce51<
         'input,
     >(
         input: &'input str,
@@ -6480,7 +6482,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant16(__nt), __end));
         (1, 23)
     }
-    pub(crate) fn __reduce52<
+    fn __reduce52<
         'input,
     >(
         input: &'input str,
@@ -6490,13 +6492,13 @@ mod __parse__Assertion {
     ) -> (usize, usize)
     {
         // KnownPredicate? =  => ActionFn(70);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action70::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant16(__nt), __end));
         (0, 23)
     }
-    pub(crate) fn __reduce53<
+    fn __reduce53<
         'input,
     >(
         input: &'input str,
@@ -6513,7 +6515,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce54<
+    fn __reduce54<
         'input,
     >(
         input: &'input str,
@@ -6530,7 +6532,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce55<
+    fn __reduce55<
         'input,
     >(
         input: &'input str,
@@ -6547,7 +6549,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce56<
+    fn __reduce56<
         'input,
     >(
         input: &'input str,
@@ -6564,7 +6566,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 25)
     }
-    pub(crate) fn __reduce57<
+    fn __reduce57<
         'input,
     >(
         input: &'input str,
@@ -6581,7 +6583,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant18(__nt), __end));
         (1, 26)
     }
-    pub(crate) fn __reduce58<
+    fn __reduce58<
         'input,
     >(
         input: &'input str,
@@ -6600,7 +6602,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant18(__nt), __end));
         (2, 26)
     }
-    pub(crate) fn __reduce59<
+    fn __reduce59<
         'input,
     >(
         input: &'input str,
@@ -6620,7 +6622,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 27)
     }
-    pub(crate) fn __reduce60<
+    fn __reduce60<
         'input,
     >(
         input: &'input str,
@@ -6637,7 +6639,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (1, 28)
     }
-    pub(crate) fn __reduce61<
+    fn __reduce61<
         'input,
     >(
         input: &'input str,
@@ -6647,13 +6649,13 @@ mod __parse__Assertion {
     ) -> (usize, usize)
     {
         // PostSpec? =  => ActionFn(66);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action66::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (0, 28)
     }
-    pub(crate) fn __reduce62<
+    fn __reduce62<
         'input,
     >(
         input: &'input str,
@@ -6673,7 +6675,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 29)
     }
-    pub(crate) fn __reduce63<
+    fn __reduce63<
         'input,
     >(
         input: &'input str,
@@ -6690,7 +6692,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (1, 30)
     }
-    pub(crate) fn __reduce64<
+    fn __reduce64<
         'input,
     >(
         input: &'input str,
@@ -6700,13 +6702,13 @@ mod __parse__Assertion {
     ) -> (usize, usize)
     {
         // PreSpec? =  => ActionFn(68);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action68::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (0, 30)
     }
-    pub(crate) fn __reduce65<
+    fn __reduce65<
         'input,
     >(
         input: &'input str,
@@ -6726,7 +6728,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 31)
     }
-    pub(crate) fn __reduce66<
+    fn __reduce66<
         'input,
     >(
         input: &'input str,
@@ -6746,7 +6748,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 31)
     }
-    pub(crate) fn __reduce67<
+    fn __reduce67<
         'input,
     >(
         input: &'input str,
@@ -6763,7 +6765,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 31)
     }
-    pub(crate) fn __reduce68<
+    fn __reduce68<
         'input,
     >(
         input: &'input str,
@@ -6780,7 +6782,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 32)
     }
-    pub(crate) fn __reduce69<
+    fn __reduce69<
         'input,
     >(
         input: &'input str,
@@ -6800,7 +6802,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce70<
+    fn __reduce70<
         'input,
     >(
         input: &'input str,
@@ -6817,7 +6819,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 32)
     }
-    pub(crate) fn __reduce71<
+    fn __reduce71<
         'input,
     >(
         input: &'input str,
@@ -6837,7 +6839,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce72<
+    fn __reduce72<
         'input,
     >(
         input: &'input str,
@@ -6857,7 +6859,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce73<
+    fn __reduce73<
         'input,
     >(
         input: &'input str,
@@ -6877,7 +6879,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce74<
+    fn __reduce74<
         'input,
     >(
         input: &'input str,
@@ -6899,7 +6901,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (5, 33)
     }
-    pub(crate) fn __reduce75<
+    fn __reduce75<
         'input,
     >(
         input: &'input str,
@@ -6921,7 +6923,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (5, 33)
     }
-    pub(crate) fn __reduce76<
+    fn __reduce76<
         'input,
     >(
         input: &'input str,
@@ -6938,7 +6940,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 33)
     }
-    pub(crate) fn __reduce77<
+    fn __reduce77<
         'input,
     >(
         input: &'input str,
@@ -6955,7 +6957,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 34)
     }
-    pub(crate) fn __reduce78<
+    fn __reduce78<
         'input,
     >(
         input: &'input str,
@@ -6972,7 +6974,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant22(__nt), __end));
         (1, 35)
     }
-    pub(crate) fn __reduce79<
+    fn __reduce79<
         'input,
     >(
         input: &'input str,
@@ -6989,7 +6991,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 36)
     }
-    pub(crate) fn __reduce80<
+    fn __reduce80<
         'input,
     >(
         input: &'input str,
@@ -7009,7 +7011,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (3, 36)
     }
-    pub(crate) fn __reduce81<
+    fn __reduce81<
         'input,
     >(
         input: &'input str,
@@ -7026,7 +7028,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (1, 37)
     }
-    pub(crate) fn __reduce82<
+    fn __reduce82<
         'input,
     >(
         input: &'input str,
@@ -7036,13 +7038,13 @@ mod __parse__Assertion {
     ) -> (usize, usize)
     {
         // SemiColon<KnownPredicate> =  => ActionFn(111);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action111::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (0, 37)
     }
-    pub(crate) fn __reduce83<
+    fn __reduce83<
         'input,
     >(
         input: &'input str,
@@ -7061,7 +7063,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (2, 37)
     }
-    pub(crate) fn __reduce84<
+    fn __reduce84<
         'input,
     >(
         input: &'input str,
@@ -7078,7 +7080,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (1, 37)
     }
-    pub(crate) fn __reduce85<
+    fn __reduce85<
         'input,
     >(
         input: &'input str,
@@ -7095,7 +7097,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 38)
     }
-    pub(crate) fn __reduce86<
+    fn __reduce86<
         'input,
     >(
         input: &'input str,
@@ -7114,7 +7116,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (2, 38)
     }
-    pub(crate) fn __reduce87<
+    fn __reduce87<
         'input,
     >(
         input: &'input str,
@@ -7134,7 +7136,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 39)
     }
-    pub(crate) fn __reduce88<
+    fn __reduce88<
         'input,
     >(
         input: &'input str,
@@ -7151,7 +7153,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 40)
     }
-    pub(crate) fn __reduce89<
+    fn __reduce89<
         'input,
     >(
         input: &'input str,
@@ -7171,7 +7173,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (3, 40)
     }
-    pub(crate) fn __reduce90<
+    fn __reduce90<
         'input,
     >(
         input: &'input str,
@@ -7188,7 +7190,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 41)
     }
-    pub(crate) fn __reduce91<
+    fn __reduce91<
         'input,
     >(
         input: &'input str,
@@ -7205,7 +7207,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant24(__nt), __end));
         (1, 42)
     }
-    pub(crate) fn __reduce92<
+    fn __reduce92<
         'input,
     >(
         input: &'input str,
@@ -7215,13 +7217,13 @@ mod __parse__Assertion {
     ) -> (usize, usize)
     {
         // VAR? =  => ActionFn(77);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action77::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant24(__nt), __end));
         (0, 42)
     }
-    pub(crate) fn __reduce93<
+    fn __reduce93<
         'input,
     >(
         input: &'input str,
@@ -7238,7 +7240,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 43)
     }
-    pub(crate) fn __reduce94<
+    fn __reduce94<
         'input,
     >(
         input: &'input str,
@@ -7258,7 +7260,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (3, 43)
     }
-    pub(crate) fn __reduce95<
+    fn __reduce95<
         'input,
     >(
         input: &'input str,
@@ -7275,7 +7277,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 44)
     }
-    pub(crate) fn __reduce97<
+    fn __reduce97<
         'input,
     >(
         input: &'input str,
@@ -7292,7 +7294,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 46)
     }
-    pub(crate) fn __reduce98<
+    fn __reduce98<
         'input,
     >(
         input: &'input str,
@@ -7309,7 +7311,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 47)
     }
-    pub(crate) fn __reduce99<
+    fn __reduce99<
         'input,
     >(
         input: &'input str,
@@ -7326,7 +7328,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 48)
     }
-    pub(crate) fn __reduce100<
+    fn __reduce100<
         'input,
     >(
         input: &'input str,
@@ -7343,7 +7345,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 49)
     }
-    pub(crate) fn __reduce101<
+    fn __reduce101<
         'input,
     >(
         input: &'input str,
@@ -7360,7 +7362,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 50)
     }
-    pub(crate) fn __reduce102<
+    fn __reduce102<
         'input,
     >(
         input: &'input str,
@@ -7377,7 +7379,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 51)
     }
-    pub(crate) fn __reduce103<
+    fn __reduce103<
         'input,
     >(
         input: &'input str,
@@ -7394,7 +7396,7 @@ mod __parse__Assertion {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 52)
     }
-    pub(crate) fn __reduce104<
+    fn __reduce104<
         'input,
     >(
         input: &'input str,
@@ -7415,7 +7417,7 @@ mod __parse__Assertion {
 pub use self::__parse__Assertion::AssertionParser;
 
 #[rustfmt::skip]
-#[allow(non_snake_case, non_camel_case_types, unused_mut, unused_variables, unused_imports, unused_parens, clippy::all)]
+#[allow(non_snake_case, non_camel_case_types, unused_mut, unused_variables, unused_imports, unused_parens, clippy::needless_lifetimes, clippy::type_complexity, clippy::needless_return, clippy::too_many_arguments, clippy::never_loop, clippy::match_single_binding, clippy::needless_raw_string_hashes)]
 mod __parse__FUNC_TP {
 
     use crate::ipc::{ElrondKnownPredicate, ElrondPredicates, ElrondAssertion,ElrondSpec, ElrondForallFormula, ElrondTpedvar, ElrondType, ElrondPred, ElrondSimpleExpr, ElrondLiteral};
@@ -7647,7 +7649,7 @@ mod __parse__FUNC_TP {
             }
         }).collect()
     }
-    pub(crate) struct __StateMachine<'input>
+    struct __StateMachine<'input>
     where 
     {
         input: &'input str,
@@ -7801,7 +7803,7 @@ mod __parse__FUNC_TP {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> __Symbol<'input>
     {
-        match __token_index {
+        #[allow(clippy::manual_range_patterns)]match __token_index {
             0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 => match __token {
                 Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(14, __tok0) | Token(15, __tok0) | Token(16, __tok0) | Token(17, __tok0) | Token(18, __tok0) | Token(19, __tok0) | Token(20, __tok0) | Token(21, __tok0) | Token(22, __tok0) | Token(23, __tok0) | Token(24, __tok0) | Token(25, __tok0) | Token(26, __tok0) | Token(27, __tok0) | Token(28, __tok0) | Token(29, __tok0) | Token(30, __tok0) | Token(31, __tok0) | Token(32, __tok0) | Token(33, __tok0) | Token(0, __tok0) | Token(1, __tok0) if true => __Symbol::Variant0(__tok0),
                 _ => unreachable!(),
@@ -8450,6 +8452,7 @@ mod __parse__FUNC_TP {
         _priv: (),
     }
 
+    impl Default for FUNC_TPParser { fn default() -> Self { Self::new() } }
     impl FUNC_TPParser {
         pub fn new() -> FUNC_TPParser {
             let __builder = super::__intern_token::new_builder();
@@ -8510,7 +8513,7 @@ mod __parse__FUNC_TP {
             __states.push(__next_state);
         }
     }
-    pub(crate) fn __reduce<
+    fn __reduce<
         'input,
     >(
         input: &'input str,
@@ -9130,7 +9133,7 @@ mod __parse__FUNC_TP {
             _ => __symbol_type_mismatch()
         }
     }
-    pub(crate) fn __reduce0<
+    fn __reduce0<
         'input,
     >(
         input: &'input str,
@@ -9149,7 +9152,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (2, 0)
     }
-    pub(crate) fn __reduce1<
+    fn __reduce1<
         'input,
     >(
         input: &'input str,
@@ -9159,13 +9162,13 @@ mod __parse__FUNC_TP {
     ) -> (usize, usize)
     {
         // (<ARG_TP> ",")* =  => ActionFn(83);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action83::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (0, 1)
     }
-    pub(crate) fn __reduce2<
+    fn __reduce2<
         'input,
     >(
         input: &'input str,
@@ -9182,7 +9185,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (1, 1)
     }
-    pub(crate) fn __reduce3<
+    fn __reduce3<
         'input,
     >(
         input: &'input str,
@@ -9201,7 +9204,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (2, 2)
     }
-    pub(crate) fn __reduce4<
+    fn __reduce4<
         'input,
     >(
         input: &'input str,
@@ -9221,7 +9224,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (3, 2)
     }
-    pub(crate) fn __reduce5<
+    fn __reduce5<
         'input,
     >(
         input: &'input str,
@@ -9240,7 +9243,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (2, 3)
     }
-    pub(crate) fn __reduce6<
+    fn __reduce6<
         'input,
     >(
         input: &'input str,
@@ -9250,13 +9253,13 @@ mod __parse__FUNC_TP {
     ) -> (usize, usize)
     {
         // (<KnownPredicate> ";")* =  => ActionFn(71);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action71::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (0, 4)
     }
-    pub(crate) fn __reduce7<
+    fn __reduce7<
         'input,
     >(
         input: &'input str,
@@ -9273,7 +9276,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (1, 4)
     }
-    pub(crate) fn __reduce8<
+    fn __reduce8<
         'input,
     >(
         input: &'input str,
@@ -9292,7 +9295,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (2, 5)
     }
-    pub(crate) fn __reduce9<
+    fn __reduce9<
         'input,
     >(
         input: &'input str,
@@ -9312,7 +9315,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (3, 5)
     }
-    pub(crate) fn __reduce10<
+    fn __reduce10<
         'input,
     >(
         input: &'input str,
@@ -9331,7 +9334,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (2, 6)
     }
-    pub(crate) fn __reduce11<
+    fn __reduce11<
         'input,
     >(
         input: &'input str,
@@ -9341,13 +9344,13 @@ mod __parse__FUNC_TP {
     ) -> (usize, usize)
     {
         // (<VAR> ",")* =  => ActionFn(78);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action78::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (0, 7)
     }
-    pub(crate) fn __reduce12<
+    fn __reduce12<
         'input,
     >(
         input: &'input str,
@@ -9364,7 +9367,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (1, 7)
     }
-    pub(crate) fn __reduce13<
+    fn __reduce13<
         'input,
     >(
         input: &'input str,
@@ -9383,7 +9386,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (2, 8)
     }
-    pub(crate) fn __reduce14<
+    fn __reduce14<
         'input,
     >(
         input: &'input str,
@@ -9403,7 +9406,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (3, 8)
     }
-    pub(crate) fn __reduce15<
+    fn __reduce15<
         'input,
     >(
         input: &'input str,
@@ -9420,7 +9423,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce16<
+    fn __reduce16<
         'input,
     >(
         input: &'input str,
@@ -9437,7 +9440,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce17<
+    fn __reduce17<
         'input,
     >(
         input: &'input str,
@@ -9454,7 +9457,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant7(__nt), __end));
         (1, 10)
     }
-    pub(crate) fn __reduce18<
+    fn __reduce18<
         'input,
     >(
         input: &'input str,
@@ -9464,13 +9467,13 @@ mod __parse__FUNC_TP {
     ) -> (usize, usize)
     {
         // ARG_TP? =  => ActionFn(82);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action82::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant7(__nt), __end));
         (0, 10)
     }
-    pub(crate) fn __reduce19<
+    fn __reduce19<
         'input,
     >(
         input: &'input str,
@@ -9492,7 +9495,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant8(__nt), __end));
         (5, 11)
     }
-    pub(crate) fn __reduce20<
+    fn __reduce20<
         'input,
     >(
         input: &'input str,
@@ -9502,13 +9505,13 @@ mod __parse__FUNC_TP {
     ) -> (usize, usize)
     {
         // Arg* =  => ActionFn(62);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action62::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (0, 12)
     }
-    pub(crate) fn __reduce21<
+    fn __reduce21<
         'input,
     >(
         input: &'input str,
@@ -9525,7 +9528,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (1, 12)
     }
-    pub(crate) fn __reduce22<
+    fn __reduce22<
         'input,
     >(
         input: &'input str,
@@ -9542,7 +9545,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (1, 13)
     }
-    pub(crate) fn __reduce23<
+    fn __reduce23<
         'input,
     >(
         input: &'input str,
@@ -9561,7 +9564,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (2, 13)
     }
-    pub(crate) fn __reduce24<
+    fn __reduce24<
         'input,
     >(
         input: &'input str,
@@ -9571,13 +9574,13 @@ mod __parse__FUNC_TP {
     ) -> (usize, usize)
     {
         // Args =  => ActionFn(108);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action108::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant10(__nt), __end));
         (0, 14)
     }
-    pub(crate) fn __reduce25<
+    fn __reduce25<
         'input,
     >(
         input: &'input str,
@@ -9594,7 +9597,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant10(__nt), __end));
         (1, 14)
     }
-    pub(crate) fn __reduce26<
+    fn __reduce26<
         'input,
     >(
         input: &'input str,
@@ -9619,7 +9622,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (8, 15)
     }
-    pub(crate) fn __reduce27<
+    fn __reduce27<
         'input,
     >(
         input: &'input str,
@@ -9643,7 +9646,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (7, 15)
     }
-    pub(crate) fn __reduce28<
+    fn __reduce28<
         'input,
     >(
         input: &'input str,
@@ -9667,7 +9670,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (7, 15)
     }
-    pub(crate) fn __reduce29<
+    fn __reduce29<
         'input,
     >(
         input: &'input str,
@@ -9690,7 +9693,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (6, 15)
     }
-    pub(crate) fn __reduce30<
+    fn __reduce30<
         'input,
     >(
         input: &'input str,
@@ -9707,7 +9710,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 16)
     }
-    pub(crate) fn __reduce31<
+    fn __reduce31<
         'input,
     >(
         input: &'input str,
@@ -9724,7 +9727,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 16)
     }
-    pub(crate) fn __reduce32<
+    fn __reduce32<
         'input,
     >(
         input: &'input str,
@@ -9741,7 +9744,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (1, 17)
     }
-    pub(crate) fn __reduce33<
+    fn __reduce33<
         'input,
     >(
         input: &'input str,
@@ -9751,13 +9754,13 @@ mod __parse__FUNC_TP {
     ) -> (usize, usize)
     {
         // Comma<ARG_TP> =  => ActionFn(105);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action105::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (0, 17)
     }
-    pub(crate) fn __reduce34<
+    fn __reduce34<
         'input,
     >(
         input: &'input str,
@@ -9776,7 +9779,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (2, 17)
     }
-    pub(crate) fn __reduce35<
+    fn __reduce35<
         'input,
     >(
         input: &'input str,
@@ -9793,7 +9796,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (1, 17)
     }
-    pub(crate) fn __reduce36<
+    fn __reduce36<
         'input,
     >(
         input: &'input str,
@@ -9810,7 +9813,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (1, 18)
     }
-    pub(crate) fn __reduce37<
+    fn __reduce37<
         'input,
     >(
         input: &'input str,
@@ -9820,13 +9823,13 @@ mod __parse__FUNC_TP {
     ) -> (usize, usize)
     {
         // Comma<VAR> =  => ActionFn(121);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action121::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (0, 18)
     }
-    pub(crate) fn __reduce38<
+    fn __reduce38<
         'input,
     >(
         input: &'input str,
@@ -9845,7 +9848,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (2, 18)
     }
-    pub(crate) fn __reduce39<
+    fn __reduce39<
         'input,
     >(
         input: &'input str,
@@ -9862,7 +9865,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (1, 18)
     }
-    pub(crate) fn __reduce40<
+    fn __reduce40<
         'input,
     >(
         input: &'input str,
@@ -9879,7 +9882,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 19)
     }
-    pub(crate) fn __reduce41<
+    fn __reduce41<
         'input,
     >(
         input: &'input str,
@@ -9896,7 +9899,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 20)
     }
-    pub(crate) fn __reduce42<
+    fn __reduce42<
         'input,
     >(
         input: &'input str,
@@ -9916,7 +9919,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (3, 20)
     }
-    pub(crate) fn __reduce43<
+    fn __reduce43<
         'input,
     >(
         input: &'input str,
@@ -9933,7 +9936,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant15(__nt), __end));
         (1, 21)
     }
-    pub(crate) fn __reduce44<
+    fn __reduce44<
         'input,
     >(
         input: &'input str,
@@ -9950,7 +9953,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce45<
+    fn __reduce45<
         'input,
     >(
         input: &'input str,
@@ -9967,7 +9970,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce46<
+    fn __reduce46<
         'input,
     >(
         input: &'input str,
@@ -9984,7 +9987,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce47<
+    fn __reduce47<
         'input,
     >(
         input: &'input str,
@@ -10001,7 +10004,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce48<
+    fn __reduce48<
         'input,
     >(
         input: &'input str,
@@ -10018,7 +10021,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce49<
+    fn __reduce49<
         'input,
     >(
         input: &'input str,
@@ -10035,7 +10038,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce50<
+    fn __reduce50<
         'input,
     >(
         input: &'input str,
@@ -10052,7 +10055,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce51<
+    fn __reduce51<
         'input,
     >(
         input: &'input str,
@@ -10069,7 +10072,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant16(__nt), __end));
         (1, 23)
     }
-    pub(crate) fn __reduce52<
+    fn __reduce52<
         'input,
     >(
         input: &'input str,
@@ -10079,13 +10082,13 @@ mod __parse__FUNC_TP {
     ) -> (usize, usize)
     {
         // KnownPredicate? =  => ActionFn(70);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action70::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant16(__nt), __end));
         (0, 23)
     }
-    pub(crate) fn __reduce53<
+    fn __reduce53<
         'input,
     >(
         input: &'input str,
@@ -10102,7 +10105,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce54<
+    fn __reduce54<
         'input,
     >(
         input: &'input str,
@@ -10119,7 +10122,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce55<
+    fn __reduce55<
         'input,
     >(
         input: &'input str,
@@ -10136,7 +10139,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce56<
+    fn __reduce56<
         'input,
     >(
         input: &'input str,
@@ -10153,7 +10156,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 25)
     }
-    pub(crate) fn __reduce57<
+    fn __reduce57<
         'input,
     >(
         input: &'input str,
@@ -10170,7 +10173,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant18(__nt), __end));
         (1, 26)
     }
-    pub(crate) fn __reduce58<
+    fn __reduce58<
         'input,
     >(
         input: &'input str,
@@ -10189,7 +10192,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant18(__nt), __end));
         (2, 26)
     }
-    pub(crate) fn __reduce59<
+    fn __reduce59<
         'input,
     >(
         input: &'input str,
@@ -10209,7 +10212,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 27)
     }
-    pub(crate) fn __reduce60<
+    fn __reduce60<
         'input,
     >(
         input: &'input str,
@@ -10226,7 +10229,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (1, 28)
     }
-    pub(crate) fn __reduce61<
+    fn __reduce61<
         'input,
     >(
         input: &'input str,
@@ -10236,13 +10239,13 @@ mod __parse__FUNC_TP {
     ) -> (usize, usize)
     {
         // PostSpec? =  => ActionFn(66);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action66::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (0, 28)
     }
-    pub(crate) fn __reduce62<
+    fn __reduce62<
         'input,
     >(
         input: &'input str,
@@ -10262,7 +10265,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 29)
     }
-    pub(crate) fn __reduce63<
+    fn __reduce63<
         'input,
     >(
         input: &'input str,
@@ -10279,7 +10282,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (1, 30)
     }
-    pub(crate) fn __reduce64<
+    fn __reduce64<
         'input,
     >(
         input: &'input str,
@@ -10289,13 +10292,13 @@ mod __parse__FUNC_TP {
     ) -> (usize, usize)
     {
         // PreSpec? =  => ActionFn(68);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action68::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (0, 30)
     }
-    pub(crate) fn __reduce65<
+    fn __reduce65<
         'input,
     >(
         input: &'input str,
@@ -10315,7 +10318,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 31)
     }
-    pub(crate) fn __reduce66<
+    fn __reduce66<
         'input,
     >(
         input: &'input str,
@@ -10335,7 +10338,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 31)
     }
-    pub(crate) fn __reduce67<
+    fn __reduce67<
         'input,
     >(
         input: &'input str,
@@ -10352,7 +10355,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 31)
     }
-    pub(crate) fn __reduce68<
+    fn __reduce68<
         'input,
     >(
         input: &'input str,
@@ -10369,7 +10372,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 32)
     }
-    pub(crate) fn __reduce69<
+    fn __reduce69<
         'input,
     >(
         input: &'input str,
@@ -10389,7 +10392,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce70<
+    fn __reduce70<
         'input,
     >(
         input: &'input str,
@@ -10406,7 +10409,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 32)
     }
-    pub(crate) fn __reduce71<
+    fn __reduce71<
         'input,
     >(
         input: &'input str,
@@ -10426,7 +10429,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce72<
+    fn __reduce72<
         'input,
     >(
         input: &'input str,
@@ -10446,7 +10449,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce73<
+    fn __reduce73<
         'input,
     >(
         input: &'input str,
@@ -10466,7 +10469,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce74<
+    fn __reduce74<
         'input,
     >(
         input: &'input str,
@@ -10488,7 +10491,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (5, 33)
     }
-    pub(crate) fn __reduce75<
+    fn __reduce75<
         'input,
     >(
         input: &'input str,
@@ -10510,7 +10513,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (5, 33)
     }
-    pub(crate) fn __reduce76<
+    fn __reduce76<
         'input,
     >(
         input: &'input str,
@@ -10527,7 +10530,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 33)
     }
-    pub(crate) fn __reduce77<
+    fn __reduce77<
         'input,
     >(
         input: &'input str,
@@ -10544,7 +10547,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 34)
     }
-    pub(crate) fn __reduce78<
+    fn __reduce78<
         'input,
     >(
         input: &'input str,
@@ -10561,7 +10564,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant22(__nt), __end));
         (1, 35)
     }
-    pub(crate) fn __reduce79<
+    fn __reduce79<
         'input,
     >(
         input: &'input str,
@@ -10578,7 +10581,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 36)
     }
-    pub(crate) fn __reduce80<
+    fn __reduce80<
         'input,
     >(
         input: &'input str,
@@ -10598,7 +10601,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (3, 36)
     }
-    pub(crate) fn __reduce81<
+    fn __reduce81<
         'input,
     >(
         input: &'input str,
@@ -10615,7 +10618,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (1, 37)
     }
-    pub(crate) fn __reduce82<
+    fn __reduce82<
         'input,
     >(
         input: &'input str,
@@ -10625,13 +10628,13 @@ mod __parse__FUNC_TP {
     ) -> (usize, usize)
     {
         // SemiColon<KnownPredicate> =  => ActionFn(111);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action111::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (0, 37)
     }
-    pub(crate) fn __reduce83<
+    fn __reduce83<
         'input,
     >(
         input: &'input str,
@@ -10650,7 +10653,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (2, 37)
     }
-    pub(crate) fn __reduce84<
+    fn __reduce84<
         'input,
     >(
         input: &'input str,
@@ -10667,7 +10670,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (1, 37)
     }
-    pub(crate) fn __reduce85<
+    fn __reduce85<
         'input,
     >(
         input: &'input str,
@@ -10684,7 +10687,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 38)
     }
-    pub(crate) fn __reduce86<
+    fn __reduce86<
         'input,
     >(
         input: &'input str,
@@ -10703,7 +10706,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (2, 38)
     }
-    pub(crate) fn __reduce87<
+    fn __reduce87<
         'input,
     >(
         input: &'input str,
@@ -10723,7 +10726,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 39)
     }
-    pub(crate) fn __reduce88<
+    fn __reduce88<
         'input,
     >(
         input: &'input str,
@@ -10740,7 +10743,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 40)
     }
-    pub(crate) fn __reduce89<
+    fn __reduce89<
         'input,
     >(
         input: &'input str,
@@ -10760,7 +10763,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (3, 40)
     }
-    pub(crate) fn __reduce90<
+    fn __reduce90<
         'input,
     >(
         input: &'input str,
@@ -10777,7 +10780,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 41)
     }
-    pub(crate) fn __reduce91<
+    fn __reduce91<
         'input,
     >(
         input: &'input str,
@@ -10794,7 +10797,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant24(__nt), __end));
         (1, 42)
     }
-    pub(crate) fn __reduce92<
+    fn __reduce92<
         'input,
     >(
         input: &'input str,
@@ -10804,13 +10807,13 @@ mod __parse__FUNC_TP {
     ) -> (usize, usize)
     {
         // VAR? =  => ActionFn(77);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action77::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant24(__nt), __end));
         (0, 42)
     }
-    pub(crate) fn __reduce93<
+    fn __reduce93<
         'input,
     >(
         input: &'input str,
@@ -10827,7 +10830,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 43)
     }
-    pub(crate) fn __reduce94<
+    fn __reduce94<
         'input,
     >(
         input: &'input str,
@@ -10847,7 +10850,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (3, 43)
     }
-    pub(crate) fn __reduce95<
+    fn __reduce95<
         'input,
     >(
         input: &'input str,
@@ -10864,7 +10867,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 44)
     }
-    pub(crate) fn __reduce96<
+    fn __reduce96<
         'input,
     >(
         input: &'input str,
@@ -10881,7 +10884,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (1, 45)
     }
-    pub(crate) fn __reduce98<
+    fn __reduce98<
         'input,
     >(
         input: &'input str,
@@ -10898,7 +10901,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 47)
     }
-    pub(crate) fn __reduce99<
+    fn __reduce99<
         'input,
     >(
         input: &'input str,
@@ -10915,7 +10918,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 48)
     }
-    pub(crate) fn __reduce100<
+    fn __reduce100<
         'input,
     >(
         input: &'input str,
@@ -10932,7 +10935,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 49)
     }
-    pub(crate) fn __reduce101<
+    fn __reduce101<
         'input,
     >(
         input: &'input str,
@@ -10949,7 +10952,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 50)
     }
-    pub(crate) fn __reduce102<
+    fn __reduce102<
         'input,
     >(
         input: &'input str,
@@ -10966,7 +10969,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 51)
     }
-    pub(crate) fn __reduce103<
+    fn __reduce103<
         'input,
     >(
         input: &'input str,
@@ -10983,7 +10986,7 @@ mod __parse__FUNC_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 52)
     }
-    pub(crate) fn __reduce104<
+    fn __reduce104<
         'input,
     >(
         input: &'input str,
@@ -11004,7 +11007,7 @@ mod __parse__FUNC_TP {
 pub use self::__parse__FUNC_TP::FUNC_TPParser;
 
 #[rustfmt::skip]
-#[allow(non_snake_case, non_camel_case_types, unused_mut, unused_variables, unused_imports, unused_parens, clippy::all)]
+#[allow(non_snake_case, non_camel_case_types, unused_mut, unused_variables, unused_imports, unused_parens, clippy::needless_lifetimes, clippy::type_complexity, clippy::needless_return, clippy::too_many_arguments, clippy::never_loop, clippy::match_single_binding, clippy::needless_raw_string_hashes)]
 mod __parse__LIT {
 
     use crate::ipc::{ElrondKnownPredicate, ElrondPredicates, ElrondAssertion,ElrondSpec, ElrondForallFormula, ElrondTpedvar, ElrondType, ElrondPred, ElrondSimpleExpr, ElrondLiteral};
@@ -11139,7 +11142,7 @@ mod __parse__LIT {
             }
         }).collect()
     }
-    pub(crate) struct __StateMachine<'input>
+    struct __StateMachine<'input>
     where 
     {
         input: &'input str,
@@ -11293,7 +11296,7 @@ mod __parse__LIT {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> __Symbol<'input>
     {
-        match __token_index {
+        #[allow(clippy::manual_range_patterns)]match __token_index {
             0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 => match __token {
                 Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(14, __tok0) | Token(15, __tok0) | Token(16, __tok0) | Token(17, __tok0) | Token(18, __tok0) | Token(19, __tok0) | Token(20, __tok0) | Token(21, __tok0) | Token(22, __tok0) | Token(23, __tok0) | Token(24, __tok0) | Token(25, __tok0) | Token(26, __tok0) | Token(27, __tok0) | Token(28, __tok0) | Token(29, __tok0) | Token(30, __tok0) | Token(31, __tok0) | Token(32, __tok0) | Token(33, __tok0) | Token(0, __tok0) | Token(1, __tok0) if true => __Symbol::Variant0(__tok0),
                 _ => unreachable!(),
@@ -11942,6 +11945,7 @@ mod __parse__LIT {
         _priv: (),
     }
 
+    impl Default for LITParser { fn default() -> Self { Self::new() } }
     impl LITParser {
         pub fn new() -> LITParser {
             let __builder = super::__intern_token::new_builder();
@@ -12002,7 +12006,7 @@ mod __parse__LIT {
             __states.push(__next_state);
         }
     }
-    pub(crate) fn __reduce<
+    fn __reduce<
         'input,
     >(
         input: &'input str,
@@ -12622,7 +12626,7 @@ mod __parse__LIT {
             _ => __symbol_type_mismatch()
         }
     }
-    pub(crate) fn __reduce0<
+    fn __reduce0<
         'input,
     >(
         input: &'input str,
@@ -12641,7 +12645,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (2, 0)
     }
-    pub(crate) fn __reduce1<
+    fn __reduce1<
         'input,
     >(
         input: &'input str,
@@ -12651,13 +12655,13 @@ mod __parse__LIT {
     ) -> (usize, usize)
     {
         // (<ARG_TP> ",")* =  => ActionFn(83);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action83::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (0, 1)
     }
-    pub(crate) fn __reduce2<
+    fn __reduce2<
         'input,
     >(
         input: &'input str,
@@ -12674,7 +12678,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (1, 1)
     }
-    pub(crate) fn __reduce3<
+    fn __reduce3<
         'input,
     >(
         input: &'input str,
@@ -12693,7 +12697,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (2, 2)
     }
-    pub(crate) fn __reduce4<
+    fn __reduce4<
         'input,
     >(
         input: &'input str,
@@ -12713,7 +12717,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (3, 2)
     }
-    pub(crate) fn __reduce5<
+    fn __reduce5<
         'input,
     >(
         input: &'input str,
@@ -12732,7 +12736,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (2, 3)
     }
-    pub(crate) fn __reduce6<
+    fn __reduce6<
         'input,
     >(
         input: &'input str,
@@ -12742,13 +12746,13 @@ mod __parse__LIT {
     ) -> (usize, usize)
     {
         // (<KnownPredicate> ";")* =  => ActionFn(71);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action71::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (0, 4)
     }
-    pub(crate) fn __reduce7<
+    fn __reduce7<
         'input,
     >(
         input: &'input str,
@@ -12765,7 +12769,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (1, 4)
     }
-    pub(crate) fn __reduce8<
+    fn __reduce8<
         'input,
     >(
         input: &'input str,
@@ -12784,7 +12788,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (2, 5)
     }
-    pub(crate) fn __reduce9<
+    fn __reduce9<
         'input,
     >(
         input: &'input str,
@@ -12804,7 +12808,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (3, 5)
     }
-    pub(crate) fn __reduce10<
+    fn __reduce10<
         'input,
     >(
         input: &'input str,
@@ -12823,7 +12827,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (2, 6)
     }
-    pub(crate) fn __reduce11<
+    fn __reduce11<
         'input,
     >(
         input: &'input str,
@@ -12833,13 +12837,13 @@ mod __parse__LIT {
     ) -> (usize, usize)
     {
         // (<VAR> ",")* =  => ActionFn(78);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action78::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (0, 7)
     }
-    pub(crate) fn __reduce12<
+    fn __reduce12<
         'input,
     >(
         input: &'input str,
@@ -12856,7 +12860,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (1, 7)
     }
-    pub(crate) fn __reduce13<
+    fn __reduce13<
         'input,
     >(
         input: &'input str,
@@ -12875,7 +12879,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (2, 8)
     }
-    pub(crate) fn __reduce14<
+    fn __reduce14<
         'input,
     >(
         input: &'input str,
@@ -12895,7 +12899,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (3, 8)
     }
-    pub(crate) fn __reduce15<
+    fn __reduce15<
         'input,
     >(
         input: &'input str,
@@ -12912,7 +12916,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce16<
+    fn __reduce16<
         'input,
     >(
         input: &'input str,
@@ -12929,7 +12933,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce17<
+    fn __reduce17<
         'input,
     >(
         input: &'input str,
@@ -12946,7 +12950,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant7(__nt), __end));
         (1, 10)
     }
-    pub(crate) fn __reduce18<
+    fn __reduce18<
         'input,
     >(
         input: &'input str,
@@ -12956,13 +12960,13 @@ mod __parse__LIT {
     ) -> (usize, usize)
     {
         // ARG_TP? =  => ActionFn(82);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action82::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant7(__nt), __end));
         (0, 10)
     }
-    pub(crate) fn __reduce19<
+    fn __reduce19<
         'input,
     >(
         input: &'input str,
@@ -12984,7 +12988,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant8(__nt), __end));
         (5, 11)
     }
-    pub(crate) fn __reduce20<
+    fn __reduce20<
         'input,
     >(
         input: &'input str,
@@ -12994,13 +12998,13 @@ mod __parse__LIT {
     ) -> (usize, usize)
     {
         // Arg* =  => ActionFn(62);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action62::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (0, 12)
     }
-    pub(crate) fn __reduce21<
+    fn __reduce21<
         'input,
     >(
         input: &'input str,
@@ -13017,7 +13021,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (1, 12)
     }
-    pub(crate) fn __reduce22<
+    fn __reduce22<
         'input,
     >(
         input: &'input str,
@@ -13034,7 +13038,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (1, 13)
     }
-    pub(crate) fn __reduce23<
+    fn __reduce23<
         'input,
     >(
         input: &'input str,
@@ -13053,7 +13057,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (2, 13)
     }
-    pub(crate) fn __reduce24<
+    fn __reduce24<
         'input,
     >(
         input: &'input str,
@@ -13063,13 +13067,13 @@ mod __parse__LIT {
     ) -> (usize, usize)
     {
         // Args =  => ActionFn(108);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action108::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant10(__nt), __end));
         (0, 14)
     }
-    pub(crate) fn __reduce25<
+    fn __reduce25<
         'input,
     >(
         input: &'input str,
@@ -13086,7 +13090,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant10(__nt), __end));
         (1, 14)
     }
-    pub(crate) fn __reduce26<
+    fn __reduce26<
         'input,
     >(
         input: &'input str,
@@ -13111,7 +13115,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (8, 15)
     }
-    pub(crate) fn __reduce27<
+    fn __reduce27<
         'input,
     >(
         input: &'input str,
@@ -13135,7 +13139,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (7, 15)
     }
-    pub(crate) fn __reduce28<
+    fn __reduce28<
         'input,
     >(
         input: &'input str,
@@ -13159,7 +13163,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (7, 15)
     }
-    pub(crate) fn __reduce29<
+    fn __reduce29<
         'input,
     >(
         input: &'input str,
@@ -13182,7 +13186,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (6, 15)
     }
-    pub(crate) fn __reduce30<
+    fn __reduce30<
         'input,
     >(
         input: &'input str,
@@ -13199,7 +13203,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 16)
     }
-    pub(crate) fn __reduce31<
+    fn __reduce31<
         'input,
     >(
         input: &'input str,
@@ -13216,7 +13220,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 16)
     }
-    pub(crate) fn __reduce32<
+    fn __reduce32<
         'input,
     >(
         input: &'input str,
@@ -13233,7 +13237,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (1, 17)
     }
-    pub(crate) fn __reduce33<
+    fn __reduce33<
         'input,
     >(
         input: &'input str,
@@ -13243,13 +13247,13 @@ mod __parse__LIT {
     ) -> (usize, usize)
     {
         // Comma<ARG_TP> =  => ActionFn(105);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action105::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (0, 17)
     }
-    pub(crate) fn __reduce34<
+    fn __reduce34<
         'input,
     >(
         input: &'input str,
@@ -13268,7 +13272,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (2, 17)
     }
-    pub(crate) fn __reduce35<
+    fn __reduce35<
         'input,
     >(
         input: &'input str,
@@ -13285,7 +13289,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (1, 17)
     }
-    pub(crate) fn __reduce36<
+    fn __reduce36<
         'input,
     >(
         input: &'input str,
@@ -13302,7 +13306,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (1, 18)
     }
-    pub(crate) fn __reduce37<
+    fn __reduce37<
         'input,
     >(
         input: &'input str,
@@ -13312,13 +13316,13 @@ mod __parse__LIT {
     ) -> (usize, usize)
     {
         // Comma<VAR> =  => ActionFn(121);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action121::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (0, 18)
     }
-    pub(crate) fn __reduce38<
+    fn __reduce38<
         'input,
     >(
         input: &'input str,
@@ -13337,7 +13341,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (2, 18)
     }
-    pub(crate) fn __reduce39<
+    fn __reduce39<
         'input,
     >(
         input: &'input str,
@@ -13354,7 +13358,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (1, 18)
     }
-    pub(crate) fn __reduce40<
+    fn __reduce40<
         'input,
     >(
         input: &'input str,
@@ -13371,7 +13375,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 19)
     }
-    pub(crate) fn __reduce41<
+    fn __reduce41<
         'input,
     >(
         input: &'input str,
@@ -13388,7 +13392,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 20)
     }
-    pub(crate) fn __reduce42<
+    fn __reduce42<
         'input,
     >(
         input: &'input str,
@@ -13408,7 +13412,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (3, 20)
     }
-    pub(crate) fn __reduce43<
+    fn __reduce43<
         'input,
     >(
         input: &'input str,
@@ -13425,7 +13429,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant15(__nt), __end));
         (1, 21)
     }
-    pub(crate) fn __reduce44<
+    fn __reduce44<
         'input,
     >(
         input: &'input str,
@@ -13442,7 +13446,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce45<
+    fn __reduce45<
         'input,
     >(
         input: &'input str,
@@ -13459,7 +13463,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce46<
+    fn __reduce46<
         'input,
     >(
         input: &'input str,
@@ -13476,7 +13480,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce47<
+    fn __reduce47<
         'input,
     >(
         input: &'input str,
@@ -13493,7 +13497,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce48<
+    fn __reduce48<
         'input,
     >(
         input: &'input str,
@@ -13510,7 +13514,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce49<
+    fn __reduce49<
         'input,
     >(
         input: &'input str,
@@ -13527,7 +13531,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce50<
+    fn __reduce50<
         'input,
     >(
         input: &'input str,
@@ -13544,7 +13548,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce51<
+    fn __reduce51<
         'input,
     >(
         input: &'input str,
@@ -13561,7 +13565,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant16(__nt), __end));
         (1, 23)
     }
-    pub(crate) fn __reduce52<
+    fn __reduce52<
         'input,
     >(
         input: &'input str,
@@ -13571,13 +13575,13 @@ mod __parse__LIT {
     ) -> (usize, usize)
     {
         // KnownPredicate? =  => ActionFn(70);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action70::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant16(__nt), __end));
         (0, 23)
     }
-    pub(crate) fn __reduce53<
+    fn __reduce53<
         'input,
     >(
         input: &'input str,
@@ -13594,7 +13598,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce54<
+    fn __reduce54<
         'input,
     >(
         input: &'input str,
@@ -13611,7 +13615,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce55<
+    fn __reduce55<
         'input,
     >(
         input: &'input str,
@@ -13628,7 +13632,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce56<
+    fn __reduce56<
         'input,
     >(
         input: &'input str,
@@ -13645,7 +13649,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 25)
     }
-    pub(crate) fn __reduce57<
+    fn __reduce57<
         'input,
     >(
         input: &'input str,
@@ -13662,7 +13666,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant18(__nt), __end));
         (1, 26)
     }
-    pub(crate) fn __reduce58<
+    fn __reduce58<
         'input,
     >(
         input: &'input str,
@@ -13681,7 +13685,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant18(__nt), __end));
         (2, 26)
     }
-    pub(crate) fn __reduce59<
+    fn __reduce59<
         'input,
     >(
         input: &'input str,
@@ -13701,7 +13705,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 27)
     }
-    pub(crate) fn __reduce60<
+    fn __reduce60<
         'input,
     >(
         input: &'input str,
@@ -13718,7 +13722,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (1, 28)
     }
-    pub(crate) fn __reduce61<
+    fn __reduce61<
         'input,
     >(
         input: &'input str,
@@ -13728,13 +13732,13 @@ mod __parse__LIT {
     ) -> (usize, usize)
     {
         // PostSpec? =  => ActionFn(66);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action66::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (0, 28)
     }
-    pub(crate) fn __reduce62<
+    fn __reduce62<
         'input,
     >(
         input: &'input str,
@@ -13754,7 +13758,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 29)
     }
-    pub(crate) fn __reduce63<
+    fn __reduce63<
         'input,
     >(
         input: &'input str,
@@ -13771,7 +13775,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (1, 30)
     }
-    pub(crate) fn __reduce64<
+    fn __reduce64<
         'input,
     >(
         input: &'input str,
@@ -13781,13 +13785,13 @@ mod __parse__LIT {
     ) -> (usize, usize)
     {
         // PreSpec? =  => ActionFn(68);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action68::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (0, 30)
     }
-    pub(crate) fn __reduce65<
+    fn __reduce65<
         'input,
     >(
         input: &'input str,
@@ -13807,7 +13811,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 31)
     }
-    pub(crate) fn __reduce66<
+    fn __reduce66<
         'input,
     >(
         input: &'input str,
@@ -13827,7 +13831,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 31)
     }
-    pub(crate) fn __reduce67<
+    fn __reduce67<
         'input,
     >(
         input: &'input str,
@@ -13844,7 +13848,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 31)
     }
-    pub(crate) fn __reduce68<
+    fn __reduce68<
         'input,
     >(
         input: &'input str,
@@ -13861,7 +13865,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 32)
     }
-    pub(crate) fn __reduce69<
+    fn __reduce69<
         'input,
     >(
         input: &'input str,
@@ -13881,7 +13885,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce70<
+    fn __reduce70<
         'input,
     >(
         input: &'input str,
@@ -13898,7 +13902,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 32)
     }
-    pub(crate) fn __reduce71<
+    fn __reduce71<
         'input,
     >(
         input: &'input str,
@@ -13918,7 +13922,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce72<
+    fn __reduce72<
         'input,
     >(
         input: &'input str,
@@ -13938,7 +13942,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce73<
+    fn __reduce73<
         'input,
     >(
         input: &'input str,
@@ -13958,7 +13962,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce74<
+    fn __reduce74<
         'input,
     >(
         input: &'input str,
@@ -13980,7 +13984,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (5, 33)
     }
-    pub(crate) fn __reduce75<
+    fn __reduce75<
         'input,
     >(
         input: &'input str,
@@ -14002,7 +14006,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (5, 33)
     }
-    pub(crate) fn __reduce76<
+    fn __reduce76<
         'input,
     >(
         input: &'input str,
@@ -14019,7 +14023,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 33)
     }
-    pub(crate) fn __reduce77<
+    fn __reduce77<
         'input,
     >(
         input: &'input str,
@@ -14036,7 +14040,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 34)
     }
-    pub(crate) fn __reduce78<
+    fn __reduce78<
         'input,
     >(
         input: &'input str,
@@ -14053,7 +14057,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant22(__nt), __end));
         (1, 35)
     }
-    pub(crate) fn __reduce79<
+    fn __reduce79<
         'input,
     >(
         input: &'input str,
@@ -14070,7 +14074,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 36)
     }
-    pub(crate) fn __reduce80<
+    fn __reduce80<
         'input,
     >(
         input: &'input str,
@@ -14090,7 +14094,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (3, 36)
     }
-    pub(crate) fn __reduce81<
+    fn __reduce81<
         'input,
     >(
         input: &'input str,
@@ -14107,7 +14111,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (1, 37)
     }
-    pub(crate) fn __reduce82<
+    fn __reduce82<
         'input,
     >(
         input: &'input str,
@@ -14117,13 +14121,13 @@ mod __parse__LIT {
     ) -> (usize, usize)
     {
         // SemiColon<KnownPredicate> =  => ActionFn(111);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action111::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (0, 37)
     }
-    pub(crate) fn __reduce83<
+    fn __reduce83<
         'input,
     >(
         input: &'input str,
@@ -14142,7 +14146,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (2, 37)
     }
-    pub(crate) fn __reduce84<
+    fn __reduce84<
         'input,
     >(
         input: &'input str,
@@ -14159,7 +14163,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (1, 37)
     }
-    pub(crate) fn __reduce85<
+    fn __reduce85<
         'input,
     >(
         input: &'input str,
@@ -14176,7 +14180,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 38)
     }
-    pub(crate) fn __reduce86<
+    fn __reduce86<
         'input,
     >(
         input: &'input str,
@@ -14195,7 +14199,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (2, 38)
     }
-    pub(crate) fn __reduce87<
+    fn __reduce87<
         'input,
     >(
         input: &'input str,
@@ -14215,7 +14219,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 39)
     }
-    pub(crate) fn __reduce88<
+    fn __reduce88<
         'input,
     >(
         input: &'input str,
@@ -14232,7 +14236,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 40)
     }
-    pub(crate) fn __reduce89<
+    fn __reduce89<
         'input,
     >(
         input: &'input str,
@@ -14252,7 +14256,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (3, 40)
     }
-    pub(crate) fn __reduce90<
+    fn __reduce90<
         'input,
     >(
         input: &'input str,
@@ -14269,7 +14273,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 41)
     }
-    pub(crate) fn __reduce91<
+    fn __reduce91<
         'input,
     >(
         input: &'input str,
@@ -14286,7 +14290,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant24(__nt), __end));
         (1, 42)
     }
-    pub(crate) fn __reduce92<
+    fn __reduce92<
         'input,
     >(
         input: &'input str,
@@ -14296,13 +14300,13 @@ mod __parse__LIT {
     ) -> (usize, usize)
     {
         // VAR? =  => ActionFn(77);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action77::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant24(__nt), __end));
         (0, 42)
     }
-    pub(crate) fn __reduce93<
+    fn __reduce93<
         'input,
     >(
         input: &'input str,
@@ -14319,7 +14323,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 43)
     }
-    pub(crate) fn __reduce94<
+    fn __reduce94<
         'input,
     >(
         input: &'input str,
@@ -14339,7 +14343,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (3, 43)
     }
-    pub(crate) fn __reduce95<
+    fn __reduce95<
         'input,
     >(
         input: &'input str,
@@ -14356,7 +14360,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 44)
     }
-    pub(crate) fn __reduce96<
+    fn __reduce96<
         'input,
     >(
         input: &'input str,
@@ -14373,7 +14377,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (1, 45)
     }
-    pub(crate) fn __reduce97<
+    fn __reduce97<
         'input,
     >(
         input: &'input str,
@@ -14390,7 +14394,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 46)
     }
-    pub(crate) fn __reduce99<
+    fn __reduce99<
         'input,
     >(
         input: &'input str,
@@ -14407,7 +14411,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 48)
     }
-    pub(crate) fn __reduce100<
+    fn __reduce100<
         'input,
     >(
         input: &'input str,
@@ -14424,7 +14428,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 49)
     }
-    pub(crate) fn __reduce101<
+    fn __reduce101<
         'input,
     >(
         input: &'input str,
@@ -14441,7 +14445,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 50)
     }
-    pub(crate) fn __reduce102<
+    fn __reduce102<
         'input,
     >(
         input: &'input str,
@@ -14458,7 +14462,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 51)
     }
-    pub(crate) fn __reduce103<
+    fn __reduce103<
         'input,
     >(
         input: &'input str,
@@ -14475,7 +14479,7 @@ mod __parse__LIT {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 52)
     }
-    pub(crate) fn __reduce104<
+    fn __reduce104<
         'input,
     >(
         input: &'input str,
@@ -14496,7 +14500,7 @@ mod __parse__LIT {
 pub use self::__parse__LIT::LITParser;
 
 #[rustfmt::skip]
-#[allow(non_snake_case, non_camel_case_types, unused_mut, unused_variables, unused_imports, unused_parens, clippy::all)]
+#[allow(non_snake_case, non_camel_case_types, unused_mut, unused_variables, unused_imports, unused_parens, clippy::needless_lifetimes, clippy::type_complexity, clippy::needless_return, clippy::too_many_arguments, clippy::never_loop, clippy::match_single_binding, clippy::needless_raw_string_hashes)]
 mod __parse__Pred {
 
     use crate::ipc::{ElrondKnownPredicate, ElrondPredicates, ElrondAssertion,ElrondSpec, ElrondForallFormula, ElrondTpedvar, ElrondType, ElrondPred, ElrondSimpleExpr, ElrondLiteral};
@@ -14784,7 +14788,7 @@ mod __parse__Pred {
             }
         }).collect()
     }
-    pub(crate) struct __StateMachine<'input>
+    struct __StateMachine<'input>
     where 
     {
         input: &'input str,
@@ -14938,7 +14942,7 @@ mod __parse__Pred {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> __Symbol<'input>
     {
-        match __token_index {
+        #[allow(clippy::manual_range_patterns)]match __token_index {
             0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 => match __token {
                 Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(14, __tok0) | Token(15, __tok0) | Token(16, __tok0) | Token(17, __tok0) | Token(18, __tok0) | Token(19, __tok0) | Token(20, __tok0) | Token(21, __tok0) | Token(22, __tok0) | Token(23, __tok0) | Token(24, __tok0) | Token(25, __tok0) | Token(26, __tok0) | Token(27, __tok0) | Token(28, __tok0) | Token(29, __tok0) | Token(30, __tok0) | Token(31, __tok0) | Token(32, __tok0) | Token(33, __tok0) | Token(0, __tok0) | Token(1, __tok0) if true => __Symbol::Variant0(__tok0),
                 _ => unreachable!(),
@@ -15587,6 +15591,7 @@ mod __parse__Pred {
         _priv: (),
     }
 
+    impl Default for PredParser { fn default() -> Self { Self::new() } }
     impl PredParser {
         pub fn new() -> PredParser {
             let __builder = super::__intern_token::new_builder();
@@ -15647,7 +15652,7 @@ mod __parse__Pred {
             __states.push(__next_state);
         }
     }
-    pub(crate) fn __reduce<
+    fn __reduce<
         'input,
     >(
         input: &'input str,
@@ -16267,7 +16272,7 @@ mod __parse__Pred {
             _ => __symbol_type_mismatch()
         }
     }
-    pub(crate) fn __reduce0<
+    fn __reduce0<
         'input,
     >(
         input: &'input str,
@@ -16286,7 +16291,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (2, 0)
     }
-    pub(crate) fn __reduce1<
+    fn __reduce1<
         'input,
     >(
         input: &'input str,
@@ -16296,13 +16301,13 @@ mod __parse__Pred {
     ) -> (usize, usize)
     {
         // (<ARG_TP> ",")* =  => ActionFn(83);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action83::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (0, 1)
     }
-    pub(crate) fn __reduce2<
+    fn __reduce2<
         'input,
     >(
         input: &'input str,
@@ -16319,7 +16324,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (1, 1)
     }
-    pub(crate) fn __reduce3<
+    fn __reduce3<
         'input,
     >(
         input: &'input str,
@@ -16338,7 +16343,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (2, 2)
     }
-    pub(crate) fn __reduce4<
+    fn __reduce4<
         'input,
     >(
         input: &'input str,
@@ -16358,7 +16363,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (3, 2)
     }
-    pub(crate) fn __reduce5<
+    fn __reduce5<
         'input,
     >(
         input: &'input str,
@@ -16377,7 +16382,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (2, 3)
     }
-    pub(crate) fn __reduce6<
+    fn __reduce6<
         'input,
     >(
         input: &'input str,
@@ -16387,13 +16392,13 @@ mod __parse__Pred {
     ) -> (usize, usize)
     {
         // (<KnownPredicate> ";")* =  => ActionFn(71);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action71::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (0, 4)
     }
-    pub(crate) fn __reduce7<
+    fn __reduce7<
         'input,
     >(
         input: &'input str,
@@ -16410,7 +16415,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (1, 4)
     }
-    pub(crate) fn __reduce8<
+    fn __reduce8<
         'input,
     >(
         input: &'input str,
@@ -16429,7 +16434,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (2, 5)
     }
-    pub(crate) fn __reduce9<
+    fn __reduce9<
         'input,
     >(
         input: &'input str,
@@ -16449,7 +16454,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (3, 5)
     }
-    pub(crate) fn __reduce10<
+    fn __reduce10<
         'input,
     >(
         input: &'input str,
@@ -16468,7 +16473,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (2, 6)
     }
-    pub(crate) fn __reduce11<
+    fn __reduce11<
         'input,
     >(
         input: &'input str,
@@ -16478,13 +16483,13 @@ mod __parse__Pred {
     ) -> (usize, usize)
     {
         // (<VAR> ",")* =  => ActionFn(78);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action78::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (0, 7)
     }
-    pub(crate) fn __reduce12<
+    fn __reduce12<
         'input,
     >(
         input: &'input str,
@@ -16501,7 +16506,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (1, 7)
     }
-    pub(crate) fn __reduce13<
+    fn __reduce13<
         'input,
     >(
         input: &'input str,
@@ -16520,7 +16525,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (2, 8)
     }
-    pub(crate) fn __reduce14<
+    fn __reduce14<
         'input,
     >(
         input: &'input str,
@@ -16540,7 +16545,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (3, 8)
     }
-    pub(crate) fn __reduce15<
+    fn __reduce15<
         'input,
     >(
         input: &'input str,
@@ -16557,7 +16562,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce16<
+    fn __reduce16<
         'input,
     >(
         input: &'input str,
@@ -16574,7 +16579,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce17<
+    fn __reduce17<
         'input,
     >(
         input: &'input str,
@@ -16591,7 +16596,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant7(__nt), __end));
         (1, 10)
     }
-    pub(crate) fn __reduce18<
+    fn __reduce18<
         'input,
     >(
         input: &'input str,
@@ -16601,13 +16606,13 @@ mod __parse__Pred {
     ) -> (usize, usize)
     {
         // ARG_TP? =  => ActionFn(82);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action82::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant7(__nt), __end));
         (0, 10)
     }
-    pub(crate) fn __reduce19<
+    fn __reduce19<
         'input,
     >(
         input: &'input str,
@@ -16629,7 +16634,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant8(__nt), __end));
         (5, 11)
     }
-    pub(crate) fn __reduce20<
+    fn __reduce20<
         'input,
     >(
         input: &'input str,
@@ -16639,13 +16644,13 @@ mod __parse__Pred {
     ) -> (usize, usize)
     {
         // Arg* =  => ActionFn(62);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action62::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (0, 12)
     }
-    pub(crate) fn __reduce21<
+    fn __reduce21<
         'input,
     >(
         input: &'input str,
@@ -16662,7 +16667,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (1, 12)
     }
-    pub(crate) fn __reduce22<
+    fn __reduce22<
         'input,
     >(
         input: &'input str,
@@ -16679,7 +16684,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (1, 13)
     }
-    pub(crate) fn __reduce23<
+    fn __reduce23<
         'input,
     >(
         input: &'input str,
@@ -16698,7 +16703,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (2, 13)
     }
-    pub(crate) fn __reduce24<
+    fn __reduce24<
         'input,
     >(
         input: &'input str,
@@ -16708,13 +16713,13 @@ mod __parse__Pred {
     ) -> (usize, usize)
     {
         // Args =  => ActionFn(108);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action108::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant10(__nt), __end));
         (0, 14)
     }
-    pub(crate) fn __reduce25<
+    fn __reduce25<
         'input,
     >(
         input: &'input str,
@@ -16731,7 +16736,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant10(__nt), __end));
         (1, 14)
     }
-    pub(crate) fn __reduce26<
+    fn __reduce26<
         'input,
     >(
         input: &'input str,
@@ -16756,7 +16761,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (8, 15)
     }
-    pub(crate) fn __reduce27<
+    fn __reduce27<
         'input,
     >(
         input: &'input str,
@@ -16780,7 +16785,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (7, 15)
     }
-    pub(crate) fn __reduce28<
+    fn __reduce28<
         'input,
     >(
         input: &'input str,
@@ -16804,7 +16809,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (7, 15)
     }
-    pub(crate) fn __reduce29<
+    fn __reduce29<
         'input,
     >(
         input: &'input str,
@@ -16827,7 +16832,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (6, 15)
     }
-    pub(crate) fn __reduce30<
+    fn __reduce30<
         'input,
     >(
         input: &'input str,
@@ -16844,7 +16849,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 16)
     }
-    pub(crate) fn __reduce31<
+    fn __reduce31<
         'input,
     >(
         input: &'input str,
@@ -16861,7 +16866,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 16)
     }
-    pub(crate) fn __reduce32<
+    fn __reduce32<
         'input,
     >(
         input: &'input str,
@@ -16878,7 +16883,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (1, 17)
     }
-    pub(crate) fn __reduce33<
+    fn __reduce33<
         'input,
     >(
         input: &'input str,
@@ -16888,13 +16893,13 @@ mod __parse__Pred {
     ) -> (usize, usize)
     {
         // Comma<ARG_TP> =  => ActionFn(105);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action105::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (0, 17)
     }
-    pub(crate) fn __reduce34<
+    fn __reduce34<
         'input,
     >(
         input: &'input str,
@@ -16913,7 +16918,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (2, 17)
     }
-    pub(crate) fn __reduce35<
+    fn __reduce35<
         'input,
     >(
         input: &'input str,
@@ -16930,7 +16935,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (1, 17)
     }
-    pub(crate) fn __reduce36<
+    fn __reduce36<
         'input,
     >(
         input: &'input str,
@@ -16947,7 +16952,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (1, 18)
     }
-    pub(crate) fn __reduce37<
+    fn __reduce37<
         'input,
     >(
         input: &'input str,
@@ -16957,13 +16962,13 @@ mod __parse__Pred {
     ) -> (usize, usize)
     {
         // Comma<VAR> =  => ActionFn(121);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action121::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (0, 18)
     }
-    pub(crate) fn __reduce38<
+    fn __reduce38<
         'input,
     >(
         input: &'input str,
@@ -16982,7 +16987,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (2, 18)
     }
-    pub(crate) fn __reduce39<
+    fn __reduce39<
         'input,
     >(
         input: &'input str,
@@ -16999,7 +17004,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (1, 18)
     }
-    pub(crate) fn __reduce40<
+    fn __reduce40<
         'input,
     >(
         input: &'input str,
@@ -17016,7 +17021,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 19)
     }
-    pub(crate) fn __reduce41<
+    fn __reduce41<
         'input,
     >(
         input: &'input str,
@@ -17033,7 +17038,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 20)
     }
-    pub(crate) fn __reduce42<
+    fn __reduce42<
         'input,
     >(
         input: &'input str,
@@ -17053,7 +17058,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (3, 20)
     }
-    pub(crate) fn __reduce43<
+    fn __reduce43<
         'input,
     >(
         input: &'input str,
@@ -17070,7 +17075,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant15(__nt), __end));
         (1, 21)
     }
-    pub(crate) fn __reduce44<
+    fn __reduce44<
         'input,
     >(
         input: &'input str,
@@ -17087,7 +17092,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce45<
+    fn __reduce45<
         'input,
     >(
         input: &'input str,
@@ -17104,7 +17109,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce46<
+    fn __reduce46<
         'input,
     >(
         input: &'input str,
@@ -17121,7 +17126,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce47<
+    fn __reduce47<
         'input,
     >(
         input: &'input str,
@@ -17138,7 +17143,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce48<
+    fn __reduce48<
         'input,
     >(
         input: &'input str,
@@ -17155,7 +17160,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce49<
+    fn __reduce49<
         'input,
     >(
         input: &'input str,
@@ -17172,7 +17177,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce50<
+    fn __reduce50<
         'input,
     >(
         input: &'input str,
@@ -17189,7 +17194,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce51<
+    fn __reduce51<
         'input,
     >(
         input: &'input str,
@@ -17206,7 +17211,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant16(__nt), __end));
         (1, 23)
     }
-    pub(crate) fn __reduce52<
+    fn __reduce52<
         'input,
     >(
         input: &'input str,
@@ -17216,13 +17221,13 @@ mod __parse__Pred {
     ) -> (usize, usize)
     {
         // KnownPredicate? =  => ActionFn(70);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action70::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant16(__nt), __end));
         (0, 23)
     }
-    pub(crate) fn __reduce53<
+    fn __reduce53<
         'input,
     >(
         input: &'input str,
@@ -17239,7 +17244,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce54<
+    fn __reduce54<
         'input,
     >(
         input: &'input str,
@@ -17256,7 +17261,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce55<
+    fn __reduce55<
         'input,
     >(
         input: &'input str,
@@ -17273,7 +17278,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce56<
+    fn __reduce56<
         'input,
     >(
         input: &'input str,
@@ -17290,7 +17295,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 25)
     }
-    pub(crate) fn __reduce57<
+    fn __reduce57<
         'input,
     >(
         input: &'input str,
@@ -17307,7 +17312,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant18(__nt), __end));
         (1, 26)
     }
-    pub(crate) fn __reduce58<
+    fn __reduce58<
         'input,
     >(
         input: &'input str,
@@ -17326,7 +17331,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant18(__nt), __end));
         (2, 26)
     }
-    pub(crate) fn __reduce59<
+    fn __reduce59<
         'input,
     >(
         input: &'input str,
@@ -17346,7 +17351,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 27)
     }
-    pub(crate) fn __reduce60<
+    fn __reduce60<
         'input,
     >(
         input: &'input str,
@@ -17363,7 +17368,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (1, 28)
     }
-    pub(crate) fn __reduce61<
+    fn __reduce61<
         'input,
     >(
         input: &'input str,
@@ -17373,13 +17378,13 @@ mod __parse__Pred {
     ) -> (usize, usize)
     {
         // PostSpec? =  => ActionFn(66);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action66::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (0, 28)
     }
-    pub(crate) fn __reduce62<
+    fn __reduce62<
         'input,
     >(
         input: &'input str,
@@ -17399,7 +17404,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 29)
     }
-    pub(crate) fn __reduce63<
+    fn __reduce63<
         'input,
     >(
         input: &'input str,
@@ -17416,7 +17421,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (1, 30)
     }
-    pub(crate) fn __reduce64<
+    fn __reduce64<
         'input,
     >(
         input: &'input str,
@@ -17426,13 +17431,13 @@ mod __parse__Pred {
     ) -> (usize, usize)
     {
         // PreSpec? =  => ActionFn(68);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action68::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (0, 30)
     }
-    pub(crate) fn __reduce65<
+    fn __reduce65<
         'input,
     >(
         input: &'input str,
@@ -17452,7 +17457,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 31)
     }
-    pub(crate) fn __reduce66<
+    fn __reduce66<
         'input,
     >(
         input: &'input str,
@@ -17472,7 +17477,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 31)
     }
-    pub(crate) fn __reduce67<
+    fn __reduce67<
         'input,
     >(
         input: &'input str,
@@ -17489,7 +17494,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 31)
     }
-    pub(crate) fn __reduce68<
+    fn __reduce68<
         'input,
     >(
         input: &'input str,
@@ -17506,7 +17511,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 32)
     }
-    pub(crate) fn __reduce69<
+    fn __reduce69<
         'input,
     >(
         input: &'input str,
@@ -17526,7 +17531,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce70<
+    fn __reduce70<
         'input,
     >(
         input: &'input str,
@@ -17543,7 +17548,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 32)
     }
-    pub(crate) fn __reduce71<
+    fn __reduce71<
         'input,
     >(
         input: &'input str,
@@ -17563,7 +17568,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce72<
+    fn __reduce72<
         'input,
     >(
         input: &'input str,
@@ -17583,7 +17588,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce73<
+    fn __reduce73<
         'input,
     >(
         input: &'input str,
@@ -17603,7 +17608,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce74<
+    fn __reduce74<
         'input,
     >(
         input: &'input str,
@@ -17625,7 +17630,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (5, 33)
     }
-    pub(crate) fn __reduce75<
+    fn __reduce75<
         'input,
     >(
         input: &'input str,
@@ -17647,7 +17652,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (5, 33)
     }
-    pub(crate) fn __reduce76<
+    fn __reduce76<
         'input,
     >(
         input: &'input str,
@@ -17664,7 +17669,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 33)
     }
-    pub(crate) fn __reduce77<
+    fn __reduce77<
         'input,
     >(
         input: &'input str,
@@ -17681,7 +17686,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 34)
     }
-    pub(crate) fn __reduce78<
+    fn __reduce78<
         'input,
     >(
         input: &'input str,
@@ -17698,7 +17703,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant22(__nt), __end));
         (1, 35)
     }
-    pub(crate) fn __reduce79<
+    fn __reduce79<
         'input,
     >(
         input: &'input str,
@@ -17715,7 +17720,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 36)
     }
-    pub(crate) fn __reduce80<
+    fn __reduce80<
         'input,
     >(
         input: &'input str,
@@ -17735,7 +17740,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (3, 36)
     }
-    pub(crate) fn __reduce81<
+    fn __reduce81<
         'input,
     >(
         input: &'input str,
@@ -17752,7 +17757,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (1, 37)
     }
-    pub(crate) fn __reduce82<
+    fn __reduce82<
         'input,
     >(
         input: &'input str,
@@ -17762,13 +17767,13 @@ mod __parse__Pred {
     ) -> (usize, usize)
     {
         // SemiColon<KnownPredicate> =  => ActionFn(111);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action111::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (0, 37)
     }
-    pub(crate) fn __reduce83<
+    fn __reduce83<
         'input,
     >(
         input: &'input str,
@@ -17787,7 +17792,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (2, 37)
     }
-    pub(crate) fn __reduce84<
+    fn __reduce84<
         'input,
     >(
         input: &'input str,
@@ -17804,7 +17809,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (1, 37)
     }
-    pub(crate) fn __reduce85<
+    fn __reduce85<
         'input,
     >(
         input: &'input str,
@@ -17821,7 +17826,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 38)
     }
-    pub(crate) fn __reduce86<
+    fn __reduce86<
         'input,
     >(
         input: &'input str,
@@ -17840,7 +17845,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (2, 38)
     }
-    pub(crate) fn __reduce87<
+    fn __reduce87<
         'input,
     >(
         input: &'input str,
@@ -17860,7 +17865,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 39)
     }
-    pub(crate) fn __reduce88<
+    fn __reduce88<
         'input,
     >(
         input: &'input str,
@@ -17877,7 +17882,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 40)
     }
-    pub(crate) fn __reduce89<
+    fn __reduce89<
         'input,
     >(
         input: &'input str,
@@ -17897,7 +17902,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (3, 40)
     }
-    pub(crate) fn __reduce90<
+    fn __reduce90<
         'input,
     >(
         input: &'input str,
@@ -17914,7 +17919,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 41)
     }
-    pub(crate) fn __reduce91<
+    fn __reduce91<
         'input,
     >(
         input: &'input str,
@@ -17931,7 +17936,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant24(__nt), __end));
         (1, 42)
     }
-    pub(crate) fn __reduce92<
+    fn __reduce92<
         'input,
     >(
         input: &'input str,
@@ -17941,13 +17946,13 @@ mod __parse__Pred {
     ) -> (usize, usize)
     {
         // VAR? =  => ActionFn(77);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action77::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant24(__nt), __end));
         (0, 42)
     }
-    pub(crate) fn __reduce93<
+    fn __reduce93<
         'input,
     >(
         input: &'input str,
@@ -17964,7 +17969,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 43)
     }
-    pub(crate) fn __reduce94<
+    fn __reduce94<
         'input,
     >(
         input: &'input str,
@@ -17984,7 +17989,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (3, 43)
     }
-    pub(crate) fn __reduce95<
+    fn __reduce95<
         'input,
     >(
         input: &'input str,
@@ -18001,7 +18006,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 44)
     }
-    pub(crate) fn __reduce96<
+    fn __reduce96<
         'input,
     >(
         input: &'input str,
@@ -18018,7 +18023,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (1, 45)
     }
-    pub(crate) fn __reduce97<
+    fn __reduce97<
         'input,
     >(
         input: &'input str,
@@ -18035,7 +18040,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 46)
     }
-    pub(crate) fn __reduce98<
+    fn __reduce98<
         'input,
     >(
         input: &'input str,
@@ -18052,7 +18057,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 47)
     }
-    pub(crate) fn __reduce100<
+    fn __reduce100<
         'input,
     >(
         input: &'input str,
@@ -18069,7 +18074,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 49)
     }
-    pub(crate) fn __reduce101<
+    fn __reduce101<
         'input,
     >(
         input: &'input str,
@@ -18086,7 +18091,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 50)
     }
-    pub(crate) fn __reduce102<
+    fn __reduce102<
         'input,
     >(
         input: &'input str,
@@ -18103,7 +18108,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 51)
     }
-    pub(crate) fn __reduce103<
+    fn __reduce103<
         'input,
     >(
         input: &'input str,
@@ -18120,7 +18125,7 @@ mod __parse__Pred {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 52)
     }
-    pub(crate) fn __reduce104<
+    fn __reduce104<
         'input,
     >(
         input: &'input str,
@@ -18141,7 +18146,7 @@ mod __parse__Pred {
 pub use self::__parse__Pred::PredParser;
 
 #[rustfmt::skip]
-#[allow(non_snake_case, non_camel_case_types, unused_mut, unused_variables, unused_imports, unused_parens, clippy::all)]
+#[allow(non_snake_case, non_camel_case_types, unused_mut, unused_variables, unused_imports, unused_parens, clippy::needless_lifetimes, clippy::type_complexity, clippy::needless_return, clippy::too_many_arguments, clippy::never_loop, clippy::match_single_binding, clippy::needless_raw_string_hashes)]
 mod __parse__Pred1 {
 
     use crate::ipc::{ElrondKnownPredicate, ElrondPredicates, ElrondAssertion,ElrondSpec, ElrondForallFormula, ElrondTpedvar, ElrondType, ElrondPred, ElrondSimpleExpr, ElrondLiteral};
@@ -18429,7 +18434,7 @@ mod __parse__Pred1 {
             }
         }).collect()
     }
-    pub(crate) struct __StateMachine<'input>
+    struct __StateMachine<'input>
     where 
     {
         input: &'input str,
@@ -18583,7 +18588,7 @@ mod __parse__Pred1 {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> __Symbol<'input>
     {
-        match __token_index {
+        #[allow(clippy::manual_range_patterns)]match __token_index {
             0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 => match __token {
                 Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(14, __tok0) | Token(15, __tok0) | Token(16, __tok0) | Token(17, __tok0) | Token(18, __tok0) | Token(19, __tok0) | Token(20, __tok0) | Token(21, __tok0) | Token(22, __tok0) | Token(23, __tok0) | Token(24, __tok0) | Token(25, __tok0) | Token(26, __tok0) | Token(27, __tok0) | Token(28, __tok0) | Token(29, __tok0) | Token(30, __tok0) | Token(31, __tok0) | Token(32, __tok0) | Token(33, __tok0) | Token(0, __tok0) | Token(1, __tok0) if true => __Symbol::Variant0(__tok0),
                 _ => unreachable!(),
@@ -19232,6 +19237,7 @@ mod __parse__Pred1 {
         _priv: (),
     }
 
+    impl Default for Pred1Parser { fn default() -> Self { Self::new() } }
     impl Pred1Parser {
         pub fn new() -> Pred1Parser {
             let __builder = super::__intern_token::new_builder();
@@ -19292,7 +19298,7 @@ mod __parse__Pred1 {
             __states.push(__next_state);
         }
     }
-    pub(crate) fn __reduce<
+    fn __reduce<
         'input,
     >(
         input: &'input str,
@@ -19912,7 +19918,7 @@ mod __parse__Pred1 {
             _ => __symbol_type_mismatch()
         }
     }
-    pub(crate) fn __reduce0<
+    fn __reduce0<
         'input,
     >(
         input: &'input str,
@@ -19931,7 +19937,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (2, 0)
     }
-    pub(crate) fn __reduce1<
+    fn __reduce1<
         'input,
     >(
         input: &'input str,
@@ -19941,13 +19947,13 @@ mod __parse__Pred1 {
     ) -> (usize, usize)
     {
         // (<ARG_TP> ",")* =  => ActionFn(83);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action83::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (0, 1)
     }
-    pub(crate) fn __reduce2<
+    fn __reduce2<
         'input,
     >(
         input: &'input str,
@@ -19964,7 +19970,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (1, 1)
     }
-    pub(crate) fn __reduce3<
+    fn __reduce3<
         'input,
     >(
         input: &'input str,
@@ -19983,7 +19989,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (2, 2)
     }
-    pub(crate) fn __reduce4<
+    fn __reduce4<
         'input,
     >(
         input: &'input str,
@@ -20003,7 +20009,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (3, 2)
     }
-    pub(crate) fn __reduce5<
+    fn __reduce5<
         'input,
     >(
         input: &'input str,
@@ -20022,7 +20028,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (2, 3)
     }
-    pub(crate) fn __reduce6<
+    fn __reduce6<
         'input,
     >(
         input: &'input str,
@@ -20032,13 +20038,13 @@ mod __parse__Pred1 {
     ) -> (usize, usize)
     {
         // (<KnownPredicate> ";")* =  => ActionFn(71);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action71::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (0, 4)
     }
-    pub(crate) fn __reduce7<
+    fn __reduce7<
         'input,
     >(
         input: &'input str,
@@ -20055,7 +20061,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (1, 4)
     }
-    pub(crate) fn __reduce8<
+    fn __reduce8<
         'input,
     >(
         input: &'input str,
@@ -20074,7 +20080,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (2, 5)
     }
-    pub(crate) fn __reduce9<
+    fn __reduce9<
         'input,
     >(
         input: &'input str,
@@ -20094,7 +20100,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (3, 5)
     }
-    pub(crate) fn __reduce10<
+    fn __reduce10<
         'input,
     >(
         input: &'input str,
@@ -20113,7 +20119,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (2, 6)
     }
-    pub(crate) fn __reduce11<
+    fn __reduce11<
         'input,
     >(
         input: &'input str,
@@ -20123,13 +20129,13 @@ mod __parse__Pred1 {
     ) -> (usize, usize)
     {
         // (<VAR> ",")* =  => ActionFn(78);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action78::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (0, 7)
     }
-    pub(crate) fn __reduce12<
+    fn __reduce12<
         'input,
     >(
         input: &'input str,
@@ -20146,7 +20152,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (1, 7)
     }
-    pub(crate) fn __reduce13<
+    fn __reduce13<
         'input,
     >(
         input: &'input str,
@@ -20165,7 +20171,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (2, 8)
     }
-    pub(crate) fn __reduce14<
+    fn __reduce14<
         'input,
     >(
         input: &'input str,
@@ -20185,7 +20191,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (3, 8)
     }
-    pub(crate) fn __reduce15<
+    fn __reduce15<
         'input,
     >(
         input: &'input str,
@@ -20202,7 +20208,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce16<
+    fn __reduce16<
         'input,
     >(
         input: &'input str,
@@ -20219,7 +20225,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce17<
+    fn __reduce17<
         'input,
     >(
         input: &'input str,
@@ -20236,7 +20242,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant7(__nt), __end));
         (1, 10)
     }
-    pub(crate) fn __reduce18<
+    fn __reduce18<
         'input,
     >(
         input: &'input str,
@@ -20246,13 +20252,13 @@ mod __parse__Pred1 {
     ) -> (usize, usize)
     {
         // ARG_TP? =  => ActionFn(82);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action82::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant7(__nt), __end));
         (0, 10)
     }
-    pub(crate) fn __reduce19<
+    fn __reduce19<
         'input,
     >(
         input: &'input str,
@@ -20274,7 +20280,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant8(__nt), __end));
         (5, 11)
     }
-    pub(crate) fn __reduce20<
+    fn __reduce20<
         'input,
     >(
         input: &'input str,
@@ -20284,13 +20290,13 @@ mod __parse__Pred1 {
     ) -> (usize, usize)
     {
         // Arg* =  => ActionFn(62);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action62::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (0, 12)
     }
-    pub(crate) fn __reduce21<
+    fn __reduce21<
         'input,
     >(
         input: &'input str,
@@ -20307,7 +20313,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (1, 12)
     }
-    pub(crate) fn __reduce22<
+    fn __reduce22<
         'input,
     >(
         input: &'input str,
@@ -20324,7 +20330,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (1, 13)
     }
-    pub(crate) fn __reduce23<
+    fn __reduce23<
         'input,
     >(
         input: &'input str,
@@ -20343,7 +20349,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (2, 13)
     }
-    pub(crate) fn __reduce24<
+    fn __reduce24<
         'input,
     >(
         input: &'input str,
@@ -20353,13 +20359,13 @@ mod __parse__Pred1 {
     ) -> (usize, usize)
     {
         // Args =  => ActionFn(108);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action108::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant10(__nt), __end));
         (0, 14)
     }
-    pub(crate) fn __reduce25<
+    fn __reduce25<
         'input,
     >(
         input: &'input str,
@@ -20376,7 +20382,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant10(__nt), __end));
         (1, 14)
     }
-    pub(crate) fn __reduce26<
+    fn __reduce26<
         'input,
     >(
         input: &'input str,
@@ -20401,7 +20407,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (8, 15)
     }
-    pub(crate) fn __reduce27<
+    fn __reduce27<
         'input,
     >(
         input: &'input str,
@@ -20425,7 +20431,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (7, 15)
     }
-    pub(crate) fn __reduce28<
+    fn __reduce28<
         'input,
     >(
         input: &'input str,
@@ -20449,7 +20455,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (7, 15)
     }
-    pub(crate) fn __reduce29<
+    fn __reduce29<
         'input,
     >(
         input: &'input str,
@@ -20472,7 +20478,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (6, 15)
     }
-    pub(crate) fn __reduce30<
+    fn __reduce30<
         'input,
     >(
         input: &'input str,
@@ -20489,7 +20495,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 16)
     }
-    pub(crate) fn __reduce31<
+    fn __reduce31<
         'input,
     >(
         input: &'input str,
@@ -20506,7 +20512,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 16)
     }
-    pub(crate) fn __reduce32<
+    fn __reduce32<
         'input,
     >(
         input: &'input str,
@@ -20523,7 +20529,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (1, 17)
     }
-    pub(crate) fn __reduce33<
+    fn __reduce33<
         'input,
     >(
         input: &'input str,
@@ -20533,13 +20539,13 @@ mod __parse__Pred1 {
     ) -> (usize, usize)
     {
         // Comma<ARG_TP> =  => ActionFn(105);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action105::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (0, 17)
     }
-    pub(crate) fn __reduce34<
+    fn __reduce34<
         'input,
     >(
         input: &'input str,
@@ -20558,7 +20564,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (2, 17)
     }
-    pub(crate) fn __reduce35<
+    fn __reduce35<
         'input,
     >(
         input: &'input str,
@@ -20575,7 +20581,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (1, 17)
     }
-    pub(crate) fn __reduce36<
+    fn __reduce36<
         'input,
     >(
         input: &'input str,
@@ -20592,7 +20598,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (1, 18)
     }
-    pub(crate) fn __reduce37<
+    fn __reduce37<
         'input,
     >(
         input: &'input str,
@@ -20602,13 +20608,13 @@ mod __parse__Pred1 {
     ) -> (usize, usize)
     {
         // Comma<VAR> =  => ActionFn(121);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action121::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (0, 18)
     }
-    pub(crate) fn __reduce38<
+    fn __reduce38<
         'input,
     >(
         input: &'input str,
@@ -20627,7 +20633,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (2, 18)
     }
-    pub(crate) fn __reduce39<
+    fn __reduce39<
         'input,
     >(
         input: &'input str,
@@ -20644,7 +20650,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (1, 18)
     }
-    pub(crate) fn __reduce40<
+    fn __reduce40<
         'input,
     >(
         input: &'input str,
@@ -20661,7 +20667,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 19)
     }
-    pub(crate) fn __reduce41<
+    fn __reduce41<
         'input,
     >(
         input: &'input str,
@@ -20678,7 +20684,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 20)
     }
-    pub(crate) fn __reduce42<
+    fn __reduce42<
         'input,
     >(
         input: &'input str,
@@ -20698,7 +20704,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (3, 20)
     }
-    pub(crate) fn __reduce43<
+    fn __reduce43<
         'input,
     >(
         input: &'input str,
@@ -20715,7 +20721,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant15(__nt), __end));
         (1, 21)
     }
-    pub(crate) fn __reduce44<
+    fn __reduce44<
         'input,
     >(
         input: &'input str,
@@ -20732,7 +20738,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce45<
+    fn __reduce45<
         'input,
     >(
         input: &'input str,
@@ -20749,7 +20755,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce46<
+    fn __reduce46<
         'input,
     >(
         input: &'input str,
@@ -20766,7 +20772,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce47<
+    fn __reduce47<
         'input,
     >(
         input: &'input str,
@@ -20783,7 +20789,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce48<
+    fn __reduce48<
         'input,
     >(
         input: &'input str,
@@ -20800,7 +20806,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce49<
+    fn __reduce49<
         'input,
     >(
         input: &'input str,
@@ -20817,7 +20823,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce50<
+    fn __reduce50<
         'input,
     >(
         input: &'input str,
@@ -20834,7 +20840,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce51<
+    fn __reduce51<
         'input,
     >(
         input: &'input str,
@@ -20851,7 +20857,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant16(__nt), __end));
         (1, 23)
     }
-    pub(crate) fn __reduce52<
+    fn __reduce52<
         'input,
     >(
         input: &'input str,
@@ -20861,13 +20867,13 @@ mod __parse__Pred1 {
     ) -> (usize, usize)
     {
         // KnownPredicate? =  => ActionFn(70);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action70::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant16(__nt), __end));
         (0, 23)
     }
-    pub(crate) fn __reduce53<
+    fn __reduce53<
         'input,
     >(
         input: &'input str,
@@ -20884,7 +20890,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce54<
+    fn __reduce54<
         'input,
     >(
         input: &'input str,
@@ -20901,7 +20907,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce55<
+    fn __reduce55<
         'input,
     >(
         input: &'input str,
@@ -20918,7 +20924,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce56<
+    fn __reduce56<
         'input,
     >(
         input: &'input str,
@@ -20935,7 +20941,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 25)
     }
-    pub(crate) fn __reduce57<
+    fn __reduce57<
         'input,
     >(
         input: &'input str,
@@ -20952,7 +20958,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant18(__nt), __end));
         (1, 26)
     }
-    pub(crate) fn __reduce58<
+    fn __reduce58<
         'input,
     >(
         input: &'input str,
@@ -20971,7 +20977,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant18(__nt), __end));
         (2, 26)
     }
-    pub(crate) fn __reduce59<
+    fn __reduce59<
         'input,
     >(
         input: &'input str,
@@ -20991,7 +20997,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 27)
     }
-    pub(crate) fn __reduce60<
+    fn __reduce60<
         'input,
     >(
         input: &'input str,
@@ -21008,7 +21014,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (1, 28)
     }
-    pub(crate) fn __reduce61<
+    fn __reduce61<
         'input,
     >(
         input: &'input str,
@@ -21018,13 +21024,13 @@ mod __parse__Pred1 {
     ) -> (usize, usize)
     {
         // PostSpec? =  => ActionFn(66);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action66::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (0, 28)
     }
-    pub(crate) fn __reduce62<
+    fn __reduce62<
         'input,
     >(
         input: &'input str,
@@ -21044,7 +21050,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 29)
     }
-    pub(crate) fn __reduce63<
+    fn __reduce63<
         'input,
     >(
         input: &'input str,
@@ -21061,7 +21067,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (1, 30)
     }
-    pub(crate) fn __reduce64<
+    fn __reduce64<
         'input,
     >(
         input: &'input str,
@@ -21071,13 +21077,13 @@ mod __parse__Pred1 {
     ) -> (usize, usize)
     {
         // PreSpec? =  => ActionFn(68);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action68::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (0, 30)
     }
-    pub(crate) fn __reduce65<
+    fn __reduce65<
         'input,
     >(
         input: &'input str,
@@ -21097,7 +21103,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 31)
     }
-    pub(crate) fn __reduce66<
+    fn __reduce66<
         'input,
     >(
         input: &'input str,
@@ -21117,7 +21123,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 31)
     }
-    pub(crate) fn __reduce67<
+    fn __reduce67<
         'input,
     >(
         input: &'input str,
@@ -21134,7 +21140,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 31)
     }
-    pub(crate) fn __reduce68<
+    fn __reduce68<
         'input,
     >(
         input: &'input str,
@@ -21151,7 +21157,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 32)
     }
-    pub(crate) fn __reduce69<
+    fn __reduce69<
         'input,
     >(
         input: &'input str,
@@ -21171,7 +21177,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce70<
+    fn __reduce70<
         'input,
     >(
         input: &'input str,
@@ -21188,7 +21194,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 32)
     }
-    pub(crate) fn __reduce71<
+    fn __reduce71<
         'input,
     >(
         input: &'input str,
@@ -21208,7 +21214,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce72<
+    fn __reduce72<
         'input,
     >(
         input: &'input str,
@@ -21228,7 +21234,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce73<
+    fn __reduce73<
         'input,
     >(
         input: &'input str,
@@ -21248,7 +21254,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce74<
+    fn __reduce74<
         'input,
     >(
         input: &'input str,
@@ -21270,7 +21276,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (5, 33)
     }
-    pub(crate) fn __reduce75<
+    fn __reduce75<
         'input,
     >(
         input: &'input str,
@@ -21292,7 +21298,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (5, 33)
     }
-    pub(crate) fn __reduce76<
+    fn __reduce76<
         'input,
     >(
         input: &'input str,
@@ -21309,7 +21315,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 33)
     }
-    pub(crate) fn __reduce77<
+    fn __reduce77<
         'input,
     >(
         input: &'input str,
@@ -21326,7 +21332,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 34)
     }
-    pub(crate) fn __reduce78<
+    fn __reduce78<
         'input,
     >(
         input: &'input str,
@@ -21343,7 +21349,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant22(__nt), __end));
         (1, 35)
     }
-    pub(crate) fn __reduce79<
+    fn __reduce79<
         'input,
     >(
         input: &'input str,
@@ -21360,7 +21366,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 36)
     }
-    pub(crate) fn __reduce80<
+    fn __reduce80<
         'input,
     >(
         input: &'input str,
@@ -21380,7 +21386,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (3, 36)
     }
-    pub(crate) fn __reduce81<
+    fn __reduce81<
         'input,
     >(
         input: &'input str,
@@ -21397,7 +21403,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (1, 37)
     }
-    pub(crate) fn __reduce82<
+    fn __reduce82<
         'input,
     >(
         input: &'input str,
@@ -21407,13 +21413,13 @@ mod __parse__Pred1 {
     ) -> (usize, usize)
     {
         // SemiColon<KnownPredicate> =  => ActionFn(111);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action111::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (0, 37)
     }
-    pub(crate) fn __reduce83<
+    fn __reduce83<
         'input,
     >(
         input: &'input str,
@@ -21432,7 +21438,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (2, 37)
     }
-    pub(crate) fn __reduce84<
+    fn __reduce84<
         'input,
     >(
         input: &'input str,
@@ -21449,7 +21455,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (1, 37)
     }
-    pub(crate) fn __reduce85<
+    fn __reduce85<
         'input,
     >(
         input: &'input str,
@@ -21466,7 +21472,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 38)
     }
-    pub(crate) fn __reduce86<
+    fn __reduce86<
         'input,
     >(
         input: &'input str,
@@ -21485,7 +21491,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (2, 38)
     }
-    pub(crate) fn __reduce87<
+    fn __reduce87<
         'input,
     >(
         input: &'input str,
@@ -21505,7 +21511,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 39)
     }
-    pub(crate) fn __reduce88<
+    fn __reduce88<
         'input,
     >(
         input: &'input str,
@@ -21522,7 +21528,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 40)
     }
-    pub(crate) fn __reduce89<
+    fn __reduce89<
         'input,
     >(
         input: &'input str,
@@ -21542,7 +21548,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (3, 40)
     }
-    pub(crate) fn __reduce90<
+    fn __reduce90<
         'input,
     >(
         input: &'input str,
@@ -21559,7 +21565,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 41)
     }
-    pub(crate) fn __reduce91<
+    fn __reduce91<
         'input,
     >(
         input: &'input str,
@@ -21576,7 +21582,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant24(__nt), __end));
         (1, 42)
     }
-    pub(crate) fn __reduce92<
+    fn __reduce92<
         'input,
     >(
         input: &'input str,
@@ -21586,13 +21592,13 @@ mod __parse__Pred1 {
     ) -> (usize, usize)
     {
         // VAR? =  => ActionFn(77);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action77::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant24(__nt), __end));
         (0, 42)
     }
-    pub(crate) fn __reduce93<
+    fn __reduce93<
         'input,
     >(
         input: &'input str,
@@ -21609,7 +21615,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 43)
     }
-    pub(crate) fn __reduce94<
+    fn __reduce94<
         'input,
     >(
         input: &'input str,
@@ -21629,7 +21635,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (3, 43)
     }
-    pub(crate) fn __reduce95<
+    fn __reduce95<
         'input,
     >(
         input: &'input str,
@@ -21646,7 +21652,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 44)
     }
-    pub(crate) fn __reduce96<
+    fn __reduce96<
         'input,
     >(
         input: &'input str,
@@ -21663,7 +21669,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (1, 45)
     }
-    pub(crate) fn __reduce97<
+    fn __reduce97<
         'input,
     >(
         input: &'input str,
@@ -21680,7 +21686,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 46)
     }
-    pub(crate) fn __reduce98<
+    fn __reduce98<
         'input,
     >(
         input: &'input str,
@@ -21697,7 +21703,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 47)
     }
-    pub(crate) fn __reduce99<
+    fn __reduce99<
         'input,
     >(
         input: &'input str,
@@ -21714,7 +21720,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 48)
     }
-    pub(crate) fn __reduce101<
+    fn __reduce101<
         'input,
     >(
         input: &'input str,
@@ -21731,7 +21737,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 50)
     }
-    pub(crate) fn __reduce102<
+    fn __reduce102<
         'input,
     >(
         input: &'input str,
@@ -21748,7 +21754,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 51)
     }
-    pub(crate) fn __reduce103<
+    fn __reduce103<
         'input,
     >(
         input: &'input str,
@@ -21765,7 +21771,7 @@ mod __parse__Pred1 {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 52)
     }
-    pub(crate) fn __reduce104<
+    fn __reduce104<
         'input,
     >(
         input: &'input str,
@@ -21786,7 +21792,7 @@ mod __parse__Pred1 {
 pub use self::__parse__Pred1::Pred1Parser;
 
 #[rustfmt::skip]
-#[allow(non_snake_case, non_camel_case_types, unused_mut, unused_variables, unused_imports, unused_parens, clippy::all)]
+#[allow(non_snake_case, non_camel_case_types, unused_mut, unused_variables, unused_imports, unused_parens, clippy::needless_lifetimes, clippy::type_complexity, clippy::needless_return, clippy::too_many_arguments, clippy::never_loop, clippy::match_single_binding, clippy::needless_raw_string_hashes)]
 mod __parse__Pred2 {
 
     use crate::ipc::{ElrondKnownPredicate, ElrondPredicates, ElrondAssertion,ElrondSpec, ElrondForallFormula, ElrondTpedvar, ElrondType, ElrondPred, ElrondSimpleExpr, ElrondLiteral};
@@ -22072,7 +22078,7 @@ mod __parse__Pred2 {
             }
         }).collect()
     }
-    pub(crate) struct __StateMachine<'input>
+    struct __StateMachine<'input>
     where 
     {
         input: &'input str,
@@ -22226,7 +22232,7 @@ mod __parse__Pred2 {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> __Symbol<'input>
     {
-        match __token_index {
+        #[allow(clippy::manual_range_patterns)]match __token_index {
             0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 => match __token {
                 Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(14, __tok0) | Token(15, __tok0) | Token(16, __tok0) | Token(17, __tok0) | Token(18, __tok0) | Token(19, __tok0) | Token(20, __tok0) | Token(21, __tok0) | Token(22, __tok0) | Token(23, __tok0) | Token(24, __tok0) | Token(25, __tok0) | Token(26, __tok0) | Token(27, __tok0) | Token(28, __tok0) | Token(29, __tok0) | Token(30, __tok0) | Token(31, __tok0) | Token(32, __tok0) | Token(33, __tok0) | Token(0, __tok0) | Token(1, __tok0) if true => __Symbol::Variant0(__tok0),
                 _ => unreachable!(),
@@ -22875,6 +22881,7 @@ mod __parse__Pred2 {
         _priv: (),
     }
 
+    impl Default for Pred2Parser { fn default() -> Self { Self::new() } }
     impl Pred2Parser {
         pub fn new() -> Pred2Parser {
             let __builder = super::__intern_token::new_builder();
@@ -22935,7 +22942,7 @@ mod __parse__Pred2 {
             __states.push(__next_state);
         }
     }
-    pub(crate) fn __reduce<
+    fn __reduce<
         'input,
     >(
         input: &'input str,
@@ -23555,7 +23562,7 @@ mod __parse__Pred2 {
             _ => __symbol_type_mismatch()
         }
     }
-    pub(crate) fn __reduce0<
+    fn __reduce0<
         'input,
     >(
         input: &'input str,
@@ -23574,7 +23581,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (2, 0)
     }
-    pub(crate) fn __reduce1<
+    fn __reduce1<
         'input,
     >(
         input: &'input str,
@@ -23584,13 +23591,13 @@ mod __parse__Pred2 {
     ) -> (usize, usize)
     {
         // (<ARG_TP> ",")* =  => ActionFn(83);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action83::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (0, 1)
     }
-    pub(crate) fn __reduce2<
+    fn __reduce2<
         'input,
     >(
         input: &'input str,
@@ -23607,7 +23614,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (1, 1)
     }
-    pub(crate) fn __reduce3<
+    fn __reduce3<
         'input,
     >(
         input: &'input str,
@@ -23626,7 +23633,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (2, 2)
     }
-    pub(crate) fn __reduce4<
+    fn __reduce4<
         'input,
     >(
         input: &'input str,
@@ -23646,7 +23653,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (3, 2)
     }
-    pub(crate) fn __reduce5<
+    fn __reduce5<
         'input,
     >(
         input: &'input str,
@@ -23665,7 +23672,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (2, 3)
     }
-    pub(crate) fn __reduce6<
+    fn __reduce6<
         'input,
     >(
         input: &'input str,
@@ -23675,13 +23682,13 @@ mod __parse__Pred2 {
     ) -> (usize, usize)
     {
         // (<KnownPredicate> ";")* =  => ActionFn(71);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action71::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (0, 4)
     }
-    pub(crate) fn __reduce7<
+    fn __reduce7<
         'input,
     >(
         input: &'input str,
@@ -23698,7 +23705,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (1, 4)
     }
-    pub(crate) fn __reduce8<
+    fn __reduce8<
         'input,
     >(
         input: &'input str,
@@ -23717,7 +23724,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (2, 5)
     }
-    pub(crate) fn __reduce9<
+    fn __reduce9<
         'input,
     >(
         input: &'input str,
@@ -23737,7 +23744,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (3, 5)
     }
-    pub(crate) fn __reduce10<
+    fn __reduce10<
         'input,
     >(
         input: &'input str,
@@ -23756,7 +23763,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (2, 6)
     }
-    pub(crate) fn __reduce11<
+    fn __reduce11<
         'input,
     >(
         input: &'input str,
@@ -23766,13 +23773,13 @@ mod __parse__Pred2 {
     ) -> (usize, usize)
     {
         // (<VAR> ",")* =  => ActionFn(78);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action78::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (0, 7)
     }
-    pub(crate) fn __reduce12<
+    fn __reduce12<
         'input,
     >(
         input: &'input str,
@@ -23789,7 +23796,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (1, 7)
     }
-    pub(crate) fn __reduce13<
+    fn __reduce13<
         'input,
     >(
         input: &'input str,
@@ -23808,7 +23815,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (2, 8)
     }
-    pub(crate) fn __reduce14<
+    fn __reduce14<
         'input,
     >(
         input: &'input str,
@@ -23828,7 +23835,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (3, 8)
     }
-    pub(crate) fn __reduce15<
+    fn __reduce15<
         'input,
     >(
         input: &'input str,
@@ -23845,7 +23852,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce16<
+    fn __reduce16<
         'input,
     >(
         input: &'input str,
@@ -23862,7 +23869,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce17<
+    fn __reduce17<
         'input,
     >(
         input: &'input str,
@@ -23879,7 +23886,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant7(__nt), __end));
         (1, 10)
     }
-    pub(crate) fn __reduce18<
+    fn __reduce18<
         'input,
     >(
         input: &'input str,
@@ -23889,13 +23896,13 @@ mod __parse__Pred2 {
     ) -> (usize, usize)
     {
         // ARG_TP? =  => ActionFn(82);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action82::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant7(__nt), __end));
         (0, 10)
     }
-    pub(crate) fn __reduce19<
+    fn __reduce19<
         'input,
     >(
         input: &'input str,
@@ -23917,7 +23924,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant8(__nt), __end));
         (5, 11)
     }
-    pub(crate) fn __reduce20<
+    fn __reduce20<
         'input,
     >(
         input: &'input str,
@@ -23927,13 +23934,13 @@ mod __parse__Pred2 {
     ) -> (usize, usize)
     {
         // Arg* =  => ActionFn(62);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action62::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (0, 12)
     }
-    pub(crate) fn __reduce21<
+    fn __reduce21<
         'input,
     >(
         input: &'input str,
@@ -23950,7 +23957,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (1, 12)
     }
-    pub(crate) fn __reduce22<
+    fn __reduce22<
         'input,
     >(
         input: &'input str,
@@ -23967,7 +23974,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (1, 13)
     }
-    pub(crate) fn __reduce23<
+    fn __reduce23<
         'input,
     >(
         input: &'input str,
@@ -23986,7 +23993,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (2, 13)
     }
-    pub(crate) fn __reduce24<
+    fn __reduce24<
         'input,
     >(
         input: &'input str,
@@ -23996,13 +24003,13 @@ mod __parse__Pred2 {
     ) -> (usize, usize)
     {
         // Args =  => ActionFn(108);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action108::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant10(__nt), __end));
         (0, 14)
     }
-    pub(crate) fn __reduce25<
+    fn __reduce25<
         'input,
     >(
         input: &'input str,
@@ -24019,7 +24026,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant10(__nt), __end));
         (1, 14)
     }
-    pub(crate) fn __reduce26<
+    fn __reduce26<
         'input,
     >(
         input: &'input str,
@@ -24044,7 +24051,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (8, 15)
     }
-    pub(crate) fn __reduce27<
+    fn __reduce27<
         'input,
     >(
         input: &'input str,
@@ -24068,7 +24075,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (7, 15)
     }
-    pub(crate) fn __reduce28<
+    fn __reduce28<
         'input,
     >(
         input: &'input str,
@@ -24092,7 +24099,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (7, 15)
     }
-    pub(crate) fn __reduce29<
+    fn __reduce29<
         'input,
     >(
         input: &'input str,
@@ -24115,7 +24122,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (6, 15)
     }
-    pub(crate) fn __reduce30<
+    fn __reduce30<
         'input,
     >(
         input: &'input str,
@@ -24132,7 +24139,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 16)
     }
-    pub(crate) fn __reduce31<
+    fn __reduce31<
         'input,
     >(
         input: &'input str,
@@ -24149,7 +24156,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 16)
     }
-    pub(crate) fn __reduce32<
+    fn __reduce32<
         'input,
     >(
         input: &'input str,
@@ -24166,7 +24173,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (1, 17)
     }
-    pub(crate) fn __reduce33<
+    fn __reduce33<
         'input,
     >(
         input: &'input str,
@@ -24176,13 +24183,13 @@ mod __parse__Pred2 {
     ) -> (usize, usize)
     {
         // Comma<ARG_TP> =  => ActionFn(105);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action105::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (0, 17)
     }
-    pub(crate) fn __reduce34<
+    fn __reduce34<
         'input,
     >(
         input: &'input str,
@@ -24201,7 +24208,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (2, 17)
     }
-    pub(crate) fn __reduce35<
+    fn __reduce35<
         'input,
     >(
         input: &'input str,
@@ -24218,7 +24225,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (1, 17)
     }
-    pub(crate) fn __reduce36<
+    fn __reduce36<
         'input,
     >(
         input: &'input str,
@@ -24235,7 +24242,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (1, 18)
     }
-    pub(crate) fn __reduce37<
+    fn __reduce37<
         'input,
     >(
         input: &'input str,
@@ -24245,13 +24252,13 @@ mod __parse__Pred2 {
     ) -> (usize, usize)
     {
         // Comma<VAR> =  => ActionFn(121);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action121::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (0, 18)
     }
-    pub(crate) fn __reduce38<
+    fn __reduce38<
         'input,
     >(
         input: &'input str,
@@ -24270,7 +24277,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (2, 18)
     }
-    pub(crate) fn __reduce39<
+    fn __reduce39<
         'input,
     >(
         input: &'input str,
@@ -24287,7 +24294,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (1, 18)
     }
-    pub(crate) fn __reduce40<
+    fn __reduce40<
         'input,
     >(
         input: &'input str,
@@ -24304,7 +24311,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 19)
     }
-    pub(crate) fn __reduce41<
+    fn __reduce41<
         'input,
     >(
         input: &'input str,
@@ -24321,7 +24328,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 20)
     }
-    pub(crate) fn __reduce42<
+    fn __reduce42<
         'input,
     >(
         input: &'input str,
@@ -24341,7 +24348,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (3, 20)
     }
-    pub(crate) fn __reduce43<
+    fn __reduce43<
         'input,
     >(
         input: &'input str,
@@ -24358,7 +24365,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant15(__nt), __end));
         (1, 21)
     }
-    pub(crate) fn __reduce44<
+    fn __reduce44<
         'input,
     >(
         input: &'input str,
@@ -24375,7 +24382,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce45<
+    fn __reduce45<
         'input,
     >(
         input: &'input str,
@@ -24392,7 +24399,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce46<
+    fn __reduce46<
         'input,
     >(
         input: &'input str,
@@ -24409,7 +24416,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce47<
+    fn __reduce47<
         'input,
     >(
         input: &'input str,
@@ -24426,7 +24433,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce48<
+    fn __reduce48<
         'input,
     >(
         input: &'input str,
@@ -24443,7 +24450,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce49<
+    fn __reduce49<
         'input,
     >(
         input: &'input str,
@@ -24460,7 +24467,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce50<
+    fn __reduce50<
         'input,
     >(
         input: &'input str,
@@ -24477,7 +24484,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce51<
+    fn __reduce51<
         'input,
     >(
         input: &'input str,
@@ -24494,7 +24501,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant16(__nt), __end));
         (1, 23)
     }
-    pub(crate) fn __reduce52<
+    fn __reduce52<
         'input,
     >(
         input: &'input str,
@@ -24504,13 +24511,13 @@ mod __parse__Pred2 {
     ) -> (usize, usize)
     {
         // KnownPredicate? =  => ActionFn(70);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action70::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant16(__nt), __end));
         (0, 23)
     }
-    pub(crate) fn __reduce53<
+    fn __reduce53<
         'input,
     >(
         input: &'input str,
@@ -24527,7 +24534,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce54<
+    fn __reduce54<
         'input,
     >(
         input: &'input str,
@@ -24544,7 +24551,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce55<
+    fn __reduce55<
         'input,
     >(
         input: &'input str,
@@ -24561,7 +24568,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce56<
+    fn __reduce56<
         'input,
     >(
         input: &'input str,
@@ -24578,7 +24585,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 25)
     }
-    pub(crate) fn __reduce57<
+    fn __reduce57<
         'input,
     >(
         input: &'input str,
@@ -24595,7 +24602,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant18(__nt), __end));
         (1, 26)
     }
-    pub(crate) fn __reduce58<
+    fn __reduce58<
         'input,
     >(
         input: &'input str,
@@ -24614,7 +24621,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant18(__nt), __end));
         (2, 26)
     }
-    pub(crate) fn __reduce59<
+    fn __reduce59<
         'input,
     >(
         input: &'input str,
@@ -24634,7 +24641,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 27)
     }
-    pub(crate) fn __reduce60<
+    fn __reduce60<
         'input,
     >(
         input: &'input str,
@@ -24651,7 +24658,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (1, 28)
     }
-    pub(crate) fn __reduce61<
+    fn __reduce61<
         'input,
     >(
         input: &'input str,
@@ -24661,13 +24668,13 @@ mod __parse__Pred2 {
     ) -> (usize, usize)
     {
         // PostSpec? =  => ActionFn(66);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action66::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (0, 28)
     }
-    pub(crate) fn __reduce62<
+    fn __reduce62<
         'input,
     >(
         input: &'input str,
@@ -24687,7 +24694,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 29)
     }
-    pub(crate) fn __reduce63<
+    fn __reduce63<
         'input,
     >(
         input: &'input str,
@@ -24704,7 +24711,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (1, 30)
     }
-    pub(crate) fn __reduce64<
+    fn __reduce64<
         'input,
     >(
         input: &'input str,
@@ -24714,13 +24721,13 @@ mod __parse__Pred2 {
     ) -> (usize, usize)
     {
         // PreSpec? =  => ActionFn(68);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action68::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (0, 30)
     }
-    pub(crate) fn __reduce65<
+    fn __reduce65<
         'input,
     >(
         input: &'input str,
@@ -24740,7 +24747,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 31)
     }
-    pub(crate) fn __reduce66<
+    fn __reduce66<
         'input,
     >(
         input: &'input str,
@@ -24760,7 +24767,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 31)
     }
-    pub(crate) fn __reduce67<
+    fn __reduce67<
         'input,
     >(
         input: &'input str,
@@ -24777,7 +24784,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 31)
     }
-    pub(crate) fn __reduce68<
+    fn __reduce68<
         'input,
     >(
         input: &'input str,
@@ -24794,7 +24801,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 32)
     }
-    pub(crate) fn __reduce69<
+    fn __reduce69<
         'input,
     >(
         input: &'input str,
@@ -24814,7 +24821,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce70<
+    fn __reduce70<
         'input,
     >(
         input: &'input str,
@@ -24831,7 +24838,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 32)
     }
-    pub(crate) fn __reduce71<
+    fn __reduce71<
         'input,
     >(
         input: &'input str,
@@ -24851,7 +24858,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce72<
+    fn __reduce72<
         'input,
     >(
         input: &'input str,
@@ -24871,7 +24878,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce73<
+    fn __reduce73<
         'input,
     >(
         input: &'input str,
@@ -24891,7 +24898,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce74<
+    fn __reduce74<
         'input,
     >(
         input: &'input str,
@@ -24913,7 +24920,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (5, 33)
     }
-    pub(crate) fn __reduce75<
+    fn __reduce75<
         'input,
     >(
         input: &'input str,
@@ -24935,7 +24942,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (5, 33)
     }
-    pub(crate) fn __reduce76<
+    fn __reduce76<
         'input,
     >(
         input: &'input str,
@@ -24952,7 +24959,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 33)
     }
-    pub(crate) fn __reduce77<
+    fn __reduce77<
         'input,
     >(
         input: &'input str,
@@ -24969,7 +24976,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 34)
     }
-    pub(crate) fn __reduce78<
+    fn __reduce78<
         'input,
     >(
         input: &'input str,
@@ -24986,7 +24993,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant22(__nt), __end));
         (1, 35)
     }
-    pub(crate) fn __reduce79<
+    fn __reduce79<
         'input,
     >(
         input: &'input str,
@@ -25003,7 +25010,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 36)
     }
-    pub(crate) fn __reduce80<
+    fn __reduce80<
         'input,
     >(
         input: &'input str,
@@ -25023,7 +25030,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (3, 36)
     }
-    pub(crate) fn __reduce81<
+    fn __reduce81<
         'input,
     >(
         input: &'input str,
@@ -25040,7 +25047,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (1, 37)
     }
-    pub(crate) fn __reduce82<
+    fn __reduce82<
         'input,
     >(
         input: &'input str,
@@ -25050,13 +25057,13 @@ mod __parse__Pred2 {
     ) -> (usize, usize)
     {
         // SemiColon<KnownPredicate> =  => ActionFn(111);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action111::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (0, 37)
     }
-    pub(crate) fn __reduce83<
+    fn __reduce83<
         'input,
     >(
         input: &'input str,
@@ -25075,7 +25082,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (2, 37)
     }
-    pub(crate) fn __reduce84<
+    fn __reduce84<
         'input,
     >(
         input: &'input str,
@@ -25092,7 +25099,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (1, 37)
     }
-    pub(crate) fn __reduce85<
+    fn __reduce85<
         'input,
     >(
         input: &'input str,
@@ -25109,7 +25116,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 38)
     }
-    pub(crate) fn __reduce86<
+    fn __reduce86<
         'input,
     >(
         input: &'input str,
@@ -25128,7 +25135,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (2, 38)
     }
-    pub(crate) fn __reduce87<
+    fn __reduce87<
         'input,
     >(
         input: &'input str,
@@ -25148,7 +25155,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 39)
     }
-    pub(crate) fn __reduce88<
+    fn __reduce88<
         'input,
     >(
         input: &'input str,
@@ -25165,7 +25172,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 40)
     }
-    pub(crate) fn __reduce89<
+    fn __reduce89<
         'input,
     >(
         input: &'input str,
@@ -25185,7 +25192,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (3, 40)
     }
-    pub(crate) fn __reduce90<
+    fn __reduce90<
         'input,
     >(
         input: &'input str,
@@ -25202,7 +25209,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 41)
     }
-    pub(crate) fn __reduce91<
+    fn __reduce91<
         'input,
     >(
         input: &'input str,
@@ -25219,7 +25226,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant24(__nt), __end));
         (1, 42)
     }
-    pub(crate) fn __reduce92<
+    fn __reduce92<
         'input,
     >(
         input: &'input str,
@@ -25229,13 +25236,13 @@ mod __parse__Pred2 {
     ) -> (usize, usize)
     {
         // VAR? =  => ActionFn(77);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action77::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant24(__nt), __end));
         (0, 42)
     }
-    pub(crate) fn __reduce93<
+    fn __reduce93<
         'input,
     >(
         input: &'input str,
@@ -25252,7 +25259,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 43)
     }
-    pub(crate) fn __reduce94<
+    fn __reduce94<
         'input,
     >(
         input: &'input str,
@@ -25272,7 +25279,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (3, 43)
     }
-    pub(crate) fn __reduce95<
+    fn __reduce95<
         'input,
     >(
         input: &'input str,
@@ -25289,7 +25296,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 44)
     }
-    pub(crate) fn __reduce96<
+    fn __reduce96<
         'input,
     >(
         input: &'input str,
@@ -25306,7 +25313,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (1, 45)
     }
-    pub(crate) fn __reduce97<
+    fn __reduce97<
         'input,
     >(
         input: &'input str,
@@ -25323,7 +25330,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 46)
     }
-    pub(crate) fn __reduce98<
+    fn __reduce98<
         'input,
     >(
         input: &'input str,
@@ -25340,7 +25347,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 47)
     }
-    pub(crate) fn __reduce99<
+    fn __reduce99<
         'input,
     >(
         input: &'input str,
@@ -25357,7 +25364,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 48)
     }
-    pub(crate) fn __reduce100<
+    fn __reduce100<
         'input,
     >(
         input: &'input str,
@@ -25374,7 +25381,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 49)
     }
-    pub(crate) fn __reduce102<
+    fn __reduce102<
         'input,
     >(
         input: &'input str,
@@ -25391,7 +25398,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 51)
     }
-    pub(crate) fn __reduce103<
+    fn __reduce103<
         'input,
     >(
         input: &'input str,
@@ -25408,7 +25415,7 @@ mod __parse__Pred2 {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 52)
     }
-    pub(crate) fn __reduce104<
+    fn __reduce104<
         'input,
     >(
         input: &'input str,
@@ -25429,7 +25436,7 @@ mod __parse__Pred2 {
 pub use self::__parse__Pred2::Pred2Parser;
 
 #[rustfmt::skip]
-#[allow(non_snake_case, non_camel_case_types, unused_mut, unused_variables, unused_imports, unused_parens, clippy::all)]
+#[allow(non_snake_case, non_camel_case_types, unused_mut, unused_variables, unused_imports, unused_parens, clippy::needless_lifetimes, clippy::type_complexity, clippy::needless_return, clippy::too_many_arguments, clippy::never_loop, clippy::match_single_binding, clippy::needless_raw_string_hashes)]
 mod __parse__RET_TP {
 
     use crate::ipc::{ElrondKnownPredicate, ElrondPredicates, ElrondAssertion,ElrondSpec, ElrondForallFormula, ElrondTpedvar, ElrondType, ElrondPred, ElrondSimpleExpr, ElrondLiteral};
@@ -25645,7 +25652,7 @@ mod __parse__RET_TP {
             }
         }).collect()
     }
-    pub(crate) struct __StateMachine<'input>
+    struct __StateMachine<'input>
     where 
     {
         input: &'input str,
@@ -25799,7 +25806,7 @@ mod __parse__RET_TP {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> __Symbol<'input>
     {
-        match __token_index {
+        #[allow(clippy::manual_range_patterns)]match __token_index {
             0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 => match __token {
                 Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(14, __tok0) | Token(15, __tok0) | Token(16, __tok0) | Token(17, __tok0) | Token(18, __tok0) | Token(19, __tok0) | Token(20, __tok0) | Token(21, __tok0) | Token(22, __tok0) | Token(23, __tok0) | Token(24, __tok0) | Token(25, __tok0) | Token(26, __tok0) | Token(27, __tok0) | Token(28, __tok0) | Token(29, __tok0) | Token(30, __tok0) | Token(31, __tok0) | Token(32, __tok0) | Token(33, __tok0) | Token(0, __tok0) | Token(1, __tok0) if true => __Symbol::Variant0(__tok0),
                 _ => unreachable!(),
@@ -26448,6 +26455,7 @@ mod __parse__RET_TP {
         _priv: (),
     }
 
+    impl Default for RET_TPParser { fn default() -> Self { Self::new() } }
     impl RET_TPParser {
         pub fn new() -> RET_TPParser {
             let __builder = super::__intern_token::new_builder();
@@ -26508,7 +26516,7 @@ mod __parse__RET_TP {
             __states.push(__next_state);
         }
     }
-    pub(crate) fn __reduce<
+    fn __reduce<
         'input,
     >(
         input: &'input str,
@@ -27128,7 +27136,7 @@ mod __parse__RET_TP {
             _ => __symbol_type_mismatch()
         }
     }
-    pub(crate) fn __reduce0<
+    fn __reduce0<
         'input,
     >(
         input: &'input str,
@@ -27147,7 +27155,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (2, 0)
     }
-    pub(crate) fn __reduce1<
+    fn __reduce1<
         'input,
     >(
         input: &'input str,
@@ -27157,13 +27165,13 @@ mod __parse__RET_TP {
     ) -> (usize, usize)
     {
         // (<ARG_TP> ",")* =  => ActionFn(83);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action83::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (0, 1)
     }
-    pub(crate) fn __reduce2<
+    fn __reduce2<
         'input,
     >(
         input: &'input str,
@@ -27180,7 +27188,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (1, 1)
     }
-    pub(crate) fn __reduce3<
+    fn __reduce3<
         'input,
     >(
         input: &'input str,
@@ -27199,7 +27207,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (2, 2)
     }
-    pub(crate) fn __reduce4<
+    fn __reduce4<
         'input,
     >(
         input: &'input str,
@@ -27219,7 +27227,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (3, 2)
     }
-    pub(crate) fn __reduce5<
+    fn __reduce5<
         'input,
     >(
         input: &'input str,
@@ -27238,7 +27246,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (2, 3)
     }
-    pub(crate) fn __reduce6<
+    fn __reduce6<
         'input,
     >(
         input: &'input str,
@@ -27248,13 +27256,13 @@ mod __parse__RET_TP {
     ) -> (usize, usize)
     {
         // (<KnownPredicate> ";")* =  => ActionFn(71);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action71::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (0, 4)
     }
-    pub(crate) fn __reduce7<
+    fn __reduce7<
         'input,
     >(
         input: &'input str,
@@ -27271,7 +27279,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (1, 4)
     }
-    pub(crate) fn __reduce8<
+    fn __reduce8<
         'input,
     >(
         input: &'input str,
@@ -27290,7 +27298,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (2, 5)
     }
-    pub(crate) fn __reduce9<
+    fn __reduce9<
         'input,
     >(
         input: &'input str,
@@ -27310,7 +27318,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (3, 5)
     }
-    pub(crate) fn __reduce10<
+    fn __reduce10<
         'input,
     >(
         input: &'input str,
@@ -27329,7 +27337,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (2, 6)
     }
-    pub(crate) fn __reduce11<
+    fn __reduce11<
         'input,
     >(
         input: &'input str,
@@ -27339,13 +27347,13 @@ mod __parse__RET_TP {
     ) -> (usize, usize)
     {
         // (<VAR> ",")* =  => ActionFn(78);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action78::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (0, 7)
     }
-    pub(crate) fn __reduce12<
+    fn __reduce12<
         'input,
     >(
         input: &'input str,
@@ -27362,7 +27370,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (1, 7)
     }
-    pub(crate) fn __reduce13<
+    fn __reduce13<
         'input,
     >(
         input: &'input str,
@@ -27381,7 +27389,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (2, 8)
     }
-    pub(crate) fn __reduce14<
+    fn __reduce14<
         'input,
     >(
         input: &'input str,
@@ -27401,7 +27409,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (3, 8)
     }
-    pub(crate) fn __reduce15<
+    fn __reduce15<
         'input,
     >(
         input: &'input str,
@@ -27418,7 +27426,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce16<
+    fn __reduce16<
         'input,
     >(
         input: &'input str,
@@ -27435,7 +27443,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce17<
+    fn __reduce17<
         'input,
     >(
         input: &'input str,
@@ -27452,7 +27460,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant7(__nt), __end));
         (1, 10)
     }
-    pub(crate) fn __reduce18<
+    fn __reduce18<
         'input,
     >(
         input: &'input str,
@@ -27462,13 +27470,13 @@ mod __parse__RET_TP {
     ) -> (usize, usize)
     {
         // ARG_TP? =  => ActionFn(82);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action82::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant7(__nt), __end));
         (0, 10)
     }
-    pub(crate) fn __reduce19<
+    fn __reduce19<
         'input,
     >(
         input: &'input str,
@@ -27490,7 +27498,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant8(__nt), __end));
         (5, 11)
     }
-    pub(crate) fn __reduce20<
+    fn __reduce20<
         'input,
     >(
         input: &'input str,
@@ -27500,13 +27508,13 @@ mod __parse__RET_TP {
     ) -> (usize, usize)
     {
         // Arg* =  => ActionFn(62);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action62::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (0, 12)
     }
-    pub(crate) fn __reduce21<
+    fn __reduce21<
         'input,
     >(
         input: &'input str,
@@ -27523,7 +27531,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (1, 12)
     }
-    pub(crate) fn __reduce22<
+    fn __reduce22<
         'input,
     >(
         input: &'input str,
@@ -27540,7 +27548,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (1, 13)
     }
-    pub(crate) fn __reduce23<
+    fn __reduce23<
         'input,
     >(
         input: &'input str,
@@ -27559,7 +27567,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (2, 13)
     }
-    pub(crate) fn __reduce24<
+    fn __reduce24<
         'input,
     >(
         input: &'input str,
@@ -27569,13 +27577,13 @@ mod __parse__RET_TP {
     ) -> (usize, usize)
     {
         // Args =  => ActionFn(108);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action108::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant10(__nt), __end));
         (0, 14)
     }
-    pub(crate) fn __reduce25<
+    fn __reduce25<
         'input,
     >(
         input: &'input str,
@@ -27592,7 +27600,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant10(__nt), __end));
         (1, 14)
     }
-    pub(crate) fn __reduce26<
+    fn __reduce26<
         'input,
     >(
         input: &'input str,
@@ -27617,7 +27625,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (8, 15)
     }
-    pub(crate) fn __reduce27<
+    fn __reduce27<
         'input,
     >(
         input: &'input str,
@@ -27641,7 +27649,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (7, 15)
     }
-    pub(crate) fn __reduce28<
+    fn __reduce28<
         'input,
     >(
         input: &'input str,
@@ -27665,7 +27673,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (7, 15)
     }
-    pub(crate) fn __reduce29<
+    fn __reduce29<
         'input,
     >(
         input: &'input str,
@@ -27688,7 +27696,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (6, 15)
     }
-    pub(crate) fn __reduce30<
+    fn __reduce30<
         'input,
     >(
         input: &'input str,
@@ -27705,7 +27713,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 16)
     }
-    pub(crate) fn __reduce31<
+    fn __reduce31<
         'input,
     >(
         input: &'input str,
@@ -27722,7 +27730,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 16)
     }
-    pub(crate) fn __reduce32<
+    fn __reduce32<
         'input,
     >(
         input: &'input str,
@@ -27739,7 +27747,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (1, 17)
     }
-    pub(crate) fn __reduce33<
+    fn __reduce33<
         'input,
     >(
         input: &'input str,
@@ -27749,13 +27757,13 @@ mod __parse__RET_TP {
     ) -> (usize, usize)
     {
         // Comma<ARG_TP> =  => ActionFn(105);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action105::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (0, 17)
     }
-    pub(crate) fn __reduce34<
+    fn __reduce34<
         'input,
     >(
         input: &'input str,
@@ -27774,7 +27782,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (2, 17)
     }
-    pub(crate) fn __reduce35<
+    fn __reduce35<
         'input,
     >(
         input: &'input str,
@@ -27791,7 +27799,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (1, 17)
     }
-    pub(crate) fn __reduce36<
+    fn __reduce36<
         'input,
     >(
         input: &'input str,
@@ -27808,7 +27816,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (1, 18)
     }
-    pub(crate) fn __reduce37<
+    fn __reduce37<
         'input,
     >(
         input: &'input str,
@@ -27818,13 +27826,13 @@ mod __parse__RET_TP {
     ) -> (usize, usize)
     {
         // Comma<VAR> =  => ActionFn(121);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action121::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (0, 18)
     }
-    pub(crate) fn __reduce38<
+    fn __reduce38<
         'input,
     >(
         input: &'input str,
@@ -27843,7 +27851,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (2, 18)
     }
-    pub(crate) fn __reduce39<
+    fn __reduce39<
         'input,
     >(
         input: &'input str,
@@ -27860,7 +27868,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (1, 18)
     }
-    pub(crate) fn __reduce40<
+    fn __reduce40<
         'input,
     >(
         input: &'input str,
@@ -27877,7 +27885,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 19)
     }
-    pub(crate) fn __reduce41<
+    fn __reduce41<
         'input,
     >(
         input: &'input str,
@@ -27894,7 +27902,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 20)
     }
-    pub(crate) fn __reduce42<
+    fn __reduce42<
         'input,
     >(
         input: &'input str,
@@ -27914,7 +27922,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (3, 20)
     }
-    pub(crate) fn __reduce43<
+    fn __reduce43<
         'input,
     >(
         input: &'input str,
@@ -27931,7 +27939,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant15(__nt), __end));
         (1, 21)
     }
-    pub(crate) fn __reduce44<
+    fn __reduce44<
         'input,
     >(
         input: &'input str,
@@ -27948,7 +27956,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce45<
+    fn __reduce45<
         'input,
     >(
         input: &'input str,
@@ -27965,7 +27973,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce46<
+    fn __reduce46<
         'input,
     >(
         input: &'input str,
@@ -27982,7 +27990,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce47<
+    fn __reduce47<
         'input,
     >(
         input: &'input str,
@@ -27999,7 +28007,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce48<
+    fn __reduce48<
         'input,
     >(
         input: &'input str,
@@ -28016,7 +28024,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce49<
+    fn __reduce49<
         'input,
     >(
         input: &'input str,
@@ -28033,7 +28041,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce50<
+    fn __reduce50<
         'input,
     >(
         input: &'input str,
@@ -28050,7 +28058,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce51<
+    fn __reduce51<
         'input,
     >(
         input: &'input str,
@@ -28067,7 +28075,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant16(__nt), __end));
         (1, 23)
     }
-    pub(crate) fn __reduce52<
+    fn __reduce52<
         'input,
     >(
         input: &'input str,
@@ -28077,13 +28085,13 @@ mod __parse__RET_TP {
     ) -> (usize, usize)
     {
         // KnownPredicate? =  => ActionFn(70);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action70::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant16(__nt), __end));
         (0, 23)
     }
-    pub(crate) fn __reduce53<
+    fn __reduce53<
         'input,
     >(
         input: &'input str,
@@ -28100,7 +28108,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce54<
+    fn __reduce54<
         'input,
     >(
         input: &'input str,
@@ -28117,7 +28125,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce55<
+    fn __reduce55<
         'input,
     >(
         input: &'input str,
@@ -28134,7 +28142,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce56<
+    fn __reduce56<
         'input,
     >(
         input: &'input str,
@@ -28151,7 +28159,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 25)
     }
-    pub(crate) fn __reduce57<
+    fn __reduce57<
         'input,
     >(
         input: &'input str,
@@ -28168,7 +28176,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant18(__nt), __end));
         (1, 26)
     }
-    pub(crate) fn __reduce58<
+    fn __reduce58<
         'input,
     >(
         input: &'input str,
@@ -28187,7 +28195,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant18(__nt), __end));
         (2, 26)
     }
-    pub(crate) fn __reduce59<
+    fn __reduce59<
         'input,
     >(
         input: &'input str,
@@ -28207,7 +28215,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 27)
     }
-    pub(crate) fn __reduce60<
+    fn __reduce60<
         'input,
     >(
         input: &'input str,
@@ -28224,7 +28232,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (1, 28)
     }
-    pub(crate) fn __reduce61<
+    fn __reduce61<
         'input,
     >(
         input: &'input str,
@@ -28234,13 +28242,13 @@ mod __parse__RET_TP {
     ) -> (usize, usize)
     {
         // PostSpec? =  => ActionFn(66);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action66::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (0, 28)
     }
-    pub(crate) fn __reduce62<
+    fn __reduce62<
         'input,
     >(
         input: &'input str,
@@ -28260,7 +28268,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 29)
     }
-    pub(crate) fn __reduce63<
+    fn __reduce63<
         'input,
     >(
         input: &'input str,
@@ -28277,7 +28285,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (1, 30)
     }
-    pub(crate) fn __reduce64<
+    fn __reduce64<
         'input,
     >(
         input: &'input str,
@@ -28287,13 +28295,13 @@ mod __parse__RET_TP {
     ) -> (usize, usize)
     {
         // PreSpec? =  => ActionFn(68);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action68::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (0, 30)
     }
-    pub(crate) fn __reduce65<
+    fn __reduce65<
         'input,
     >(
         input: &'input str,
@@ -28313,7 +28321,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 31)
     }
-    pub(crate) fn __reduce66<
+    fn __reduce66<
         'input,
     >(
         input: &'input str,
@@ -28333,7 +28341,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 31)
     }
-    pub(crate) fn __reduce67<
+    fn __reduce67<
         'input,
     >(
         input: &'input str,
@@ -28350,7 +28358,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 31)
     }
-    pub(crate) fn __reduce68<
+    fn __reduce68<
         'input,
     >(
         input: &'input str,
@@ -28367,7 +28375,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 32)
     }
-    pub(crate) fn __reduce69<
+    fn __reduce69<
         'input,
     >(
         input: &'input str,
@@ -28387,7 +28395,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce70<
+    fn __reduce70<
         'input,
     >(
         input: &'input str,
@@ -28404,7 +28412,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 32)
     }
-    pub(crate) fn __reduce71<
+    fn __reduce71<
         'input,
     >(
         input: &'input str,
@@ -28424,7 +28432,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce72<
+    fn __reduce72<
         'input,
     >(
         input: &'input str,
@@ -28444,7 +28452,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce73<
+    fn __reduce73<
         'input,
     >(
         input: &'input str,
@@ -28464,7 +28472,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce74<
+    fn __reduce74<
         'input,
     >(
         input: &'input str,
@@ -28486,7 +28494,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (5, 33)
     }
-    pub(crate) fn __reduce75<
+    fn __reduce75<
         'input,
     >(
         input: &'input str,
@@ -28508,7 +28516,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (5, 33)
     }
-    pub(crate) fn __reduce76<
+    fn __reduce76<
         'input,
     >(
         input: &'input str,
@@ -28525,7 +28533,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 33)
     }
-    pub(crate) fn __reduce77<
+    fn __reduce77<
         'input,
     >(
         input: &'input str,
@@ -28542,7 +28550,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 34)
     }
-    pub(crate) fn __reduce78<
+    fn __reduce78<
         'input,
     >(
         input: &'input str,
@@ -28559,7 +28567,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant22(__nt), __end));
         (1, 35)
     }
-    pub(crate) fn __reduce79<
+    fn __reduce79<
         'input,
     >(
         input: &'input str,
@@ -28576,7 +28584,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 36)
     }
-    pub(crate) fn __reduce80<
+    fn __reduce80<
         'input,
     >(
         input: &'input str,
@@ -28596,7 +28604,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (3, 36)
     }
-    pub(crate) fn __reduce81<
+    fn __reduce81<
         'input,
     >(
         input: &'input str,
@@ -28613,7 +28621,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (1, 37)
     }
-    pub(crate) fn __reduce82<
+    fn __reduce82<
         'input,
     >(
         input: &'input str,
@@ -28623,13 +28631,13 @@ mod __parse__RET_TP {
     ) -> (usize, usize)
     {
         // SemiColon<KnownPredicate> =  => ActionFn(111);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action111::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (0, 37)
     }
-    pub(crate) fn __reduce83<
+    fn __reduce83<
         'input,
     >(
         input: &'input str,
@@ -28648,7 +28656,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (2, 37)
     }
-    pub(crate) fn __reduce84<
+    fn __reduce84<
         'input,
     >(
         input: &'input str,
@@ -28665,7 +28673,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (1, 37)
     }
-    pub(crate) fn __reduce85<
+    fn __reduce85<
         'input,
     >(
         input: &'input str,
@@ -28682,7 +28690,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 38)
     }
-    pub(crate) fn __reduce86<
+    fn __reduce86<
         'input,
     >(
         input: &'input str,
@@ -28701,7 +28709,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (2, 38)
     }
-    pub(crate) fn __reduce87<
+    fn __reduce87<
         'input,
     >(
         input: &'input str,
@@ -28721,7 +28729,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 39)
     }
-    pub(crate) fn __reduce88<
+    fn __reduce88<
         'input,
     >(
         input: &'input str,
@@ -28738,7 +28746,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 40)
     }
-    pub(crate) fn __reduce89<
+    fn __reduce89<
         'input,
     >(
         input: &'input str,
@@ -28758,7 +28766,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (3, 40)
     }
-    pub(crate) fn __reduce90<
+    fn __reduce90<
         'input,
     >(
         input: &'input str,
@@ -28775,7 +28783,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 41)
     }
-    pub(crate) fn __reduce91<
+    fn __reduce91<
         'input,
     >(
         input: &'input str,
@@ -28792,7 +28800,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant24(__nt), __end));
         (1, 42)
     }
-    pub(crate) fn __reduce92<
+    fn __reduce92<
         'input,
     >(
         input: &'input str,
@@ -28802,13 +28810,13 @@ mod __parse__RET_TP {
     ) -> (usize, usize)
     {
         // VAR? =  => ActionFn(77);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action77::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant24(__nt), __end));
         (0, 42)
     }
-    pub(crate) fn __reduce93<
+    fn __reduce93<
         'input,
     >(
         input: &'input str,
@@ -28825,7 +28833,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 43)
     }
-    pub(crate) fn __reduce94<
+    fn __reduce94<
         'input,
     >(
         input: &'input str,
@@ -28845,7 +28853,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (3, 43)
     }
-    pub(crate) fn __reduce95<
+    fn __reduce95<
         'input,
     >(
         input: &'input str,
@@ -28862,7 +28870,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 44)
     }
-    pub(crate) fn __reduce96<
+    fn __reduce96<
         'input,
     >(
         input: &'input str,
@@ -28879,7 +28887,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (1, 45)
     }
-    pub(crate) fn __reduce97<
+    fn __reduce97<
         'input,
     >(
         input: &'input str,
@@ -28896,7 +28904,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 46)
     }
-    pub(crate) fn __reduce98<
+    fn __reduce98<
         'input,
     >(
         input: &'input str,
@@ -28913,7 +28921,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 47)
     }
-    pub(crate) fn __reduce99<
+    fn __reduce99<
         'input,
     >(
         input: &'input str,
@@ -28930,7 +28938,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 48)
     }
-    pub(crate) fn __reduce100<
+    fn __reduce100<
         'input,
     >(
         input: &'input str,
@@ -28947,7 +28955,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 49)
     }
-    pub(crate) fn __reduce101<
+    fn __reduce101<
         'input,
     >(
         input: &'input str,
@@ -28964,7 +28972,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 50)
     }
-    pub(crate) fn __reduce103<
+    fn __reduce103<
         'input,
     >(
         input: &'input str,
@@ -28981,7 +28989,7 @@ mod __parse__RET_TP {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 52)
     }
-    pub(crate) fn __reduce104<
+    fn __reduce104<
         'input,
     >(
         input: &'input str,
@@ -29002,7 +29010,7 @@ mod __parse__RET_TP {
 pub use self::__parse__RET_TP::RET_TPParser;
 
 #[rustfmt::skip]
-#[allow(non_snake_case, non_camel_case_types, unused_mut, unused_variables, unused_imports, unused_parens, clippy::all)]
+#[allow(non_snake_case, non_camel_case_types, unused_mut, unused_variables, unused_imports, unused_parens, clippy::needless_lifetimes, clippy::type_complexity, clippy::needless_return, clippy::too_many_arguments, clippy::never_loop, clippy::match_single_binding, clippy::needless_raw_string_hashes)]
 mod __parse__SimpleExpr {
 
     use crate::ipc::{ElrondKnownPredicate, ElrondPredicates, ElrondAssertion,ElrondSpec, ElrondForallFormula, ElrondTpedvar, ElrondType, ElrondPred, ElrondSimpleExpr, ElrondLiteral};
@@ -29156,7 +29164,7 @@ mod __parse__SimpleExpr {
             }
         }).collect()
     }
-    pub(crate) struct __StateMachine<'input>
+    struct __StateMachine<'input>
     where 
     {
         input: &'input str,
@@ -29310,7 +29318,7 @@ mod __parse__SimpleExpr {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> __Symbol<'input>
     {
-        match __token_index {
+        #[allow(clippy::manual_range_patterns)]match __token_index {
             0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 => match __token {
                 Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(14, __tok0) | Token(15, __tok0) | Token(16, __tok0) | Token(17, __tok0) | Token(18, __tok0) | Token(19, __tok0) | Token(20, __tok0) | Token(21, __tok0) | Token(22, __tok0) | Token(23, __tok0) | Token(24, __tok0) | Token(25, __tok0) | Token(26, __tok0) | Token(27, __tok0) | Token(28, __tok0) | Token(29, __tok0) | Token(30, __tok0) | Token(31, __tok0) | Token(32, __tok0) | Token(33, __tok0) | Token(0, __tok0) | Token(1, __tok0) if true => __Symbol::Variant0(__tok0),
                 _ => unreachable!(),
@@ -29959,6 +29967,7 @@ mod __parse__SimpleExpr {
         _priv: (),
     }
 
+    impl Default for SimpleExprParser { fn default() -> Self { Self::new() } }
     impl SimpleExprParser {
         pub fn new() -> SimpleExprParser {
             let __builder = super::__intern_token::new_builder();
@@ -30019,7 +30028,7 @@ mod __parse__SimpleExpr {
             __states.push(__next_state);
         }
     }
-    pub(crate) fn __reduce<
+    fn __reduce<
         'input,
     >(
         input: &'input str,
@@ -30639,7 +30648,7 @@ mod __parse__SimpleExpr {
             _ => __symbol_type_mismatch()
         }
     }
-    pub(crate) fn __reduce0<
+    fn __reduce0<
         'input,
     >(
         input: &'input str,
@@ -30658,7 +30667,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (2, 0)
     }
-    pub(crate) fn __reduce1<
+    fn __reduce1<
         'input,
     >(
         input: &'input str,
@@ -30668,13 +30677,13 @@ mod __parse__SimpleExpr {
     ) -> (usize, usize)
     {
         // (<ARG_TP> ",")* =  => ActionFn(83);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action83::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (0, 1)
     }
-    pub(crate) fn __reduce2<
+    fn __reduce2<
         'input,
     >(
         input: &'input str,
@@ -30691,7 +30700,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (1, 1)
     }
-    pub(crate) fn __reduce3<
+    fn __reduce3<
         'input,
     >(
         input: &'input str,
@@ -30710,7 +30719,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (2, 2)
     }
-    pub(crate) fn __reduce4<
+    fn __reduce4<
         'input,
     >(
         input: &'input str,
@@ -30730,7 +30739,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (3, 2)
     }
-    pub(crate) fn __reduce5<
+    fn __reduce5<
         'input,
     >(
         input: &'input str,
@@ -30749,7 +30758,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (2, 3)
     }
-    pub(crate) fn __reduce6<
+    fn __reduce6<
         'input,
     >(
         input: &'input str,
@@ -30759,13 +30768,13 @@ mod __parse__SimpleExpr {
     ) -> (usize, usize)
     {
         // (<KnownPredicate> ";")* =  => ActionFn(71);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action71::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (0, 4)
     }
-    pub(crate) fn __reduce7<
+    fn __reduce7<
         'input,
     >(
         input: &'input str,
@@ -30782,7 +30791,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (1, 4)
     }
-    pub(crate) fn __reduce8<
+    fn __reduce8<
         'input,
     >(
         input: &'input str,
@@ -30801,7 +30810,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (2, 5)
     }
-    pub(crate) fn __reduce9<
+    fn __reduce9<
         'input,
     >(
         input: &'input str,
@@ -30821,7 +30830,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (3, 5)
     }
-    pub(crate) fn __reduce10<
+    fn __reduce10<
         'input,
     >(
         input: &'input str,
@@ -30840,7 +30849,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (2, 6)
     }
-    pub(crate) fn __reduce11<
+    fn __reduce11<
         'input,
     >(
         input: &'input str,
@@ -30850,13 +30859,13 @@ mod __parse__SimpleExpr {
     ) -> (usize, usize)
     {
         // (<VAR> ",")* =  => ActionFn(78);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action78::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (0, 7)
     }
-    pub(crate) fn __reduce12<
+    fn __reduce12<
         'input,
     >(
         input: &'input str,
@@ -30873,7 +30882,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (1, 7)
     }
-    pub(crate) fn __reduce13<
+    fn __reduce13<
         'input,
     >(
         input: &'input str,
@@ -30892,7 +30901,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (2, 8)
     }
-    pub(crate) fn __reduce14<
+    fn __reduce14<
         'input,
     >(
         input: &'input str,
@@ -30912,7 +30921,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (3, 8)
     }
-    pub(crate) fn __reduce15<
+    fn __reduce15<
         'input,
     >(
         input: &'input str,
@@ -30929,7 +30938,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce16<
+    fn __reduce16<
         'input,
     >(
         input: &'input str,
@@ -30946,7 +30955,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce17<
+    fn __reduce17<
         'input,
     >(
         input: &'input str,
@@ -30963,7 +30972,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant7(__nt), __end));
         (1, 10)
     }
-    pub(crate) fn __reduce18<
+    fn __reduce18<
         'input,
     >(
         input: &'input str,
@@ -30973,13 +30982,13 @@ mod __parse__SimpleExpr {
     ) -> (usize, usize)
     {
         // ARG_TP? =  => ActionFn(82);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action82::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant7(__nt), __end));
         (0, 10)
     }
-    pub(crate) fn __reduce19<
+    fn __reduce19<
         'input,
     >(
         input: &'input str,
@@ -31001,7 +31010,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant8(__nt), __end));
         (5, 11)
     }
-    pub(crate) fn __reduce20<
+    fn __reduce20<
         'input,
     >(
         input: &'input str,
@@ -31011,13 +31020,13 @@ mod __parse__SimpleExpr {
     ) -> (usize, usize)
     {
         // Arg* =  => ActionFn(62);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action62::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (0, 12)
     }
-    pub(crate) fn __reduce21<
+    fn __reduce21<
         'input,
     >(
         input: &'input str,
@@ -31034,7 +31043,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (1, 12)
     }
-    pub(crate) fn __reduce22<
+    fn __reduce22<
         'input,
     >(
         input: &'input str,
@@ -31051,7 +31060,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (1, 13)
     }
-    pub(crate) fn __reduce23<
+    fn __reduce23<
         'input,
     >(
         input: &'input str,
@@ -31070,7 +31079,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (2, 13)
     }
-    pub(crate) fn __reduce24<
+    fn __reduce24<
         'input,
     >(
         input: &'input str,
@@ -31080,13 +31089,13 @@ mod __parse__SimpleExpr {
     ) -> (usize, usize)
     {
         // Args =  => ActionFn(108);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action108::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant10(__nt), __end));
         (0, 14)
     }
-    pub(crate) fn __reduce25<
+    fn __reduce25<
         'input,
     >(
         input: &'input str,
@@ -31103,7 +31112,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant10(__nt), __end));
         (1, 14)
     }
-    pub(crate) fn __reduce26<
+    fn __reduce26<
         'input,
     >(
         input: &'input str,
@@ -31128,7 +31137,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (8, 15)
     }
-    pub(crate) fn __reduce27<
+    fn __reduce27<
         'input,
     >(
         input: &'input str,
@@ -31152,7 +31161,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (7, 15)
     }
-    pub(crate) fn __reduce28<
+    fn __reduce28<
         'input,
     >(
         input: &'input str,
@@ -31176,7 +31185,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (7, 15)
     }
-    pub(crate) fn __reduce29<
+    fn __reduce29<
         'input,
     >(
         input: &'input str,
@@ -31199,7 +31208,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (6, 15)
     }
-    pub(crate) fn __reduce30<
+    fn __reduce30<
         'input,
     >(
         input: &'input str,
@@ -31216,7 +31225,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 16)
     }
-    pub(crate) fn __reduce31<
+    fn __reduce31<
         'input,
     >(
         input: &'input str,
@@ -31233,7 +31242,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 16)
     }
-    pub(crate) fn __reduce32<
+    fn __reduce32<
         'input,
     >(
         input: &'input str,
@@ -31250,7 +31259,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (1, 17)
     }
-    pub(crate) fn __reduce33<
+    fn __reduce33<
         'input,
     >(
         input: &'input str,
@@ -31260,13 +31269,13 @@ mod __parse__SimpleExpr {
     ) -> (usize, usize)
     {
         // Comma<ARG_TP> =  => ActionFn(105);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action105::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (0, 17)
     }
-    pub(crate) fn __reduce34<
+    fn __reduce34<
         'input,
     >(
         input: &'input str,
@@ -31285,7 +31294,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (2, 17)
     }
-    pub(crate) fn __reduce35<
+    fn __reduce35<
         'input,
     >(
         input: &'input str,
@@ -31302,7 +31311,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (1, 17)
     }
-    pub(crate) fn __reduce36<
+    fn __reduce36<
         'input,
     >(
         input: &'input str,
@@ -31319,7 +31328,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (1, 18)
     }
-    pub(crate) fn __reduce37<
+    fn __reduce37<
         'input,
     >(
         input: &'input str,
@@ -31329,13 +31338,13 @@ mod __parse__SimpleExpr {
     ) -> (usize, usize)
     {
         // Comma<VAR> =  => ActionFn(121);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action121::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (0, 18)
     }
-    pub(crate) fn __reduce38<
+    fn __reduce38<
         'input,
     >(
         input: &'input str,
@@ -31354,7 +31363,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (2, 18)
     }
-    pub(crate) fn __reduce39<
+    fn __reduce39<
         'input,
     >(
         input: &'input str,
@@ -31371,7 +31380,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (1, 18)
     }
-    pub(crate) fn __reduce40<
+    fn __reduce40<
         'input,
     >(
         input: &'input str,
@@ -31388,7 +31397,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 19)
     }
-    pub(crate) fn __reduce41<
+    fn __reduce41<
         'input,
     >(
         input: &'input str,
@@ -31405,7 +31414,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 20)
     }
-    pub(crate) fn __reduce42<
+    fn __reduce42<
         'input,
     >(
         input: &'input str,
@@ -31425,7 +31434,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (3, 20)
     }
-    pub(crate) fn __reduce43<
+    fn __reduce43<
         'input,
     >(
         input: &'input str,
@@ -31442,7 +31451,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant15(__nt), __end));
         (1, 21)
     }
-    pub(crate) fn __reduce44<
+    fn __reduce44<
         'input,
     >(
         input: &'input str,
@@ -31459,7 +31468,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce45<
+    fn __reduce45<
         'input,
     >(
         input: &'input str,
@@ -31476,7 +31485,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce46<
+    fn __reduce46<
         'input,
     >(
         input: &'input str,
@@ -31493,7 +31502,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce47<
+    fn __reduce47<
         'input,
     >(
         input: &'input str,
@@ -31510,7 +31519,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce48<
+    fn __reduce48<
         'input,
     >(
         input: &'input str,
@@ -31527,7 +31536,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce49<
+    fn __reduce49<
         'input,
     >(
         input: &'input str,
@@ -31544,7 +31553,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce50<
+    fn __reduce50<
         'input,
     >(
         input: &'input str,
@@ -31561,7 +31570,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce51<
+    fn __reduce51<
         'input,
     >(
         input: &'input str,
@@ -31578,7 +31587,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant16(__nt), __end));
         (1, 23)
     }
-    pub(crate) fn __reduce52<
+    fn __reduce52<
         'input,
     >(
         input: &'input str,
@@ -31588,13 +31597,13 @@ mod __parse__SimpleExpr {
     ) -> (usize, usize)
     {
         // KnownPredicate? =  => ActionFn(70);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action70::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant16(__nt), __end));
         (0, 23)
     }
-    pub(crate) fn __reduce53<
+    fn __reduce53<
         'input,
     >(
         input: &'input str,
@@ -31611,7 +31620,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce54<
+    fn __reduce54<
         'input,
     >(
         input: &'input str,
@@ -31628,7 +31637,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce55<
+    fn __reduce55<
         'input,
     >(
         input: &'input str,
@@ -31645,7 +31654,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce56<
+    fn __reduce56<
         'input,
     >(
         input: &'input str,
@@ -31662,7 +31671,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 25)
     }
-    pub(crate) fn __reduce57<
+    fn __reduce57<
         'input,
     >(
         input: &'input str,
@@ -31679,7 +31688,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant18(__nt), __end));
         (1, 26)
     }
-    pub(crate) fn __reduce58<
+    fn __reduce58<
         'input,
     >(
         input: &'input str,
@@ -31698,7 +31707,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant18(__nt), __end));
         (2, 26)
     }
-    pub(crate) fn __reduce59<
+    fn __reduce59<
         'input,
     >(
         input: &'input str,
@@ -31718,7 +31727,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 27)
     }
-    pub(crate) fn __reduce60<
+    fn __reduce60<
         'input,
     >(
         input: &'input str,
@@ -31735,7 +31744,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (1, 28)
     }
-    pub(crate) fn __reduce61<
+    fn __reduce61<
         'input,
     >(
         input: &'input str,
@@ -31745,13 +31754,13 @@ mod __parse__SimpleExpr {
     ) -> (usize, usize)
     {
         // PostSpec? =  => ActionFn(66);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action66::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (0, 28)
     }
-    pub(crate) fn __reduce62<
+    fn __reduce62<
         'input,
     >(
         input: &'input str,
@@ -31771,7 +31780,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 29)
     }
-    pub(crate) fn __reduce63<
+    fn __reduce63<
         'input,
     >(
         input: &'input str,
@@ -31788,7 +31797,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (1, 30)
     }
-    pub(crate) fn __reduce64<
+    fn __reduce64<
         'input,
     >(
         input: &'input str,
@@ -31798,13 +31807,13 @@ mod __parse__SimpleExpr {
     ) -> (usize, usize)
     {
         // PreSpec? =  => ActionFn(68);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action68::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (0, 30)
     }
-    pub(crate) fn __reduce65<
+    fn __reduce65<
         'input,
     >(
         input: &'input str,
@@ -31824,7 +31833,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 31)
     }
-    pub(crate) fn __reduce66<
+    fn __reduce66<
         'input,
     >(
         input: &'input str,
@@ -31844,7 +31853,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 31)
     }
-    pub(crate) fn __reduce67<
+    fn __reduce67<
         'input,
     >(
         input: &'input str,
@@ -31861,7 +31870,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 31)
     }
-    pub(crate) fn __reduce68<
+    fn __reduce68<
         'input,
     >(
         input: &'input str,
@@ -31878,7 +31887,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 32)
     }
-    pub(crate) fn __reduce69<
+    fn __reduce69<
         'input,
     >(
         input: &'input str,
@@ -31898,7 +31907,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce70<
+    fn __reduce70<
         'input,
     >(
         input: &'input str,
@@ -31915,7 +31924,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 32)
     }
-    pub(crate) fn __reduce71<
+    fn __reduce71<
         'input,
     >(
         input: &'input str,
@@ -31935,7 +31944,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce72<
+    fn __reduce72<
         'input,
     >(
         input: &'input str,
@@ -31955,7 +31964,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce73<
+    fn __reduce73<
         'input,
     >(
         input: &'input str,
@@ -31975,7 +31984,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce74<
+    fn __reduce74<
         'input,
     >(
         input: &'input str,
@@ -31997,7 +32006,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (5, 33)
     }
-    pub(crate) fn __reduce75<
+    fn __reduce75<
         'input,
     >(
         input: &'input str,
@@ -32019,7 +32028,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (5, 33)
     }
-    pub(crate) fn __reduce76<
+    fn __reduce76<
         'input,
     >(
         input: &'input str,
@@ -32036,7 +32045,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 33)
     }
-    pub(crate) fn __reduce77<
+    fn __reduce77<
         'input,
     >(
         input: &'input str,
@@ -32053,7 +32062,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 34)
     }
-    pub(crate) fn __reduce78<
+    fn __reduce78<
         'input,
     >(
         input: &'input str,
@@ -32070,7 +32079,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant22(__nt), __end));
         (1, 35)
     }
-    pub(crate) fn __reduce79<
+    fn __reduce79<
         'input,
     >(
         input: &'input str,
@@ -32087,7 +32096,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 36)
     }
-    pub(crate) fn __reduce80<
+    fn __reduce80<
         'input,
     >(
         input: &'input str,
@@ -32107,7 +32116,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (3, 36)
     }
-    pub(crate) fn __reduce81<
+    fn __reduce81<
         'input,
     >(
         input: &'input str,
@@ -32124,7 +32133,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (1, 37)
     }
-    pub(crate) fn __reduce82<
+    fn __reduce82<
         'input,
     >(
         input: &'input str,
@@ -32134,13 +32143,13 @@ mod __parse__SimpleExpr {
     ) -> (usize, usize)
     {
         // SemiColon<KnownPredicate> =  => ActionFn(111);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action111::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (0, 37)
     }
-    pub(crate) fn __reduce83<
+    fn __reduce83<
         'input,
     >(
         input: &'input str,
@@ -32159,7 +32168,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (2, 37)
     }
-    pub(crate) fn __reduce84<
+    fn __reduce84<
         'input,
     >(
         input: &'input str,
@@ -32176,7 +32185,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (1, 37)
     }
-    pub(crate) fn __reduce85<
+    fn __reduce85<
         'input,
     >(
         input: &'input str,
@@ -32193,7 +32202,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 38)
     }
-    pub(crate) fn __reduce86<
+    fn __reduce86<
         'input,
     >(
         input: &'input str,
@@ -32212,7 +32221,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (2, 38)
     }
-    pub(crate) fn __reduce87<
+    fn __reduce87<
         'input,
     >(
         input: &'input str,
@@ -32232,7 +32241,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 39)
     }
-    pub(crate) fn __reduce88<
+    fn __reduce88<
         'input,
     >(
         input: &'input str,
@@ -32249,7 +32258,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 40)
     }
-    pub(crate) fn __reduce89<
+    fn __reduce89<
         'input,
     >(
         input: &'input str,
@@ -32269,7 +32278,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (3, 40)
     }
-    pub(crate) fn __reduce90<
+    fn __reduce90<
         'input,
     >(
         input: &'input str,
@@ -32286,7 +32295,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 41)
     }
-    pub(crate) fn __reduce91<
+    fn __reduce91<
         'input,
     >(
         input: &'input str,
@@ -32303,7 +32312,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant24(__nt), __end));
         (1, 42)
     }
-    pub(crate) fn __reduce92<
+    fn __reduce92<
         'input,
     >(
         input: &'input str,
@@ -32313,13 +32322,13 @@ mod __parse__SimpleExpr {
     ) -> (usize, usize)
     {
         // VAR? =  => ActionFn(77);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action77::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant24(__nt), __end));
         (0, 42)
     }
-    pub(crate) fn __reduce93<
+    fn __reduce93<
         'input,
     >(
         input: &'input str,
@@ -32336,7 +32345,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 43)
     }
-    pub(crate) fn __reduce94<
+    fn __reduce94<
         'input,
     >(
         input: &'input str,
@@ -32356,7 +32365,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (3, 43)
     }
-    pub(crate) fn __reduce95<
+    fn __reduce95<
         'input,
     >(
         input: &'input str,
@@ -32373,7 +32382,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 44)
     }
-    pub(crate) fn __reduce96<
+    fn __reduce96<
         'input,
     >(
         input: &'input str,
@@ -32390,7 +32399,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (1, 45)
     }
-    pub(crate) fn __reduce97<
+    fn __reduce97<
         'input,
     >(
         input: &'input str,
@@ -32407,7 +32416,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 46)
     }
-    pub(crate) fn __reduce98<
+    fn __reduce98<
         'input,
     >(
         input: &'input str,
@@ -32424,7 +32433,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 47)
     }
-    pub(crate) fn __reduce99<
+    fn __reduce99<
         'input,
     >(
         input: &'input str,
@@ -32441,7 +32450,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 48)
     }
-    pub(crate) fn __reduce100<
+    fn __reduce100<
         'input,
     >(
         input: &'input str,
@@ -32458,7 +32467,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 49)
     }
-    pub(crate) fn __reduce101<
+    fn __reduce101<
         'input,
     >(
         input: &'input str,
@@ -32475,7 +32484,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 50)
     }
-    pub(crate) fn __reduce102<
+    fn __reduce102<
         'input,
     >(
         input: &'input str,
@@ -32492,7 +32501,7 @@ mod __parse__SimpleExpr {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 51)
     }
-    pub(crate) fn __reduce104<
+    fn __reduce104<
         'input,
     >(
         input: &'input str,
@@ -32513,7 +32522,7 @@ mod __parse__SimpleExpr {
 pub use self::__parse__SimpleExpr::SimpleExprParser;
 
 #[rustfmt::skip]
-#[allow(non_snake_case, non_camel_case_types, unused_mut, unused_variables, unused_imports, unused_parens, clippy::all)]
+#[allow(non_snake_case, non_camel_case_types, unused_mut, unused_variables, unused_imports, unused_parens, clippy::needless_lifetimes, clippy::type_complexity, clippy::needless_return, clippy::too_many_arguments, clippy::never_loop, clippy::match_single_binding, clippy::needless_raw_string_hashes)]
 mod __parse__VAR_TUPLE {
 
     use crate::ipc::{ElrondKnownPredicate, ElrondPredicates, ElrondAssertion,ElrondSpec, ElrondForallFormula, ElrondTpedvar, ElrondType, ElrondPred, ElrondSimpleExpr, ElrondLiteral};
@@ -32688,7 +32697,7 @@ mod __parse__VAR_TUPLE {
             }
         }).collect()
     }
-    pub(crate) struct __StateMachine<'input>
+    struct __StateMachine<'input>
     where 
     {
         input: &'input str,
@@ -32842,7 +32851,7 @@ mod __parse__VAR_TUPLE {
         _: core::marker::PhantomData<(&'input ())>,
     ) -> __Symbol<'input>
     {
-        match __token_index {
+        #[allow(clippy::manual_range_patterns)]match __token_index {
             0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 => match __token {
                 Token(2, __tok0) | Token(3, __tok0) | Token(4, __tok0) | Token(5, __tok0) | Token(6, __tok0) | Token(7, __tok0) | Token(8, __tok0) | Token(9, __tok0) | Token(10, __tok0) | Token(11, __tok0) | Token(12, __tok0) | Token(13, __tok0) | Token(14, __tok0) | Token(15, __tok0) | Token(16, __tok0) | Token(17, __tok0) | Token(18, __tok0) | Token(19, __tok0) | Token(20, __tok0) | Token(21, __tok0) | Token(22, __tok0) | Token(23, __tok0) | Token(24, __tok0) | Token(25, __tok0) | Token(26, __tok0) | Token(27, __tok0) | Token(28, __tok0) | Token(29, __tok0) | Token(30, __tok0) | Token(31, __tok0) | Token(32, __tok0) | Token(33, __tok0) | Token(0, __tok0) | Token(1, __tok0) if true => __Symbol::Variant0(__tok0),
                 _ => unreachable!(),
@@ -33491,6 +33500,7 @@ mod __parse__VAR_TUPLE {
         _priv: (),
     }
 
+    impl Default for VAR_TUPLEParser { fn default() -> Self { Self::new() } }
     impl VAR_TUPLEParser {
         pub fn new() -> VAR_TUPLEParser {
             let __builder = super::__intern_token::new_builder();
@@ -33551,7 +33561,7 @@ mod __parse__VAR_TUPLE {
             __states.push(__next_state);
         }
     }
-    pub(crate) fn __reduce<
+    fn __reduce<
         'input,
     >(
         input: &'input str,
@@ -34171,7 +34181,7 @@ mod __parse__VAR_TUPLE {
             _ => __symbol_type_mismatch()
         }
     }
-    pub(crate) fn __reduce0<
+    fn __reduce0<
         'input,
     >(
         input: &'input str,
@@ -34190,7 +34200,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (2, 0)
     }
-    pub(crate) fn __reduce1<
+    fn __reduce1<
         'input,
     >(
         input: &'input str,
@@ -34200,13 +34210,13 @@ mod __parse__VAR_TUPLE {
     ) -> (usize, usize)
     {
         // (<ARG_TP> ",")* =  => ActionFn(83);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action83::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (0, 1)
     }
-    pub(crate) fn __reduce2<
+    fn __reduce2<
         'input,
     >(
         input: &'input str,
@@ -34223,7 +34233,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (1, 1)
     }
-    pub(crate) fn __reduce3<
+    fn __reduce3<
         'input,
     >(
         input: &'input str,
@@ -34242,7 +34252,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (2, 2)
     }
-    pub(crate) fn __reduce4<
+    fn __reduce4<
         'input,
     >(
         input: &'input str,
@@ -34262,7 +34272,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant2(__nt), __end));
         (3, 2)
     }
-    pub(crate) fn __reduce5<
+    fn __reduce5<
         'input,
     >(
         input: &'input str,
@@ -34281,7 +34291,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (2, 3)
     }
-    pub(crate) fn __reduce6<
+    fn __reduce6<
         'input,
     >(
         input: &'input str,
@@ -34291,13 +34301,13 @@ mod __parse__VAR_TUPLE {
     ) -> (usize, usize)
     {
         // (<KnownPredicate> ";")* =  => ActionFn(71);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action71::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (0, 4)
     }
-    pub(crate) fn __reduce7<
+    fn __reduce7<
         'input,
     >(
         input: &'input str,
@@ -34314,7 +34324,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (1, 4)
     }
-    pub(crate) fn __reduce8<
+    fn __reduce8<
         'input,
     >(
         input: &'input str,
@@ -34333,7 +34343,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (2, 5)
     }
-    pub(crate) fn __reduce9<
+    fn __reduce9<
         'input,
     >(
         input: &'input str,
@@ -34353,7 +34363,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant4(__nt), __end));
         (3, 5)
     }
-    pub(crate) fn __reduce10<
+    fn __reduce10<
         'input,
     >(
         input: &'input str,
@@ -34372,7 +34382,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (2, 6)
     }
-    pub(crate) fn __reduce11<
+    fn __reduce11<
         'input,
     >(
         input: &'input str,
@@ -34382,13 +34392,13 @@ mod __parse__VAR_TUPLE {
     ) -> (usize, usize)
     {
         // (<VAR> ",")* =  => ActionFn(78);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action78::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (0, 7)
     }
-    pub(crate) fn __reduce12<
+    fn __reduce12<
         'input,
     >(
         input: &'input str,
@@ -34405,7 +34415,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (1, 7)
     }
-    pub(crate) fn __reduce13<
+    fn __reduce13<
         'input,
     >(
         input: &'input str,
@@ -34424,7 +34434,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (2, 8)
     }
-    pub(crate) fn __reduce14<
+    fn __reduce14<
         'input,
     >(
         input: &'input str,
@@ -34444,7 +34454,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant6(__nt), __end));
         (3, 8)
     }
-    pub(crate) fn __reduce15<
+    fn __reduce15<
         'input,
     >(
         input: &'input str,
@@ -34461,7 +34471,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce16<
+    fn __reduce16<
         'input,
     >(
         input: &'input str,
@@ -34478,7 +34488,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 9)
     }
-    pub(crate) fn __reduce17<
+    fn __reduce17<
         'input,
     >(
         input: &'input str,
@@ -34495,7 +34505,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant7(__nt), __end));
         (1, 10)
     }
-    pub(crate) fn __reduce18<
+    fn __reduce18<
         'input,
     >(
         input: &'input str,
@@ -34505,13 +34515,13 @@ mod __parse__VAR_TUPLE {
     ) -> (usize, usize)
     {
         // ARG_TP? =  => ActionFn(82);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action82::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant7(__nt), __end));
         (0, 10)
     }
-    pub(crate) fn __reduce19<
+    fn __reduce19<
         'input,
     >(
         input: &'input str,
@@ -34533,7 +34543,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant8(__nt), __end));
         (5, 11)
     }
-    pub(crate) fn __reduce20<
+    fn __reduce20<
         'input,
     >(
         input: &'input str,
@@ -34543,13 +34553,13 @@ mod __parse__VAR_TUPLE {
     ) -> (usize, usize)
     {
         // Arg* =  => ActionFn(62);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action62::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (0, 12)
     }
-    pub(crate) fn __reduce21<
+    fn __reduce21<
         'input,
     >(
         input: &'input str,
@@ -34566,7 +34576,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (1, 12)
     }
-    pub(crate) fn __reduce22<
+    fn __reduce22<
         'input,
     >(
         input: &'input str,
@@ -34583,7 +34593,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (1, 13)
     }
-    pub(crate) fn __reduce23<
+    fn __reduce23<
         'input,
     >(
         input: &'input str,
@@ -34602,7 +34612,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant9(__nt), __end));
         (2, 13)
     }
-    pub(crate) fn __reduce24<
+    fn __reduce24<
         'input,
     >(
         input: &'input str,
@@ -34612,13 +34622,13 @@ mod __parse__VAR_TUPLE {
     ) -> (usize, usize)
     {
         // Args =  => ActionFn(108);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action108::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant10(__nt), __end));
         (0, 14)
     }
-    pub(crate) fn __reduce25<
+    fn __reduce25<
         'input,
     >(
         input: &'input str,
@@ -34635,7 +34645,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant10(__nt), __end));
         (1, 14)
     }
-    pub(crate) fn __reduce26<
+    fn __reduce26<
         'input,
     >(
         input: &'input str,
@@ -34660,7 +34670,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (8, 15)
     }
-    pub(crate) fn __reduce27<
+    fn __reduce27<
         'input,
     >(
         input: &'input str,
@@ -34684,7 +34694,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (7, 15)
     }
-    pub(crate) fn __reduce28<
+    fn __reduce28<
         'input,
     >(
         input: &'input str,
@@ -34708,7 +34718,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (7, 15)
     }
-    pub(crate) fn __reduce29<
+    fn __reduce29<
         'input,
     >(
         input: &'input str,
@@ -34731,7 +34741,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (6, 15)
     }
-    pub(crate) fn __reduce30<
+    fn __reduce30<
         'input,
     >(
         input: &'input str,
@@ -34748,7 +34758,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 16)
     }
-    pub(crate) fn __reduce31<
+    fn __reduce31<
         'input,
     >(
         input: &'input str,
@@ -34765,7 +34775,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 16)
     }
-    pub(crate) fn __reduce32<
+    fn __reduce32<
         'input,
     >(
         input: &'input str,
@@ -34782,7 +34792,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (1, 17)
     }
-    pub(crate) fn __reduce33<
+    fn __reduce33<
         'input,
     >(
         input: &'input str,
@@ -34792,13 +34802,13 @@ mod __parse__VAR_TUPLE {
     ) -> (usize, usize)
     {
         // Comma<ARG_TP> =  => ActionFn(105);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action105::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (0, 17)
     }
-    pub(crate) fn __reduce34<
+    fn __reduce34<
         'input,
     >(
         input: &'input str,
@@ -34817,7 +34827,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (2, 17)
     }
-    pub(crate) fn __reduce35<
+    fn __reduce35<
         'input,
     >(
         input: &'input str,
@@ -34834,7 +34844,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant12(__nt), __end));
         (1, 17)
     }
-    pub(crate) fn __reduce36<
+    fn __reduce36<
         'input,
     >(
         input: &'input str,
@@ -34851,7 +34861,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (1, 18)
     }
-    pub(crate) fn __reduce37<
+    fn __reduce37<
         'input,
     >(
         input: &'input str,
@@ -34861,13 +34871,13 @@ mod __parse__VAR_TUPLE {
     ) -> (usize, usize)
     {
         // Comma<VAR> =  => ActionFn(121);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action121::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (0, 18)
     }
-    pub(crate) fn __reduce38<
+    fn __reduce38<
         'input,
     >(
         input: &'input str,
@@ -34886,7 +34896,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (2, 18)
     }
-    pub(crate) fn __reduce39<
+    fn __reduce39<
         'input,
     >(
         input: &'input str,
@@ -34903,7 +34913,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant13(__nt), __end));
         (1, 18)
     }
-    pub(crate) fn __reduce40<
+    fn __reduce40<
         'input,
     >(
         input: &'input str,
@@ -34920,7 +34930,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 19)
     }
-    pub(crate) fn __reduce41<
+    fn __reduce41<
         'input,
     >(
         input: &'input str,
@@ -34937,7 +34947,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 20)
     }
-    pub(crate) fn __reduce42<
+    fn __reduce42<
         'input,
     >(
         input: &'input str,
@@ -34957,7 +34967,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (3, 20)
     }
-    pub(crate) fn __reduce43<
+    fn __reduce43<
         'input,
     >(
         input: &'input str,
@@ -34974,7 +34984,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant15(__nt), __end));
         (1, 21)
     }
-    pub(crate) fn __reduce44<
+    fn __reduce44<
         'input,
     >(
         input: &'input str,
@@ -34991,7 +35001,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce45<
+    fn __reduce45<
         'input,
     >(
         input: &'input str,
@@ -35008,7 +35018,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce46<
+    fn __reduce46<
         'input,
     >(
         input: &'input str,
@@ -35025,7 +35035,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce47<
+    fn __reduce47<
         'input,
     >(
         input: &'input str,
@@ -35042,7 +35052,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce48<
+    fn __reduce48<
         'input,
     >(
         input: &'input str,
@@ -35059,7 +35069,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce49<
+    fn __reduce49<
         'input,
     >(
         input: &'input str,
@@ -35076,7 +35086,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce50<
+    fn __reduce50<
         'input,
     >(
         input: &'input str,
@@ -35093,7 +35103,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant3(__nt), __end));
         (1, 22)
     }
-    pub(crate) fn __reduce51<
+    fn __reduce51<
         'input,
     >(
         input: &'input str,
@@ -35110,7 +35120,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant16(__nt), __end));
         (1, 23)
     }
-    pub(crate) fn __reduce52<
+    fn __reduce52<
         'input,
     >(
         input: &'input str,
@@ -35120,13 +35130,13 @@ mod __parse__VAR_TUPLE {
     ) -> (usize, usize)
     {
         // KnownPredicate? =  => ActionFn(70);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action70::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant16(__nt), __end));
         (0, 23)
     }
-    pub(crate) fn __reduce53<
+    fn __reduce53<
         'input,
     >(
         input: &'input str,
@@ -35143,7 +35153,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce54<
+    fn __reduce54<
         'input,
     >(
         input: &'input str,
@@ -35160,7 +35170,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce55<
+    fn __reduce55<
         'input,
     >(
         input: &'input str,
@@ -35177,7 +35187,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 24)
     }
-    pub(crate) fn __reduce56<
+    fn __reduce56<
         'input,
     >(
         input: &'input str,
@@ -35194,7 +35204,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 25)
     }
-    pub(crate) fn __reduce57<
+    fn __reduce57<
         'input,
     >(
         input: &'input str,
@@ -35211,7 +35221,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant18(__nt), __end));
         (1, 26)
     }
-    pub(crate) fn __reduce58<
+    fn __reduce58<
         'input,
     >(
         input: &'input str,
@@ -35230,7 +35240,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant18(__nt), __end));
         (2, 26)
     }
-    pub(crate) fn __reduce59<
+    fn __reduce59<
         'input,
     >(
         input: &'input str,
@@ -35250,7 +35260,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 27)
     }
-    pub(crate) fn __reduce60<
+    fn __reduce60<
         'input,
     >(
         input: &'input str,
@@ -35267,7 +35277,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (1, 28)
     }
-    pub(crate) fn __reduce61<
+    fn __reduce61<
         'input,
     >(
         input: &'input str,
@@ -35277,13 +35287,13 @@ mod __parse__VAR_TUPLE {
     ) -> (usize, usize)
     {
         // PostSpec? =  => ActionFn(66);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action66::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (0, 28)
     }
-    pub(crate) fn __reduce62<
+    fn __reduce62<
         'input,
     >(
         input: &'input str,
@@ -35303,7 +35313,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 29)
     }
-    pub(crate) fn __reduce63<
+    fn __reduce63<
         'input,
     >(
         input: &'input str,
@@ -35320,7 +35330,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (1, 30)
     }
-    pub(crate) fn __reduce64<
+    fn __reduce64<
         'input,
     >(
         input: &'input str,
@@ -35330,13 +35340,13 @@ mod __parse__VAR_TUPLE {
     ) -> (usize, usize)
     {
         // PreSpec? =  => ActionFn(68);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action68::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant20(__nt), __end));
         (0, 30)
     }
-    pub(crate) fn __reduce65<
+    fn __reduce65<
         'input,
     >(
         input: &'input str,
@@ -35356,7 +35366,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 31)
     }
-    pub(crate) fn __reduce66<
+    fn __reduce66<
         'input,
     >(
         input: &'input str,
@@ -35376,7 +35386,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 31)
     }
-    pub(crate) fn __reduce67<
+    fn __reduce67<
         'input,
     >(
         input: &'input str,
@@ -35393,7 +35403,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 31)
     }
-    pub(crate) fn __reduce68<
+    fn __reduce68<
         'input,
     >(
         input: &'input str,
@@ -35410,7 +35420,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 32)
     }
-    pub(crate) fn __reduce69<
+    fn __reduce69<
         'input,
     >(
         input: &'input str,
@@ -35430,7 +35440,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce70<
+    fn __reduce70<
         'input,
     >(
         input: &'input str,
@@ -35447,7 +35457,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 32)
     }
-    pub(crate) fn __reduce71<
+    fn __reduce71<
         'input,
     >(
         input: &'input str,
@@ -35467,7 +35477,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce72<
+    fn __reduce72<
         'input,
     >(
         input: &'input str,
@@ -35487,7 +35497,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce73<
+    fn __reduce73<
         'input,
     >(
         input: &'input str,
@@ -35507,7 +35517,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (3, 32)
     }
-    pub(crate) fn __reduce74<
+    fn __reduce74<
         'input,
     >(
         input: &'input str,
@@ -35529,7 +35539,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (5, 33)
     }
-    pub(crate) fn __reduce75<
+    fn __reduce75<
         'input,
     >(
         input: &'input str,
@@ -35551,7 +35561,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (5, 33)
     }
-    pub(crate) fn __reduce76<
+    fn __reduce76<
         'input,
     >(
         input: &'input str,
@@ -35568,7 +35578,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 33)
     }
-    pub(crate) fn __reduce77<
+    fn __reduce77<
         'input,
     >(
         input: &'input str,
@@ -35585,7 +35595,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 34)
     }
-    pub(crate) fn __reduce78<
+    fn __reduce78<
         'input,
     >(
         input: &'input str,
@@ -35602,7 +35612,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant22(__nt), __end));
         (1, 35)
     }
-    pub(crate) fn __reduce79<
+    fn __reduce79<
         'input,
     >(
         input: &'input str,
@@ -35619,7 +35629,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 36)
     }
-    pub(crate) fn __reduce80<
+    fn __reduce80<
         'input,
     >(
         input: &'input str,
@@ -35639,7 +35649,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (3, 36)
     }
-    pub(crate) fn __reduce81<
+    fn __reduce81<
         'input,
     >(
         input: &'input str,
@@ -35656,7 +35666,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (1, 37)
     }
-    pub(crate) fn __reduce82<
+    fn __reduce82<
         'input,
     >(
         input: &'input str,
@@ -35666,13 +35676,13 @@ mod __parse__VAR_TUPLE {
     ) -> (usize, usize)
     {
         // SemiColon<KnownPredicate> =  => ActionFn(111);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action111::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (0, 37)
     }
-    pub(crate) fn __reduce83<
+    fn __reduce83<
         'input,
     >(
         input: &'input str,
@@ -35691,7 +35701,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (2, 37)
     }
-    pub(crate) fn __reduce84<
+    fn __reduce84<
         'input,
     >(
         input: &'input str,
@@ -35708,7 +35718,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant23(__nt), __end));
         (1, 37)
     }
-    pub(crate) fn __reduce85<
+    fn __reduce85<
         'input,
     >(
         input: &'input str,
@@ -35725,7 +35735,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 38)
     }
-    pub(crate) fn __reduce86<
+    fn __reduce86<
         'input,
     >(
         input: &'input str,
@@ -35744,7 +35754,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (2, 38)
     }
-    pub(crate) fn __reduce87<
+    fn __reduce87<
         'input,
     >(
         input: &'input str,
@@ -35764,7 +35774,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant19(__nt), __end));
         (3, 39)
     }
-    pub(crate) fn __reduce88<
+    fn __reduce88<
         'input,
     >(
         input: &'input str,
@@ -35781,7 +35791,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (1, 40)
     }
-    pub(crate) fn __reduce89<
+    fn __reduce89<
         'input,
     >(
         input: &'input str,
@@ -35801,7 +35811,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant14(__nt), __end));
         (3, 40)
     }
-    pub(crate) fn __reduce90<
+    fn __reduce90<
         'input,
     >(
         input: &'input str,
@@ -35818,7 +35828,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 41)
     }
-    pub(crate) fn __reduce91<
+    fn __reduce91<
         'input,
     >(
         input: &'input str,
@@ -35835,7 +35845,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant24(__nt), __end));
         (1, 42)
     }
-    pub(crate) fn __reduce92<
+    fn __reduce92<
         'input,
     >(
         input: &'input str,
@@ -35845,13 +35855,13 @@ mod __parse__VAR_TUPLE {
     ) -> (usize, usize)
     {
         // VAR? =  => ActionFn(77);
-        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2.clone())).unwrap_or_default();
-        let __end = __start.clone();
+        let __start = __lookahead_start.cloned().or_else(|| __symbols.last().map(|s| s.2)).unwrap_or_default();
+        let __end = __start;
         let __nt = super::__action77::<>(input, &__start, &__end);
         __symbols.push((__start, __Symbol::Variant24(__nt), __end));
         (0, 42)
     }
-    pub(crate) fn __reduce93<
+    fn __reduce93<
         'input,
     >(
         input: &'input str,
@@ -35868,7 +35878,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (1, 43)
     }
-    pub(crate) fn __reduce94<
+    fn __reduce94<
         'input,
     >(
         input: &'input str,
@@ -35888,7 +35898,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant5(__nt), __end));
         (3, 43)
     }
-    pub(crate) fn __reduce95<
+    fn __reduce95<
         'input,
     >(
         input: &'input str,
@@ -35905,7 +35915,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 44)
     }
-    pub(crate) fn __reduce96<
+    fn __reduce96<
         'input,
     >(
         input: &'input str,
@@ -35922,7 +35932,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant11(__nt), __end));
         (1, 45)
     }
-    pub(crate) fn __reduce97<
+    fn __reduce97<
         'input,
     >(
         input: &'input str,
@@ -35939,7 +35949,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 46)
     }
-    pub(crate) fn __reduce98<
+    fn __reduce98<
         'input,
     >(
         input: &'input str,
@@ -35956,7 +35966,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant17(__nt), __end));
         (1, 47)
     }
-    pub(crate) fn __reduce99<
+    fn __reduce99<
         'input,
     >(
         input: &'input str,
@@ -35973,7 +35983,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 48)
     }
-    pub(crate) fn __reduce100<
+    fn __reduce100<
         'input,
     >(
         input: &'input str,
@@ -35990,7 +36000,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 49)
     }
-    pub(crate) fn __reduce101<
+    fn __reduce101<
         'input,
     >(
         input: &'input str,
@@ -36007,7 +36017,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant21(__nt), __end));
         (1, 50)
     }
-    pub(crate) fn __reduce102<
+    fn __reduce102<
         'input,
     >(
         input: &'input str,
@@ -36024,7 +36034,7 @@ mod __parse__VAR_TUPLE {
         __symbols.push((__start, __Symbol::Variant1(__nt), __end));
         (1, 51)
     }
-    pub(crate) fn __reduce103<
+    fn __reduce103<
         'input,
     >(
         input: &'input str,
@@ -36043,7 +36053,7 @@ mod __parse__VAR_TUPLE {
     }
 }
 pub use self::__parse__VAR_TUPLE::VAR_TUPLEParser;
-#[cfg_attr(rustfmt, rustfmt_skip)]
+#[rustfmt::skip]
 mod __intern_token {
     #![allow(unused_imports)]
     use crate::ipc::{ElrondKnownPredicate, ElrondPredicates, ElrondAssertion,ElrondSpec, ElrondForallFormula, ElrondTpedvar, ElrondType, ElrondPred, ElrondSimpleExpr, ElrondLiteral};
@@ -36056,41 +36066,41 @@ mod __intern_token {
     extern crate alloc;
     pub fn new_builder() -> __lalrpop_util::lexer::MatcherBuilder {
         let __strs: &[(&str, bool)] = &[
-            ("^((?:[A-Za-z][0-9A-Za-z]*))", false),
-            ("^([0-9]+)", false),
-            ("^((?:\"hd\"))", false),
-            ("^((?:\"left\"))", false),
-            ("^((?:\"len\"))", false),
-            ("^((?:\"mem\"))", false),
-            ("^((?:\"ord\"))", false),
-            ("^((?:\"right\"))", false),
-            ("^((?:\"sorted\"))", false),
-            ("^((?:\\&\\&))", false),
-            ("^(\\()", false),
-            ("^(\\))", false),
-            ("^(,)", false),
-            ("^((?:\\->))", false),
-            ("^(\\.)", false),
-            ("^(:)", false),
-            ("^(;)", false),
-            ("^((?:<=))", false),
-            ("^(=)", false),
-            ("^((?:==))", false),
-            ("^((?:>=))", false),
-            ("^((?:\\[\\|))", false),
-            ("^((?:bool))", false),
-            ("^((?:false))", false),
-            ("^((?:iff))", false),
-            ("^((?:implies))", false),
-            ("^((?:int))", false),
-            ("^((?:let))", false),
-            ("^((?:post))", false),
-            ("^((?:pre))", false),
-            ("^((?:preds))", false),
-            ("^((?:true))", false),
-            ("^((?:\\|\\]))", false),
-            ("^((?:\\|\\|))", false),
-            (r"^(\s*)", true),
+            ("(?:[A-Za-z][0-9A-Za-z]*)", false),
+            ("[0-9]+", false),
+            ("(?:\"hd\")", false),
+            ("(?:\"left\")", false),
+            ("(?:\"len\")", false),
+            ("(?:\"mem\")", false),
+            ("(?:\"ord\")", false),
+            ("(?:\"right\")", false),
+            ("(?:\"sorted\")", false),
+            ("(?:\\&\\&)", false),
+            ("\\(", false),
+            ("\\)", false),
+            (",", false),
+            ("(?:\\->)", false),
+            ("\\.", false),
+            (":", false),
+            (";", false),
+            ("(?:<=)", false),
+            ("=", false),
+            ("(?:==)", false),
+            ("(?:>=)", false),
+            ("(?:\\[\\|)", false),
+            ("(?:bool)", false),
+            ("(?:false)", false),
+            ("(?:iff)", false),
+            ("(?:implies)", false),
+            ("(?:int)", false),
+            ("(?:let)", false),
+            ("(?:post)", false),
+            ("(?:pre)", false),
+            ("(?:preds)", false),
+            ("(?:true)", false),
+            ("(?:\\|\\])", false),
+            ("(?:\\|\\|)", false),
+            (r"\s+", true),
         ];
         __lalrpop_util::lexer::MatcherBuilder::new(__strs.iter().copied()).unwrap()
     }
@@ -36098,7 +36108,7 @@ mod __intern_token {
 pub(crate) use self::__lalrpop_util::lexer::Token;
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action0<
     'input,
 >(
@@ -36110,7 +36120,7 @@ fn __action0<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action1<
     'input,
 >(
@@ -36122,7 +36132,7 @@ fn __action1<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action2<
     'input,
 >(
@@ -36134,7 +36144,7 @@ fn __action2<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action3<
     'input,
 >(
@@ -36146,7 +36156,7 @@ fn __action3<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action4<
     'input,
 >(
@@ -36158,7 +36168,7 @@ fn __action4<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action5<
     'input,
 >(
@@ -36170,7 +36180,7 @@ fn __action5<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action6<
     'input,
 >(
@@ -36182,7 +36192,7 @@ fn __action6<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action7<
     'input,
 >(
@@ -36194,7 +36204,7 @@ fn __action7<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action8<
     'input,
 >(
@@ -36206,7 +36216,7 @@ fn __action8<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action9<
     'input,
 >(
@@ -36218,7 +36228,7 @@ fn __action9<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action10<
     'input,
 >(
@@ -36241,7 +36251,7 @@ fn __action10<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action11<
     'input,
 >(
@@ -36253,7 +36263,7 @@ fn __action11<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action12<
     'input,
 >(
@@ -36265,7 +36275,7 @@ fn __action12<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action13<
     'input,
 >(
@@ -36277,7 +36287,7 @@ fn __action13<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action14<
     'input,
 >(
@@ -36289,7 +36299,7 @@ fn __action14<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action15<
     'input,
 >(
@@ -36301,7 +36311,7 @@ fn __action15<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action16<
     'input,
 >(
@@ -36313,7 +36323,7 @@ fn __action16<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action17<
     'input,
 >(
@@ -36325,7 +36335,7 @@ fn __action17<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action18<
     'input,
 >(
@@ -36337,7 +36347,7 @@ fn __action18<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action19<
     'input,
 >(
@@ -36351,7 +36361,7 @@ fn __action19<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action20<
     'input,
 >(
@@ -36365,7 +36375,7 @@ fn __action20<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action21<
     'input,
 >(
@@ -36379,7 +36389,7 @@ fn __action21<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action22<
     'input,
 >(
@@ -36391,7 +36401,7 @@ fn __action22<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action23<
     'input,
 >(
@@ -36407,7 +36417,7 @@ fn __action23<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action24<
     'input,
 >(
@@ -36419,7 +36429,7 @@ fn __action24<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action25<
     'input,
 >(
@@ -36431,7 +36441,7 @@ fn __action25<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action26<
     'input,
 >(
@@ -36445,7 +36455,7 @@ fn __action26<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action27<
     'input,
 >(
@@ -36457,7 +36467,7 @@ fn __action27<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action28<
     'input,
 >(
@@ -36471,7 +36481,7 @@ fn __action28<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action29<
     'input,
 >(
@@ -36485,7 +36495,7 @@ fn __action29<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action30<
     'input,
 >(
@@ -36499,7 +36509,7 @@ fn __action30<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action31<
     'input,
 >(
@@ -36515,7 +36525,7 @@ fn __action31<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action32<
     'input,
 >(
@@ -36531,7 +36541,7 @@ fn __action32<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action33<
     'input,
 >(
@@ -36543,7 +36553,7 @@ fn __action33<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action34<
     'input,
 >(
@@ -36557,7 +36567,7 @@ fn __action34<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action35<
     'input,
 >(
@@ -36571,7 +36581,7 @@ fn __action35<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action36<
     'input,
 >(
@@ -36583,7 +36593,7 @@ fn __action36<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action37<
     'input,
 >(
@@ -36595,7 +36605,7 @@ fn __action37<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action38<
     'input,
 >(
@@ -36607,7 +36617,7 @@ fn __action38<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action39<
     'input,
 >(
@@ -36620,7 +36630,7 @@ fn __action39<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action40<
     'input,
 >(
@@ -36632,7 +36642,7 @@ fn __action40<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action41<
     'input,
 >(
@@ -36644,7 +36654,7 @@ fn __action41<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action42<
     'input,
 >(
@@ -36656,7 +36666,7 @@ fn __action42<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action43<
     'input,
 >(
@@ -36668,7 +36678,7 @@ fn __action43<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action44<
     'input,
 >(
@@ -36682,7 +36692,7 @@ fn __action44<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action45<
     'input,
 >(
@@ -36694,7 +36704,7 @@ fn __action45<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action46<
     'input,
 >(
@@ -36708,7 +36718,7 @@ fn __action46<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action47<
     'input,
 >(
@@ -36720,7 +36730,7 @@ fn __action47<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action48<
     'input,
 >(
@@ -36734,7 +36744,7 @@ fn __action48<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action49<
     'input,
 >(
@@ -36746,7 +36756,7 @@ fn __action49<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action50<
     'input,
 >(
@@ -36758,7 +36768,7 @@ fn __action50<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action51<
     'input,
 >(
@@ -36770,7 +36780,7 @@ fn __action51<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action52<
     'input,
 >(
@@ -36782,7 +36792,7 @@ fn __action52<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action53<
     'input,
 >(
@@ -36796,7 +36806,7 @@ fn __action53<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action54<
     'input,
 >(
@@ -36808,7 +36818,7 @@ fn __action54<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action55<
     'input,
 >(
@@ -36820,7 +36830,7 @@ fn __action55<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action56<
     'input,
 >(
@@ -36832,7 +36842,7 @@ fn __action56<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action57<
     'input,
 >(
@@ -36844,7 +36854,7 @@ fn __action57<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action58<
     'input,
 >(
@@ -36863,7 +36873,7 @@ fn __action58<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action59<
     'input,
 >(
@@ -36882,7 +36892,7 @@ fn __action59<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action60<
     'input,
 >(
@@ -36894,7 +36904,7 @@ fn __action60<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action61<
     'input,
 >(
@@ -36907,7 +36917,7 @@ fn __action61<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action62<
     'input,
 >(
@@ -36920,7 +36930,7 @@ fn __action62<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action63<
     'input,
 >(
@@ -36932,7 +36942,7 @@ fn __action63<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action64<
     'input,
 >(
@@ -36951,7 +36961,7 @@ fn __action64<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action65<
     'input,
 >(
@@ -36963,7 +36973,7 @@ fn __action65<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action66<
     'input,
 >(
@@ -36976,7 +36986,7 @@ fn __action66<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action67<
     'input,
 >(
@@ -36988,7 +36998,7 @@ fn __action67<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action68<
     'input,
 >(
@@ -37001,7 +37011,7 @@ fn __action68<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action69<
     'input,
 >(
@@ -37013,7 +37023,7 @@ fn __action69<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action70<
     'input,
 >(
@@ -37026,7 +37036,7 @@ fn __action70<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action71<
     'input,
 >(
@@ -37039,7 +37049,7 @@ fn __action71<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action72<
     'input,
 >(
@@ -37051,7 +37061,7 @@ fn __action72<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action73<
     'input,
 >(
@@ -37064,7 +37074,7 @@ fn __action73<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action74<
     'input,
 >(
@@ -37076,7 +37086,7 @@ fn __action74<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action75<
     'input,
 >(
@@ -37089,7 +37099,7 @@ fn __action75<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action76<
     'input,
 >(
@@ -37101,7 +37111,7 @@ fn __action76<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action77<
     'input,
 >(
@@ -37114,7 +37124,7 @@ fn __action77<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action78<
     'input,
 >(
@@ -37127,7 +37137,7 @@ fn __action78<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action79<
     'input,
 >(
@@ -37139,7 +37149,7 @@ fn __action79<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action80<
     'input,
 >(
@@ -37152,7 +37162,7 @@ fn __action80<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action81<
     'input,
 >(
@@ -37164,7 +37174,7 @@ fn __action81<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action82<
     'input,
 >(
@@ -37177,7 +37187,7 @@ fn __action82<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action83<
     'input,
 >(
@@ -37190,7 +37200,7 @@ fn __action83<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action84<
     'input,
 >(
@@ -37202,7 +37212,7 @@ fn __action84<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action85<
     'input,
 >(
@@ -37215,7 +37225,7 @@ fn __action85<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action86<
     'input,
 >(
@@ -37227,7 +37237,7 @@ fn __action86<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action87<
     'input,
 >(
@@ -37240,7 +37250,7 @@ fn __action87<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action88<
     'input,
 >(
@@ -37252,7 +37262,7 @@ fn __action88<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action89<
     'input,
 >(
@@ -37265,7 +37275,7 @@ fn __action89<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action90<
     'input,
 >(
@@ -37277,7 +37287,7 @@ fn __action90<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes, clippy::just_underscores_and_digits)]
 fn __action91<
     'input,
 >(
@@ -37290,7 +37300,8 @@ fn __action91<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action92<
     'input,
 >(
@@ -37314,7 +37325,8 @@ fn __action92<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action93<
     'input,
 >(
@@ -37340,7 +37352,8 @@ fn __action93<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action94<
     'input,
 >(
@@ -37364,7 +37377,8 @@ fn __action94<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action95<
     'input,
 >(
@@ -37388,7 +37402,8 @@ fn __action95<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action96<
     'input,
 >(
@@ -37412,7 +37427,8 @@ fn __action96<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action97<
     'input,
 >(
@@ -37438,7 +37454,8 @@ fn __action97<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action98<
     'input,
 >(
@@ -37462,7 +37479,8 @@ fn __action98<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action99<
     'input,
 >(
@@ -37486,7 +37504,8 @@ fn __action99<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action100<
     'input,
 >(
@@ -37510,7 +37529,8 @@ fn __action100<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action101<
     'input,
 >(
@@ -37536,7 +37556,8 @@ fn __action101<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action102<
     'input,
 >(
@@ -37560,7 +37581,8 @@ fn __action102<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action103<
     'input,
 >(
@@ -37584,7 +37606,8 @@ fn __action103<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action104<
     'input,
 >(
@@ -37606,7 +37629,8 @@ fn __action104<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action105<
     'input,
 >(
@@ -37630,7 +37654,8 @@ fn __action105<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action106<
     'input,
 >(
@@ -37654,7 +37679,8 @@ fn __action106<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action107<
     'input,
 >(
@@ -37678,7 +37704,8 @@ fn __action107<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action108<
     'input,
 >(
@@ -37702,7 +37729,8 @@ fn __action108<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action109<
     'input,
 >(
@@ -37724,7 +37752,8 @@ fn __action109<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action110<
     'input,
 >(
@@ -37746,7 +37775,8 @@ fn __action110<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action111<
     'input,
 >(
@@ -37770,7 +37800,8 @@ fn __action111<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action112<
     'input,
 >(
@@ -37794,7 +37825,8 @@ fn __action112<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action113<
     'input,
 >(
@@ -37818,7 +37850,8 @@ fn __action113<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action114<
     'input,
 >(
@@ -37854,7 +37887,8 @@ fn __action114<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action115<
     'input,
 >(
@@ -37890,7 +37924,8 @@ fn __action115<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action116<
     'input,
 >(
@@ -37926,7 +37961,8 @@ fn __action116<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action117<
     'input,
 >(
@@ -37962,7 +37998,8 @@ fn __action117<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action118<
     'input,
 >(
@@ -37996,7 +38033,8 @@ fn __action118<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action119<
     'input,
 >(
@@ -38030,7 +38068,8 @@ fn __action119<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action120<
     'input,
 >(
@@ -38052,7 +38091,8 @@ fn __action120<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action121<
     'input,
 >(
@@ -38076,7 +38116,8 @@ fn __action121<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action122<
     'input,
 >(
@@ -38100,7 +38141,8 @@ fn __action122<
 }
 
 #[allow(unused_variables)]
-#[allow(clippy::too_many_arguments)]
+#[allow(clippy::too_many_arguments, clippy::needless_lifetimes,
+    clippy::just_underscores_and_digits)]
 fn __action123<
     'input,
 >(
@@ -38124,7 +38166,7 @@ fn __action123<
 }
 #[allow(clippy::type_complexity)]
 
-pub trait __ToTriple<'input, >
+pub  trait __ToTriple<'input, >
 {
     fn to_triple(value: Self) -> Result<(usize,Token<'input>,usize), __lalrpop_util::ParseError<usize, Token<'input>, &'static str>>;
 }
