@@ -1,0 +1,5 @@
+---
+source: tests/assertion_parser.rs
+expression: parsed_pred
+---
+iff (mem l3 u) (mem l1 u || mem l2 u) && implies (hd l3 u) (hd l1 u || hd l2 u)

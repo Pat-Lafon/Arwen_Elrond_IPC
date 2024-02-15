@@ -1,0 +1,24 @@
+---
+source: src/main.rs
+expression: parsed_pred
+---
+Op(
+    Generic(
+        "Unknown ParserType",
+    ),
+    "mem",
+    [
+        Var(
+            Generic(
+                "Unknown ParserType",
+            ),
+            "l1",
+        ),
+        Var(
+            Generic(
+                "Unknown ParserType",
+            ),
+            "u",
+        ),
+    ],
+)

@@ -1,0 +1,6 @@
+(library
+ (name ipc)
+ (package my_project)
+ (preprocess
+  (pps ppx_deriving_yojson))
+ (libraries inference language yojson))

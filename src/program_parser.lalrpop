@@ -1,0 +1,147 @@
+use crate::ipc::{ElrondKnownPredicate, ElrondPredicates, ElrondAssertion,ElrondSpec, ElrondForallFormula, ElrondTpedvar, ElrondType, ElrondPred, ElrondSimpleExpr, ElrondLiteral};
+
+use std::str::FromStr;
+
+grammar;
+
+pub Assertion: ElrondAssertion = {
+    "let" "preds" "=" "[|" <preds: Predicates> "|]"
+    <pre_spec: PreSpec?> <post_spec: PostSpec?> => ElrondAssertion {
+        preds,
+        pre_spec,
+        post_spec,
+    },
+};
+
+Predicates : ElrondPredicates = {
+    <p : SemiColon<KnownPredicate>> => ElrondPredicates(p),
+};
+
+KnownPredicate : ElrondKnownPredicate = {
+    "\"len\"" => ElrondKnownPredicate::list_length,
+    "\"hd\"" => ElrondKnownPredicate::list_head,
+    "\"mem\"" => ElrondKnownPredicate::list_member,
+    "\"ord\"" => ElrondKnownPredicate::list_order,
+    "\"left\"" => ElrondKnownPredicate::left,
+    "\"right\"" => ElrondKnownPredicate::right,
+    "\"sorted\"" => ElrondKnownPredicate::sorted,
+}
+
+PreSpec : ElrondSpec = {
+    "let" "pre" <s: Spec> => s
+}
+
+PostSpec : ElrondSpec = {
+    "let" "post" <s: Spec> => s
+}
+
+Spec : ElrondSpec = {
+    <a:Args> "=" <f:Formula> => ElrondSpec(a, f)
+}
+
+Args : Vec<ElrondTpedvar> = {
+    <v:Arg*> => v
+}
+
+Arg : ElrondTpedvar = {
+   "(" <n: Name> ":" <t:ARG_TP> ")" => ElrondTpedvar(t, n)
+}
+
+// Add forall thing for free variables when needed
+Formula : ElrondForallFormula = {
+    <e: Pred> => ElrondForallFormula(vec![], e)
+}
+
+pub Pred : ElrondPred = {
+    #[precedence(level="1")]
+    "true" => ElrondPred::True,
+    "(" <p: PredReset> ")" => p,
+    <s: SimpleExpr> => ElrondPred::Atom(s),
+    <p1: SimpleExpr> "==" <p2: SimpleExpr> => ElrondPred::Atom(ElrondSimpleExpr::Op(ElrondType::Bool, "==".to_string(), vec![p1, p2])),
+    <p1: SimpleExpr> "<=" <p2: SimpleExpr> => ElrondPred::Atom(ElrondSimpleExpr::Op(ElrondType::Bool, "<=".to_string(), vec![p1, p2])),
+    <p1: SimpleExpr> ">=" <p2: SimpleExpr> => ElrondPred::Atom(ElrondSimpleExpr::Op(ElrondType::Bool, ">=".to_string(), vec![p1, p2])),
+
+    #[precedence(level="2")]
+    "iff" "(" <p1: PredReset> ")"  <p2: Pred> => ElrondPred::Iff(Box::new(p1), Box::new(p2)),
+    "implies" "(" <p1: PredReset> ")" <p2: Pred> => ElrondPred::Implies(Box::new(p1), Box::new(p2)),
+
+    #[precedence(level="3")] #[assoc(side="left")]
+    <p1: Pred> "&&" <p2: Pred> => ElrondPred::And(vec![p1, p2]),
+    <p1: Pred> "||" <p2: Pred> => ElrondPred::Or(vec![p1, p2]),
+}
+
+PredReset : ElrondPred = {
+    Pred => <>
+}
+
+pub SimpleExpr : ElrondSimpleExpr = {
+    <v:VAR> => v,
+    <n:Name> <v:Name+> => ElrondSimpleExpr::Op(ElrondType::Generic("Unknown ParserType".to_string()), n, v.into_iter().map(|n| ElrondSimpleExpr::Var(ElrondType::Generic("Unknown ParserType".to_string()), n)).collect()),
+}
+
+pub LIT : ElrondLiteral = {
+    "true" => ElrondLiteral::Bool(true),
+    "false" => ElrondLiteral::Bool(false),
+    r"[[:digit:]]+" => ElrondLiteral::Int(i64::from_str(<>).unwrap()),
+}
+
+pub VAR_TUPLE : ElrondSimpleExpr = {
+    VAR => <>,
+    "(" <v: Comma<VAR>> ")" => ElrondSimpleExpr::Tuple(v),
+}
+
+pub FUNC_TP : ElrondType = {
+    <t: RET_TP> => t,
+    <t1: ARG_TP> "->" <t2: FUNC_TP> => ElrondType::Arrow(Box::new(t1), Box::new(t2)),
+}
+
+pub RET_TP : ElrondType = {
+    <t: ARG_TP> => t,
+    "(" <t: Comma<ARG_TP>> ")" => ElrondType::Tuple(t),
+}
+
+pub ARG_TP : ElrondType = {
+    <t: BASE_TY> => t,
+    <t: TP_NAME> => ElrondType::Generic(t),
+}
+
+DT_NAME : String = {
+    <n: Name> => n.to_string(),
+}
+
+TP_NAME : String = {
+    <n: DT_NAME> => n,
+    <n1 : Name> "." <n2: DT_NAME> => format!("{}.{}", n1, n2),
+}
+
+BASE_TY : ElrondType = {
+    "int" => ElrondType::Int,
+    "bool" => ElrondType::Bool,
+}
+
+Name: String = <s:r"[[:alpha:]][[:alnum:]]*"> => s.to_string();
+
+VAR: ElrondSimpleExpr = Name => ElrondSimpleExpr::Var(ElrondType::Generic("Unknown ParserType".to_string()),<>.to_string());
+
+// Num: i32 = <s:r"[0-9]+"> => i32::from_str(s).unwrap();
+
+// https://lalrpop.github.io/lalrpop/tutorial/006_macros.html
+Comma<T>: Vec<T> = { // (1)
+    <mut v:(<T> ",")*> <e:T?> => match e { // (2)
+        None => v,
+        Some(e) => {
+            v.push(e);
+            v
+        }
+    }
+}
+
+SemiColon<T>: Vec<T> = { // (1)
+    <mut v:(<T> ";")*> <e:T?> => match e { // (2)
+        None => v,
+        Some(e) => {
+            v.push(e);
+            v
+        }
+    }
+}

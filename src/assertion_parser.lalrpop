@@ -1,0 +1,128 @@
+use crate::ipc_assertion::{AssertionFile, AssertionPredicates, Pred, Spec,  Tpedvar, AssertionType, Assertion, AssertionOp};
+
+grammar;
+
+pub AssertionFile: AssertionFile = {
+    "let" "preds" "=" "[|" <preds: Predicates> "|]"
+    <pre_spec: PreSpec?> <post_spec: PostSpec> => AssertionFile {
+        preds,
+        pre_spec,
+        post_spec,
+    },
+};
+
+Predicates : AssertionPredicates = {
+    <p : SemiColon<StrPred>> => AssertionPredicates(p),
+};
+
+StrPred : Pred = {
+    "\"" <p:Pred> "\"" => p
+}
+
+Pred : Pred = {
+    "len" => Pred::length,
+    "sorted" => Pred::sorted,
+    "mem" => Pred::member,
+    "hd" => Pred::head,
+    "ord" => Pred::order,
+    "once" => Pred::once,
+    "left" => Pred::left,
+    "right" => Pred::right,
+    "para" => Pred::para,
+    "ance" => Pred::ance,
+    "root" => Pred::root,
+}
+
+OP : AssertionOp = {
+    "==" => AssertionOp::Eq,
+    "<=" => AssertionOp::Le,
+    ">=" => AssertionOp::Ge,
+    "!=" => AssertionOp::Ne,
+    "<" => AssertionOp::Lt,
+    ">" => AssertionOp::Gt,
+}
+
+PreSpec : Spec = {
+    "let" "pre" <s: Spec> => s
+}
+
+pub PostSpec : Spec = {
+    "let" "post" <s: Spec> => s
+}
+
+Spec : Spec = {
+    <a:Arg*> "=" <f:Assertion> => Spec(a, f)
+}
+
+Arg : Tpedvar = {
+   "(" <n: Name> ":" <t:ARG_TP> ")" => Tpedvar(t, n)
+}
+
+pub Assertion : Assertion = {
+    #[precedence(level="1")]
+    "true" => Assertion::True,
+    <p:Pred> <v:(<Name>)+> => Assertion::Predicate(p, v),
+    "(" <p: AssertionReset> ")" => p,
+    <v1: Name> <o: OP> <v2: Name> => Assertion::Op(o, v1, v2),
+
+    #[precedence(level="2")]
+    "implies" "(" <p1: AssertionReset>")" "(" <p2: AssertionReset> ")" => Assertion::Implies(Box::new(p1), Box::new(p2)),
+    "iff" "(" <p1: AssertionReset> ")" "(" <p2: AssertionReset> ")" => Assertion::Iff(Box::new(p1), Box::new(p2)),
+
+
+    #[precedence(level="3")] #[assoc(side="left")]
+    <p1: Assertion> "&&" <p2: Assertion> => Assertion::And(vec![p1, p2]),
+    <p1: Assertion> "||" <p2: Assertion> => Assertion::Or(vec![p1, p2]),
+
+    #[precedence(level="4")]
+    "!" <p: Assertion> => Assertion::Not(Box::new(p)),
+}
+
+AssertionReset : Assertion = {
+    Assertion => <>
+}
+
+
+pub ARG_TP : AssertionType = {
+    <t: BASE_TY> => t,
+    <t: TP_NAME> => AssertionType::Generic(t),
+}
+
+DT_NAME : String = {
+    <n: Name> => n.to_string(),
+}
+
+TP_NAME : String = {
+    <n: DT_NAME> => n,
+    <n1 : Name> "." <n2: DT_NAME> => format!("{}.{}", n1, n2),
+}
+
+BASE_TY : AssertionType = {
+    "int" => AssertionType::Int,
+    "bool" => AssertionType::Bool,
+}
+
+Name: String = <s:r"[[:alpha:]][[:alnum:]]*\'?"> => s.to_string();
+
+// Num: i32 = <s:r"[0-9]+"> => i32::from_str(s).unwrap();
+
+// https://lalrpop.github.io/lalrpop/tutorial/006_macros.html
+Comma<T>: Vec<T> = { // (1)
+    <mut v:(<T> ",")*> <e:T?> => match e { // (2)
+        None => v,
+        Some(e) => {
+            v.push(e);
+            v
+        }
+    }
+}
+
+SemiColon<T>: Vec<T> = { // (1)
+    <mut v:(<T> ";")*> <e:T?> => match e { // (2)
+        None => v,
+        Some(e) => {
+            v.push(e);
+            v
+        }
+    }
+}

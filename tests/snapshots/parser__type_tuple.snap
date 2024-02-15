@@ -1,0 +1,5 @@
+---
+source: tests/parser.rs
+expression: parsed_pred
+---
+(int, bool)

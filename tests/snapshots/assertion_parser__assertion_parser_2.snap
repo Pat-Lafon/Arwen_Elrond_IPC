@@ -1,0 +1,5 @@
+---
+source: tests/assertion_parser.rs
+expression: parsed_pred
+---
+mem l1 u || mem l2 u

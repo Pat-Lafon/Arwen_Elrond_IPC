@@ -1,0 +1,5 @@
+(executables
+ (libraries frontend solver inference translate ipc main_lib utils yojson)
+ (names stub)
+ (public_names stub)
+ (modules stub))

@@ -1,0 +1,5 @@
+---
+source: tests/assertion_parser.rs
+expression: parsed_pred
+---
+implies (hd l3 u) (hd l1 u || hd l2 u)

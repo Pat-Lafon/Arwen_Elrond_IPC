@@ -1,0 +1,10 @@
+---
+source: tests/assertion_parser.rs
+assertion_line: 74
+expression: parser.parse(&assertion).unwrap()
+---
+let preds = [| mem |]
+
+let post (x : int) (tree1 : Splayhp.t) (tree2 : Splayhp.t) (tree3 : Splayhp.t) (u : int) =
+  iff (mem tree1 u) (mem tree2 u || mem tree3 u)
+

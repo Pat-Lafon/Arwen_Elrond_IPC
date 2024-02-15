@@ -1,0 +1,76 @@
+---
+source: src/main.rs
+expression: parsed_pred
+---
+Implies(
+    Atom(
+        Op(
+            Generic(
+                "Unknown ParserType",
+            ),
+            "hd",
+            [
+                Var(
+                    Generic(
+                        "Unknown ParserType",
+                    ),
+                    "l3",
+                ),
+                Var(
+                    Generic(
+                        "Unknown ParserType",
+                    ),
+                    "u",
+                ),
+            ],
+        ),
+    ),
+    Or(
+        [
+            Atom(
+                Op(
+                    Generic(
+                        "Unknown ParserType",
+                    ),
+                    "hd",
+                    [
+                        Var(
+                            Generic(
+                                "Unknown ParserType",
+                            ),
+                            "l1",
+                        ),
+                        Var(
+                            Generic(
+                                "Unknown ParserType",
+                            ),
+                            "u",
+                        ),
+                    ],
+                ),
+            ),
+            Atom(
+                Op(
+                    Generic(
+                        "Unknown ParserType",
+                    ),
+                    "hd",
+                    [
+                        Var(
+                            Generic(
+                                "Unknown ParserType",
+                            ),
+                            "l2",
+                        ),
+                        Var(
+                            Generic(
+                                "Unknown ParserType",
+                            ),
+                            "u",
+                        ),
+                    ],
+                ),
+            ),
+        ],
+    ),
+)
